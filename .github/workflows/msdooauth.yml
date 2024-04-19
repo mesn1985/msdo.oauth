@@ -29,9 +29,21 @@ jobs:
       with:
           username: ${{ secrets.DOCKER_HUB_USERNAME }}
           password: ${{ secrets.DOCKER_HUB_CLIENT_SERIVCE_REPO_TOKEN }}
-    - name: Build and push
+    - name: Build and push client service image
       uses: docker/build-push-action@v5
       with:
           context: "{{defaultContext}}:msdo.oauth.client"
           push: true
           tags: lightmaze/oauthclient
+    - name: Build and push protected resource service image
+      uses: docker/build-push-action@v5
+      with:
+          context: "{{defaultContext}}:msdo.oauth.protectedResource"
+          push: true
+          tags: lightmaze/oauthprotectedresourceserver
+    - name: Build and push auth server image
+      uses: docker/build-push-action@v5
+      with:
+          context: "{{defaultContext}}:msdo.oauth.identityServer"
+          push: true
+          tags: lightmaze/oauthauthserver
