@@ -22,4 +22,4 @@ jobs:
     - name: Build 
       run: dotnet build --no-restore msdo.oauth.sln
     - name: Test
-      run: dotnet test --no-build --verbosity normal
+      run: dotnet test --no-build --verbosity normal msdo.oauth.sln
