@@ -1,0 +1,6 @@
+@msdo.oauth.client_HostAddress = http://localhost:5198
+
+GET {{msdo.oauth.client_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "msdo.oauth.identityServer", "msdo.oauth.identityServer\msdo.oauth.identityServer.csproj", "{8B259C5D-C2C2-49E6-946A-FA4CB397F2AD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "msdo.oauth.protectedResource", "msdo.oauth.protectedResource\msdo.oauth.protectedResource.csproj", "{22294EA4-1659-45F4-ADA7-87866B75ED7F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "msdo.oauth.client", "msdo.oauth.client\msdo.oauth.client.csproj", "{7A888D57-D9C0-4336-8763-F3D16B4F1135}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8B259C5D-C2C2-49E6-946A-FA4CB397F2AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B259C5D-C2C2-49E6-946A-FA4CB397F2AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B259C5D-C2C2-49E6-946A-FA4CB397F2AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B259C5D-C2C2-49E6-946A-FA4CB397F2AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22294EA4-1659-45F4-ADA7-87866B75ED7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22294EA4-1659-45F4-ADA7-87866B75ED7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22294EA4-1659-45F4-ADA7-87866B75ED7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22294EA4-1659-45F4-ADA7-87866B75ED7F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A888D57-D9C0-4336-8763-F3D16B4F1135}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A888D57-D9C0-4336-8763-F3D16B4F1135}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A888D57-D9C0-4336-8763-F3D16B4F1135}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A888D57-D9C0-4336-8763-F3D16B4F1135}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
