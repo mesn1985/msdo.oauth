@@ -22,6 +22,6 @@ jobs:
       run: dotnet build --no-restore msdo.oauth.sln
     - name: Test
       run: dotnet test --no-build --verbosity normal msdo.oauth.sln
-    - name: build client docker image
+    - name: build client service docker image
       run: |
-        docker build  -t lightmaze/oauthclient -f ./msdo.oauth.client/DockerFile
+        docker build  -t lightmaze/oauthclient -f ./msdo.oauth.client/DockerFile .
