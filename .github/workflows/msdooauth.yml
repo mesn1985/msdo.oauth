@@ -29,7 +29,7 @@ jobs:
           username: ${{ secrets.DOCKER_HUB_USERNAME }}
           password: ${{ secrets.DOCKER_HUB_CLIENT_SERIVCE_REPO_TOKEN }}
     - name: Build and push
-        uses: docker/build-push-action@v5
-        with:
+      uses: docker/build-push-action@v5
+      with:
           push: true
           tags: lightmaze/oauthclient
