@@ -26,3 +26,6 @@ jobs:
       working-directory: ./msdo.oauth.client/
       run: |
         docker build . -t lightmaze/oauthclient
+    - name: push client service image to image repository
+      run: |
+        docker push lightmaze/oauthclient
