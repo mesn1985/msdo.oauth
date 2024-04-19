@@ -29,7 +29,7 @@ namespace msdo.oauth.client.Controllers
             var protectedResourceServerHttpClient = new HttpClient();
             protectedResourceServerHttpClient.SetBearerToken(tokenResponse.AccessToken);
             var responseFromProtectedResourceServer =
-                await protectedResourceServerHttpClient.GetAsync("https://localhost:6001/Identity");
+                await protectedResourceServerHttpClient.GetAsync("https://localhost:5002/Identity");
 
             if (!responseFromProtectedResourceServer.IsSuccessStatusCode)
             {

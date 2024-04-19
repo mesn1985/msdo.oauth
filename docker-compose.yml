@@ -1,0 +1,22 @@
+version: '3.4'
+
+services:
+  client:
+    image: ${DOCKER_REGISTRY-}msdooauthclient
+    build:
+      context: .
+      dockerfile: msdo.oauth.client/Dockerfile
+
+  identityserver:
+    image: ${DOCKER_REGISTRY-}msdooauthidentityserver
+    build:
+      context: .
+      dockerfile: msdo.oauth.identityServer/Dockerfile
+
+
+  protectedresource:
+    image: ${DOCKER_REGISTRY-}msdooauthprotectedresource
+    build:
+      context: .
+      dockerfile: msdo.oauth.protectedResource/Dockerfile
+

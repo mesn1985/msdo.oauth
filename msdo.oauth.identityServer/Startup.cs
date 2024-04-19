@@ -22,6 +22,8 @@ namespace msdo.oauth.identityServer
         {
             // uncomment, if you want to add an MVC-based UI
             //services.AddControllersWithViews();
+            
+            
 
             var builder = services.AddIdentityServer(options =>
             {
@@ -34,6 +36,7 @@ namespace msdo.oauth.identityServer
 
             // not recommended for production - you need to store your key material somewhere secure
             builder.AddDeveloperSigningCredential();
+
         }
 
         public void Configure(IApplicationBuilder app)
@@ -41,12 +44,13 @@ namespace msdo.oauth.identityServer
             if (Environment.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+
             }
 
             // uncomment if you want to add MVC
             //app.UseStaticFiles();
             //app.UseRouting();
-            
+
             app.UseIdentityServer();
 
             // uncomment, if you want to add MVC

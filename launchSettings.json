@@ -1,0 +1,13 @@
+{
+  "profiles": {
+    "Docker Compose": {
+      "commandName": "DockerCompose",
+      "commandVersion": "1.0",
+      "serviceActions": {
+        "msdo.oauth.client": "StartDebugging",
+        "msdo.oauth.identityserver": "StartDebugging",
+        "msdo.oauth.protectedresource": "StartDebugging"
+      }
+    }
+  }
+}

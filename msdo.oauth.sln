@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "msdo.oauth.protectedResourc
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "msdo.oauth.client", "msdo.oauth.client\msdo.oauth.client.csproj", "{7A888D57-D9C0-4336-8763-F3D16B4F1135}"
 EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{A7A044A5-F802-4F28-A631-BF2305CDA3B8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,8 +29,15 @@ Global
 		{7A888D57-D9C0-4336-8763-F3D16B4F1135}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7A888D57-D9C0-4336-8763-F3D16B4F1135}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7A888D57-D9C0-4336-8763-F3D16B4F1135}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A7A044A5-F802-4F28-A631-BF2305CDA3B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7A044A5-F802-4F28-A631-BF2305CDA3B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7A044A5-F802-4F28-A631-BF2305CDA3B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7A044A5-F802-4F28-A631-BF2305CDA3B8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0D2BC692-0ACE-4043-A0E2-895D02EC3D07}
 	EndGlobalSection
 EndGlobal
