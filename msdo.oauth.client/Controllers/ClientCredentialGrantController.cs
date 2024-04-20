@@ -1,44 +1,36 @@
-﻿using IdentityModel.Client;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
+using msdo.oauth.client.Interfaces;
 
 namespace msdo.oauth.client.Controllers
 {
     [Route("[controller]")]
     public class ClientCredentialGrantController : Controller
     {
+        private IAuthorizationService _authorizationService;
+        private IProtectedResourceService _protectedResourceService;
+        private ILogger<ClientCredentialGrantController> _logger;
+
+        public ClientCredentialGrantController(
+            IAuthorizationService authorizationService, 
+            IProtectedResourceService protectedResourceService,
+            ILogger<ClientCredentialGrantController> logger)
+        {
+            _authorizationService = authorizationService;
+            _protectedResourceService = protectedResourceService;
+            _logger = logger;
+        }
+
         [HttpGet]
         public async Task<IActionResult> Index()
         {
-            var client = new HttpClient();
-            var metaDataFromDiscoveryEndpoint = await client.GetDiscoveryDocumentAsync("https://localhost:5001");
 
-            if (metaDataFromDiscoveryEndpoint.IsError)
-            {
-                return StatusCode(StatusCodes.Status500InternalServerError);
-            }
+            string accessToken 
+                = await _authorizationService.GetAccessToken("client", "secret");
 
-            var tokenResponse = await client.RequestClientCredentialsTokenAsync(new ClientCredentialsTokenRequest
-            {
-                Address = metaDataFromDiscoveryEndpoint.TokenEndpoint,
+            string protectedResource
+                = await _protectedResourceService.GetProtectedResource(accessToken); 
 
-                ClientId = "client",
-                ClientSecret = "secret",
-                Scope = "protectedResource"
-            });
-
-            var protectedResourceServerHttpClient = new HttpClient();
-            protectedResourceServerHttpClient.SetBearerToken(tokenResponse.AccessToken);
-            var responseFromProtectedResourceServer =
-                await protectedResourceServerHttpClient.GetAsync("https://localhost:5002/Identity");
-
-            if (!responseFromProtectedResourceServer.IsSuccessStatusCode)
-            {
-                return StatusCode(StatusCodes.Status500InternalServerError);
-            }
-            
-            string content = await responseFromProtectedResourceServer.Content.ReadAsStringAsync();
-
-            return Ok(content);
+            return Ok(protectedResource);
 
 
         }

@@ -2,12 +2,16 @@ using Microsoft.IdentityModel.Tokens;
 
 var builder = WebApplication.CreateBuilder(args);
 
+// Configuration file
+
+builder.Configuration.AddJsonFile("./ConfigurationFiles/Default.json");
+
 // Add services to the container.
 
 builder.Services.AddControllers();
 builder.Services.AddAuthentication("Bearer").AddJwtBearer("Bearer", options =>
 {
-    options.Authority = "https://localhost:5001";
+    options.Authority = builder.Configuration.GetValue<string>("Services:AuthorizationServer");
 
     options.TokenValidationParameters = new TokenValidationParameters
     {
