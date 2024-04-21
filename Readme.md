@@ -46,4 +46,4 @@ the Endpoints used in this project is presented for identity server
 #### Identity server
 | Path                                      | Purpose                                                           | Link to service OpenApi specifications |
 |---------------------------------------------------|-------------------------------------------------------------------|-------------------------------------------------------------------|
-| /.well-known/openid-configuration |  Retrieves OpenID Connect configuration details for authentication. | Yet to come|
+| ```/.well-known/openid-configuration``` |  Retrieves OpenID Connect configuration details for authentication. | Yet to come|
