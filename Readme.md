@@ -27,7 +27,7 @@ the table below provides a full overview of ports used by each service.
 |---------------------------------------------------|-------------------------------------------------------------------|
 | Client | Port 5003, used for http traffic  |
 | Protected Resource server | Port 5002, used for http traffic |
-| Identity Server | Port 5501, used for http traffic|
+| Identity Server | Port 5001, used for http traffic|
 
 ### Services endpoints
 This section presents all the endpoints exposed by the services. Except for identity server. Only
