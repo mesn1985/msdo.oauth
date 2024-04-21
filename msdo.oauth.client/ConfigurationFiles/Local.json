@@ -7,7 +7,7 @@
   },
   "AllowedHosts": "*",
   "Services": {
-    "AuthorizationServerDiscoveryEndpoint": "https://localhost:5001",
-    "ProtectedResourceServer": "https://localhost:5002/Identity"
+    "AuthorizationServerDiscoveryEndpoint": "http://localhost:5001",
+    "ProtectedResourceServer": "http://localhost:5002/Identity"
   }
 }

@@ -22,6 +22,10 @@ builder.Configuration.AddJsonFile(configurationDirectory + configurationFileName
 builder.Services.AddControllers();
 builder.Services.AddAuthentication("Bearer").AddJwtBearer("Bearer", options =>
 {
+
+    /// TLS is disable. The implementation is purely for an educational purpose. And not using TLS
+    /// will make it easier to incoporate sniffing tools later.
+    options.RequireHttpsMetadata = false;
     options.Authority 
         = builder.Configuration.GetValue<string>("Services:AuthorizationServer");
 

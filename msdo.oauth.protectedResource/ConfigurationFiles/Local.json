@@ -7,6 +7,6 @@
   },
   "AllowedHosts": "*",
   "Services": {
-    "AuthorizationServer": "https://localhost:5001",
+    "AuthorizationServer": "http://localhost:5001",
   }
 }
