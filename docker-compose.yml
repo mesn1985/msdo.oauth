@@ -11,6 +11,8 @@ services:
 
   AuthorizationServer:
     image: lightmaze/oauthauthserver:latest
+    ports:
+        - "5001:5001"
     expose:
         - "5001"
     command: dotnet msdo.oauth.identityServer.dll 

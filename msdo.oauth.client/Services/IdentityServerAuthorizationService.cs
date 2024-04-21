@@ -23,10 +23,10 @@ namespace msdo.oauth.client.Services
             _logger.LogInformation($"Requesting metadata from: {discoveryEndpointUrl}");
             var metaDataFromDiscoveryEndpoint 
                 = await client.GetDiscoveryDocumentAsync(discoveryEndpointUrl);
-
             if (metaDataFromDiscoveryEndpoint.IsError)
             {
-                throw new HttpRequestException($"An error occoured when trying to connect with discovery endpoint at: {discoveryEndpointUrl}, the error  code was: {metaDataFromDiscoveryEndpoint.HttpStatusCode}");
+                throw new HttpRequestException(
+                    $"An error occoured when trying to connect with discovery endpoint at: {discoveryEndpointUrl}, the error  code was: {metaDataFromDiscoveryEndpoint.HttpStatusCode}, {metaDataFromDiscoveryEndpoint.ErrorType == ResponseErrorType.None}");
             }
 
             var tokenResponse = await client.RequestClientCredentialsTokenAsync(new ClientCredentialsTokenRequest
