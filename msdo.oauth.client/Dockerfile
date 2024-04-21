@@ -1,7 +1,8 @@
+#  ATTENTION! The docker image, are only intented for educational use, and should never be used in a production enviroment, or other live enviroments
 # Author: Martin Edwin Schjødt Nielsen
 # Build: docker build . -t lightmaze/oauthclient
 # Push to docker repo: docker push lightmaze/oauthclient
-# Run container: docker run -p 8080:8080 lightmaze/oauthclient
+# Run container: docker run -p 5003:5003 lightmaze/oauthclient
 
 FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
 USER app
@@ -24,4 +25,5 @@ FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
 ENV ASPNETCORE_URLS=http://0.0.0.0:5003
+ENV ASPNETCORE_ENVIROMENT=Development
 CMD ["dotnet", "msdo.oauth.client.dll"]
