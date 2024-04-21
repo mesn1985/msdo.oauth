@@ -38,7 +38,7 @@ the Endpoints used in this project is presented for identity server
 #### Client
 | Path                                      | Purpose                                                           | Link to service OpenApi specifications |
 |---------------------------------------------------|-------------------------------------------------------------------|-------------------------------------------------------------------|
-||| Yet to come|
+| ```/ClientCredentialGrant``` | Uses client credential grant to obtain a valid accessToken, and then requests a protected resource | Yet to come|
 
 #### Protected resource server
 | Path                                      | Purpose                                                           | Link to service OpenApi specifications |
