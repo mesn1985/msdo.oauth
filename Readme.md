@@ -29,7 +29,7 @@ the table below provides a full overview of ports used by each service.
 | Protected Resource server | Port 5002, used for http traffic |
 | Identity Server | Port 5501, used for http traffic|
 
-### Services endpoint
+### Services endpoints
 This section presents all the endpoints exposed by the services. Except for identity server. Only
 the Endpoints used in this project is presented for identity server
 
@@ -46,12 +46,4 @@ the Endpoints used in this project is presented for identity server
 #### Identity server
 | Path                                      | Purpose                                                           | Link to service OpenApi specifications |
 |---------------------------------------------------|-------------------------------------------------------------------|-------------------------------------------------------------------|
-||| Yet to come|
-
-## Identity Server Endpoints
-
-These are the endpoints provided by the Identity Server:
-
-| Path                                      | Purpose                                                           |
-|---------------------------------------------------|-------------------------------------------------------------------|
-| /.well-known/openid-configuration | Retrieves OpenID Connect configuration details for authentication. |
+| /.well-known/openid-configuration |  Retrieves OpenID Connect configuration details for authentication. | Yet to come|
