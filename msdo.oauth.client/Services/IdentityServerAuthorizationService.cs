@@ -30,7 +30,10 @@ namespace msdo.oauth.client.Services
                     {
                         /// By default, GetDiscoveryDocumentAsync method, requires the protocol to be Https.
                         /// If Https is not used, no exception will be thrown. Instead, an error message will be returned
-                        RequireHttps = false
+                        RequireHttps = false,
+                        /// The issue name is validated against the URL used as discovery endpoint
+                        /// In Docker compose, this causes some issues do to docker network dns 
+                        ValidateIssuerName = false
                     }
                 });
 
