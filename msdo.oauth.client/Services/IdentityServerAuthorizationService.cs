@@ -26,7 +26,7 @@ namespace msdo.oauth.client.Services
 
             if (metaDataFromDiscoveryEndpoint.IsError)
             {
-                throw new HttpRequestException($"An error occoured when trying to connect with discovery endpoint at: {discoveryEndpointUrl}");
+                throw new HttpRequestException($"An error occoured when trying to connect with discovery endpoint at: {discoveryEndpointUrl}, the error  code was: {metaDataFromDiscoveryEndpoint.HttpStatusCode}");
             }
 
             var tokenResponse = await client.RequestClientCredentialsTokenAsync(new ClientCredentialsTokenRequest
