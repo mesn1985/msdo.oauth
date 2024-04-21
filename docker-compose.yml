@@ -11,6 +11,8 @@ services:
 
   AuthorizationServer:
     image: lightmaze/oauthauthserver:latest
+    #The host name is used as issuer name, and must therefor match thr URL used
+    hostname: http://AuthorizationServer:5001
     expose:
         - "5001"
     command: dotnet msdo.oauth.identityServer.dll 
