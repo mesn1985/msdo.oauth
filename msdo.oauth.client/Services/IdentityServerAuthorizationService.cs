@@ -20,12 +20,15 @@ namespace msdo.oauth.client.Services
             
             var discoveryEndpointUrl
                 = _configuration.GetValue<string>("Services:AuthorizationServerDiscoveryEndpoint");
+
+            client.BaseAddress = new Uri(discoveryEndpointUrl);
+
             _logger.LogInformation($"Requesting metadata from: {discoveryEndpointUrl}");
             
             var metaDataFromDiscoveryEndpoint 
                 = await client.GetDiscoveryDocumentAsync(new DiscoveryDocumentRequest
                 {
-                    Address = discoveryEndpointUrl,
+                    //Address = discoveryEndpointUrl,
                     Policy =
                     {
                         /// By default, GetDiscoveryDocumentAsync method, requires the protocol to be Https.
