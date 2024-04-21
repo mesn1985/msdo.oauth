@@ -24,6 +24,7 @@ RUN dotnet publish "./msdo.oauth.identityServer.csproj" -c $BUILD_CONFIGURATION 
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
+ENV ASPNETCORE_HTTP_PORTS=5003
 ENV ASPNETCORE_URLS=http://0.0.0.0:5001
 ENV ASPNETCORE_ENVIROMENT=Development
 CMD ["dotnet", "msdo.oauth.identityServer.dll"]
