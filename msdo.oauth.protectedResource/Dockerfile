@@ -1,4 +1,4 @@
-#  ATTENTION! The docker image, are only intented for educational use, and should never be used in a production enviroment, or other live enviroments
+# ATTENTION! The docker image, are only intented for educational use, and should never be used in a production enviroment, or other live enviroments
 # Author: Martin Edwin Schjødt Nielsen
 # Build: docker build . -t lightmaze/oauthprotectedresourceserver
 # Push to docker repo: docker push lightmaze/oauthprotectedresourceserver
@@ -25,7 +25,7 @@ RUN dotnet publish "./msdo.oauth.protectedResource.csproj" -c $BUILD_CONFIGURATI
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-#ENV ASPNETCORE_HTTP_PORTS=5002
+ENV ASPNETCORE_HTTP_PORTS=5002
 ENV ASPNETCORE_URLS=http://0.0.0.0:5002
 ENV ASPNETCORE_ENVIROMENT=Development
 CMD ["dotnet", "msdo.oauth.protectedResource.dll"]
