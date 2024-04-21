@@ -7,9 +7,14 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "msdo.oauth.identityServer",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "msdo.oauth.protectedResource", "msdo.oauth.protectedResource\msdo.oauth.protectedResource.csproj", "{22294EA4-1659-45F4-ADA7-87866B75ED7F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "msdo.oauth.client", "msdo.oauth.client\msdo.oauth.client.csproj", "{7A888D57-D9C0-4336-8763-F3D16B4F1135}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "msdo.oauth.client", "msdo.oauth.client\msdo.oauth.client.csproj", "{7A888D57-D9C0-4336-8763-F3D16B4F1135}"
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{A7A044A5-F802-4F28-A631-BF2305CDA3B8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{203081D0-42CD-498F-9DEF-E733C87078FF}"
+	ProjectSection(SolutionItems) = preProject
+		Readme.md = Readme.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
