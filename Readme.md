@@ -6,13 +6,13 @@ to [IdentityServer4 documentation](https://docs.duendesoftware.com/identityserve
 in OAuth.
 
 ## Starting the services
-
+Yet to come
 ### Docker compose
-
+Yet to come
 ### Directly on the OS
-
+Yet to come
 ### Configuring the services
-
+Yet to come
 ## Information on services in this project
 This section presents an overview of all the services in this project. The table below presents a general overview of all services in this project.
 
@@ -48,4 +48,7 @@ the Endpoints used in this project is presented for identity server
 #### Identity server
 | Path                                      | Purpose                                                           | Link to service OpenApi specifications |
 |---------------------------------------------------|-------------------------------------------------------------------|-------------------------------------------------------------------|
-| ```/.well-known/openid-configuration``` |  Retrieves OpenID Connect configuration details for authentication. | Yet to come|
+| ```/.well-known/openid-configuration``` |  Retrieves OpenID Connect configuration details for authentication. See [documentation](https://identityserver4.readthedocs.io/en/latest/endpoints/discovery.html) | Yet to come|
+| ```/connect/token``` |  Used to request tokens. See [documentation](https://identityserver4.readthedocs.io/en/latest/endpoints/token.html)  | Yet to come|
+
+## Testing
