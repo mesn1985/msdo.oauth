@@ -6,7 +6,7 @@ namespace msdo.oauth.client.Controllers
     [Route("[controller]")]
     [Authorize]
 
-    public class IdentityController : Controller
+    public class ResourceController : Controller
     {
         [HttpGet]
         public IActionResult Index()

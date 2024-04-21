@@ -43,7 +43,7 @@ the Endpoints used in this project is presented for identity server
 #### Protected resource server
 | Path                                      | Purpose                                                           | Link to service OpenApi specifications |
 |---------------------------------------------------|-------------------------------------------------------------------|-------------------------------------------------------------------|
-||| Yet to come|
+| ```Resource ```| Provides a protected resource, if a valid access token is presented| Yet to come|
 
 #### Identity server
 | Path                                      | Purpose                                                           | Link to service OpenApi specifications |
