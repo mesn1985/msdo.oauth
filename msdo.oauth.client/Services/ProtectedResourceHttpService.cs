@@ -27,7 +27,7 @@ namespace msdo.oauth.client.Services
             _logger.LogInformation($"Request for protected resource sent to: {protectedResourceServerUrl}");
 
             var responseFromProtectedResourceServer =
-                await protectedResourceServerHttpClient.GetAsync(protectedResourceServerUrl);
+                await protectedResourceServerHttpClient.GetAsync(protectedResourceServerUrl+ "/Identity");
 
 
             if (!responseFromProtectedResourceServer.IsSuccessStatusCode)

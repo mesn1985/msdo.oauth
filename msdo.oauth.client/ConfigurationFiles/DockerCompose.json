@@ -8,6 +8,6 @@
   "AllowedHosts": "*",
   "Services": {
     "AuthorizationServerDiscoveryEndpoint": "http://AuthorizationServer:5001",
-    "ProtectedResourceServer": "http://ProtectedResourceServer:5002/Identity"
+    "ProtectedResourceServer": "http://ProtectedResourceServer:5002"
   }
 }

@@ -20,7 +20,6 @@ namespace msdo.oauth.client.Services
             
             var discoveryEndpointUrl
                 = _configuration.GetValue<string>("Services:AuthorizationServerDiscoveryEndpoint");
-
             client.BaseAddress = new Uri(discoveryEndpointUrl);
 
             _logger.LogInformation($"Requesting metadata from: {discoveryEndpointUrl}");
@@ -28,7 +27,6 @@ namespace msdo.oauth.client.Services
             var metaDataFromDiscoveryEndpoint 
                 = await client.GetDiscoveryDocumentAsync(new DiscoveryDocumentRequest
                 {
-                    //Address = discoveryEndpointUrl,
                     Policy =
                     {
                         /// By default, GetDiscoveryDocumentAsync method, requires the protocol to be Https.
@@ -42,7 +40,7 @@ namespace msdo.oauth.client.Services
 
             if (metaDataFromDiscoveryEndpoint.IsError)
             {
-                _logger.LogError($"Request for metadata from the endpoint failed with error: {metaDataFromDiscoveryEndpoint.Error}");
+                _logger.LogError($"Request for metadata from the discovery endpoint failed with error: {metaDataFromDiscoveryEndpoint.Error}");
                 throw new HttpRequestException(
                     $"An error occoured when trying to connect with discovery endpoint at: {discoveryEndpointUrl}, the error  code was: {metaDataFromDiscoveryEndpoint.HttpStatusCode}\nError message is: {metaDataFromDiscoveryEndpoint.Error}");
             }
