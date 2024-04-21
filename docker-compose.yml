@@ -1,23 +1,27 @@
-version: '3.4'
+version: '3.7'
 
 services:
   client:
-    image: lightmaze/oauthclient
+    image: lightmaze/oauthclient:latest
     ports:
         - "5003:5003"
-    command: dotnet msdo.oauth.client.dll --ConfigurationFile:DockerCompose.json
+    command: dotnet msdo.oauth.client.dll --ConfigurationFile=DockerCompose.json
     networks:
         - authnet
 
   AuthorizationServer:
-    image: lightmaze/oauthauthserver
-    command: dotnet msdo.oauth.protectedResource.dll --ConfigurationFile:DockerCompose.json
+    image: lightmaze/oauthauthserver:latest
+    expose:
+        - "5001"
+    command: dotnet msdo.oauth.identityServer.dll 
     networks:
         - authnet
 
   ProtectedResourceServer:
-    image: lightmaze/oauthprotectedresourceserver
-    command: dotnet msdo.oauth.identityServer.dll
+    image: lightmaze/oauthprotectedresourceserver:latest
+    expose:
+        - "5002"
+    command: dotnet msdo.oauth.protectedResource.dll --ConfigurationFile=DockerCompose.json
     networks:
         - authnet
 networks: 
