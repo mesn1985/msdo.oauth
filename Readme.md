@@ -36,12 +36,17 @@ the Endpoints used in this project is presented for identity server
 #### Client
 | Path                                      | Purpose                                                           | Link to service OpenApi specifications |
 |---------------------------------------------------|-------------------------------------------------------------------|-------------------------------------------------------------------|
-||||
+||| Yet to come|
 
 #### Protected resource server
+| Path                                      | Purpose                                                           | Link to service OpenApi specifications |
+|---------------------------------------------------|-------------------------------------------------------------------|-------------------------------------------------------------------|
+||| Yet to come|
 
 #### Identity server
-
+| Path                                      | Purpose                                                           | Link to service OpenApi specifications |
+|---------------------------------------------------|-------------------------------------------------------------------|-------------------------------------------------------------------|
+||| Yet to come|
 
 ## Identity Server Endpoints
 
