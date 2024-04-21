@@ -2,21 +2,23 @@ version: '3.4'
 
 services:
   client:
-    image: ${DOCKER_REGISTRY-}msdooauthclient
-    build:
-      context: .
-      dockerfile: msdo.oauth.client/Dockerfile
+    image: lightmaze/oauthclient
+    ports:
+        - "5003:5003"
+    command: dotnet msdo.oauth.client.dll --ConfigurationFile:DockerCompose.json
+    networks:
+        - authnet
 
-  identityserver:
-    image: ${DOCKER_REGISTRY-}msdooauthidentityserver
-    build:
-      context: .
-      dockerfile: msdo.oauth.identityServer/Dockerfile
+  AuthorizationServer:
+    image: lightmaze/oauthauthserver
+    command: dotnet msdo.oauth.protectedResource.dll --ConfigurationFile:DockerCompose.json
+    networks:
+        - authnet
 
-
-  protectedresource:
-    image: ${DOCKER_REGISTRY-}msdooauthprotectedresource
-    build:
-      context: .
-      dockerfile: msdo.oauth.protectedResource/Dockerfile
-
+  ProtectedResourceServer:
+    image: lightmaze/oauthprotectedresourceserver
+    command: dotnet msdo.oauth.identityServer.dll
+    networks:
+        - authnet
+networks: 
+  authnet:

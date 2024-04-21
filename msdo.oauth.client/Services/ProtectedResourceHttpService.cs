@@ -29,6 +29,7 @@ namespace msdo.oauth.client.Services
             var responseFromProtectedResourceServer =
                 await protectedResourceServerHttpClient.GetAsync(protectedResourceServerUrl);
 
+
             if (!responseFromProtectedResourceServer.IsSuccessStatusCode)
             {
                 throw new HttpRequestException("Unable to retrieve Protected resource from the resource  server");

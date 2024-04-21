@@ -1,0 +1,13 @@
+{
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft.AspNetCore": "Warning"
+    }
+  },
+  "AllowedHosts": "*",
+  "Services": {
+    "AuthorizationServerDiscoveryEndpoint": "https://AuthorizationServer:5001",
+    "ProtectedResourceServer": "https://ProtectedResourceServer:5002/Identity"
+  }
+}

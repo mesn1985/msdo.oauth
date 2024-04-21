@@ -1,11 +1,26 @@
 using msdo.oauth.client.Interfaces;
 using msdo.oauth.client.Services;
+using System.Configuration;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Configuration file
 
-builder.Configuration.AddJsonFile("./ConfigurationFiles/Default.json");
+// Log configuration
+
+// Load configuration file
+string configurationDirectory = $"./ConfigurationFiles/";
+string configurationFileName 
+    = builder.Configuration.GetValue<string>("ConfigurationFile");
+
+if (string.IsNullOrEmpty(configurationFileName))
+{
+    throw new ConfigurationException(
+        $"Configuration file provide by commandline argument {builder.Configuration.GetValue<string>("ConfigurationFile")} not found"
+        );
+}
+
+builder.Configuration.AddJsonFile(configurationDirectory+configurationFileName);
+//builder.Configuration.AddJsonFile("./ConfigurationFiles/Local.json");
 
 // Add services to the container.
 
@@ -31,4 +46,5 @@ app.UseAuthorization();
 
 app.MapControllers();
 
+app.Logger.LogInformation($"Starting service with configurations from: {configurationFileName}");
 app.Run();
