@@ -11,6 +11,8 @@ in OAuth.
 
 ### Directly on the OS
 
+### Configuring the services
+
 ## Information on services in this project
 This section presents an overview of all the services in this project. The table below presents a general overview of all services in this project.
 
