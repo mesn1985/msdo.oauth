@@ -25,7 +25,7 @@ RUN dotnet publish "./msdo.oauth.protectedResource.csproj" -c $BUILD_CONFIGURATI
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENV ASPNETCORE_HTTP_PORTS=5003
+ENV ASPNETCORE_HTTP_PORTS=5002
 ENV ASPNETCORE_URLS=http://0.0.0.0:5002
 ENV ASPNETCORE_ENVIROMENT=Development
 CMD ["dotnet", "msdo.oauth.protectedResource.dll"]
