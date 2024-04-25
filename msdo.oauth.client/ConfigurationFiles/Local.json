@@ -27,7 +27,7 @@
     ],
     "Enrich": [ "FromLogContext", "WithMachineName" ],
     "Properties": {
-      "ApplicationName": "Your ASP.NET Core App"
+      "ApplicationName": "Client"
     }
   }
 

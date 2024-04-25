@@ -8,5 +8,25 @@
   "AllowedHosts": "*",
   "Services": {
     "AuthorizationServer": "http://AuthorizationServer:5001"
+  },
+  "Serilog": {
+    "Using": [ "Serilog.Sinks.Console", "Serilog.Sinks.File" ],
+    "MinimumLevel": "Debug",
+    "WriteTo": [
+      {
+        "Name": "Console"
+      },
+      {
+        "Name": "File",
+        "Args": {
+          "path": "Logs/applog-.txt",
+          "rollingInterval": "Day"
+        }
+      }
+    ],
+    "Enrich": [ "FromLogContext", "WithMachineName" ],
+    "Properties": {
+      "ApplicationName": "Protected_resource_server"
+    }
   }
 }
