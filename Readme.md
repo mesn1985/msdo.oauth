@@ -48,19 +48,23 @@ This section presents all the endpoints exposed by the services. Except for iden
 the Endpoints used in this project is presented for identity server
 
 #### Client
-| Path                                      | Purpose                                                           | Link to service OpenApi specifications |
-|---------------------------------------------------|-------------------------------------------------------------------|-------------------------------------------------------------------|
-| ```/ClientCredentialGrant``` | Uses client credential grant to obtain a valid accessToken, and then requests a protected resource | Yet to come|
+
+| Path                                      | Purpose                                                           | HTTP Method | Link to service OpenApi specifications |
+|-------------------------------------------|-------------------------------------------------------------------|-------------|---------------------------------------|
+| `/ClientCredentialGrant`                 | Uses client credential grant to obtain a valid accessToken, and then requests a protected resource | TBD         | Yet to come                           |
+
 
 #### Protected resource server
-| Path                                      | Purpose                                                           | Link to service OpenApi specifications |
-|---------------------------------------------------|-------------------------------------------------------------------|-------------------------------------------------------------------|
-| ```/Resource ```| Provides a protected resource, if a valid access token is presented | Yet to come|
+| Path                  | Purpose                                                           | HTTP Method | Link to service OpenApi specifications |
+|-----------------------|-------------------------------------------------------------------|-------------|---------------------------------------|
+| `/Resource`           | Provides a protected resource, if a valid access token is presented | TBD         | Yet to come                           |
+
 
 #### Identity server
-| Path                                      | Purpose                                                           | Link to service OpenApi specifications |
-|---------------------------------------------------|-------------------------------------------------------------------|-------------------------------------------------------------------|
-| ```/.well-known/openid-configuration``` |  Retrieves OpenID Connect configuration details for authentication. See [documentation](https://identityserver4.readthedocs.io/en/latest/endpoints/discovery.html) | Yet to come|
-| ```/connect/token``` |  Used to request tokens. See [documentation](https://identityserver4.readthedocs.io/en/latest/endpoints/token.html)  | Yet to come|
+| Path                                      | Purpose                                                           | HTTP Method | Link to service OpenApi specifications |
+|-------------------------------------------|-------------------------------------------------------------------|-------------|---------------------------------------|
+| `/.well-known/openid-configuration`       | Retrieves OpenID Connect configuration details for authentication. See [documentation](https://identityserver4.readthedocs.io/en/latest/endpoints/discovery.html) | GET         | Yet to come                           |
+| `/connect/token`                          | Used to request tokens. See [documentation](https://identityserver4.readthedocs.io/en/latest/endpoints/token.html)  | POST        | Yet to come                           |
+
 
 ## Testing
