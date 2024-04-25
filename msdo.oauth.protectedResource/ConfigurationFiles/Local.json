@@ -7,6 +7,26 @@
   },
   "AllowedHosts": "*",
   "Services": {
-    "AuthorizationServer": "http://localhost:5001",
+    "AuthorizationServer": "http://localhost:5001"
+  },
+  "Serilog": {
+    "Using": [ "Serilog.Sinks.Console", "Serilog.Sinks.File" ],
+    "MinimumLevel": "Debug",
+    "WriteTo": [
+      {
+        "Name": "Console"
+      },
+      {
+        "Name": "File",
+        "Args": {
+          "path": "Logs/applog-.txt",
+          "rollingInterval": "Day"
+        }
+      }
+    ],
+    "Enrich": [ "FromLogContext", "WithMachineName" ],
+    "Properties": {
+      "ApplicationName": "Your ASP.NET Core App"
+    }
   }
 }

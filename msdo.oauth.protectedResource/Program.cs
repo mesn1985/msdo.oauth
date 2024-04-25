@@ -1,9 +1,8 @@
 using Microsoft.IdentityModel.Tokens;
+using Serilog;
 using System.Configuration;
 
 var builder = WebApplication.CreateBuilder(args);
-
-//Load Configuration file
 
 // Load configuration file
 string configurationDirectory = $"./ConfigurationFiles/";
@@ -17,6 +16,11 @@ if (string.IsNullOrEmpty(configurationFileName))
     );
 }
 builder.Configuration.AddJsonFile(configurationDirectory + configurationFileName);
+
+// Log configuration
+builder.Host.UseSerilog((context, configuration) =>
+    configuration.ReadFrom.Configuration(context.Configuration));
+
 // Add services to the container.
 
 builder.Services.AddControllers();

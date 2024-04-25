@@ -1,11 +1,12 @@
 using msdo.oauth.client.Interfaces;
 using msdo.oauth.client.Services;
+using Serilog;
 using System.Configuration;
 
 var builder = WebApplication.CreateBuilder(args);
 
 
-// Log configuration
+
 
 // Load configuration file
 string configurationDirectory = $"./ConfigurationFiles/";
@@ -18,6 +19,9 @@ if (string.IsNullOrEmpty(configurationFileName))
         $"Configuration file provide by commandline argument {builder.Configuration.GetValue<string>("ConfigurationFile")} not found"
         );
 }
+// Log configuration
+builder.Host.UseSerilog((context, configuration) =>
+    configuration.ReadFrom.Configuration(context.Configuration));
 
 builder.Configuration.AddJsonFile(configurationDirectory+configurationFileName);
 //builder.Configuration.AddJsonFile("./ConfigurationFiles/Local.json");
