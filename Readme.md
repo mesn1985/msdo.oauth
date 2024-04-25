@@ -5,12 +5,24 @@ In fact this project **disregards most security aspects of the Identity server c
 to [IdentityServer4 documentation](https://docs.duendesoftware.com/identityserver/v7). The sole purpose of this project is to demonstrate the flows
 in OAuth.
 
-## Starting the services
-Yet to come
+## Running the project
+The services can be deployed as a unit pr. service by deploying the services directly onto the OS,
+or the services can be deployed as a single unit, by using [docker compose](https://docs.docker.com/compose/). Using docker compose is the recommend approach for this project.
+  
+Because this project serves educational purpose only, it is only intended to be deploy to a local desktop, where the user can experiment.
+
 ### Docker compose
-Yet to come
-### Directly on the OS
-Yet to come
+Executing the command ```Docker compose up``` in the root of this project folder, will use the `docker-compose.yml` file to deploy this entire project.
+Afterwards the [client service API]() will be exposed on port 5003.
+
+### Unit pr service
+The application can be deployed as a unit pr. services. Each service must be deploy using the [dotnet cli tool](https://learn.microsoft.com/en-us/dotnet/core/tools/).
+The services can be deployed by executing the commands shown below. The shown order of the commands, is also the recommended order for deployment:
+
+- ```dotnet run --project .\msdo.oauth.identityServer\ ```
+- ```dotnet run --project .\msdo.oauth.protectedResource\ --ConfigurationFile=Local.json```
+- ```dotnet run --project .\msdo.oauth.client\ --ConfigurationFile=Local.json```
+
 ### Configuring the services
 Yet to come
 ## Information on services in this project
