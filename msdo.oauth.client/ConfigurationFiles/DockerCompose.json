@@ -10,23 +10,7 @@
     "AuthorizationServerDiscoveryEndpoint": "http://AuthorizationServer:5001",
     "ProtectedResourceServer": "http://ProtectedResourceServer:5002"
   },
-  "Serilog": {
-    "MinimumLevel": "Debug",
-    "WriteTo": [
-      {
-        "Name": "Console",
-        "Args": {
-          "outputTemplate": "[Time:{Timestamp:HH:mm:ss}] [Log level:{Level:u3}] [Correlation id:{CorrelationId}] {NewLine} --> [Message:{Message}]"
-        }
-      },
-      {
-        "Name": "File",
-        "Args": {
-          "path": "application.log",
-          "rollingInterval": "Day"
-        }
-      },
-      ,
+  
   "Serilog": {
     "Using": [ "Serilog.Sinks.Graylog" ],
     "MinimumLevel": "Debug",
@@ -54,6 +38,6 @@
       }
     ]
   }
-    ]
-  }
+    
 }
+
