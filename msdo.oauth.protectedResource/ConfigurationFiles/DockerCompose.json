@@ -8,5 +8,32 @@
   "AllowedHosts": "*",
   "Services": {
     "AuthorizationServer": "http://AuthorizationServer:5001"
+  },
+  "Serilog": {
+    "Using": [ "Serilog.Sinks.Graylog" ],
+    "MinimumLevel": "Debug",
+    "WriteTo": [
+      {
+        "Name": "Console",
+        "Args": {
+          "outputTemplate": "[Time:{Timestamp:HH:mm:ss}] [Log level:{Level:u3}] [Correlation id:{CorrelationId}] {NewLine} --> [Message:{Message}]"
+        }
+      },
+      {
+        "Name": "File",
+        "Args": {
+          "path": "application.log",
+          "rollingInterval": "Day"
+        }
+      },
+      {
+        "Name": "Graylog",
+        "Args": {
+          "hostnameOrAddress": "graylog",
+          "port": "12201",
+          "transportType": "Udp"
+        }
+      }
+    ]
   }
 }

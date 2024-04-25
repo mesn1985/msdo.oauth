@@ -375,3 +375,48 @@
 2024-04-25 16:42:00.070 +02:00 [INF] Executed action msdo.oauth.client.Controllers.ResourceController.Index (msdo.oauth.protectedResource) in 149.6782ms
 2024-04-25 16:42:00.072 +02:00 [INF] Executed endpoint 'msdo.oauth.client.Controllers.ResourceController.Index (msdo.oauth.protectedResource)'
 2024-04-25 16:42:00.082 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5002/Resource - 200 null application/json; charset=utf-8 835.7929ms
+2024-04-25 20:20:23.269 +02:00 [INF] Starting service with configurations from: Local.json
+2024-04-25 20:20:23.405 +02:00 [INF] User profile is available. Using 'C:\Users\Martin\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-04-25 20:20:23.758 +02:00 [INF] Now listening on: http://localhost:5002
+2024-04-25 20:20:23.760 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-04-25 20:20:23.763 +02:00 [INF] Hosting environment: Development
+2024-04-25 20:20:23.764 +02:00 [INF] Content root path: C:\Source\oauth\msdo.oauth.protectedResource
+2024-04-25 20:20:38.974 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5002/Resource - null null
+2024-04-25 20:20:39.686 +02:00 [INF] Executing endpoint 'msdo.oauth.client.Controllers.ResourceController.Index (msdo.oauth.protectedResource)'
+2024-04-25 20:20:39.722 +02:00 [INF] Route matched with {action = "Index", controller = "Resource"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller msdo.oauth.client.Controllers.ResourceController (msdo.oauth.protectedResource).
+2024-04-25 20:20:39.846 +02:00 [INF] Executing action method msdo.oauth.client.Controllers.ResourceController.Index (msdo.oauth.protectedResource) - Validation state: "Valid"
+2024-04-25 20:20:39.856 +02:00 [INF] Executed action method msdo.oauth.client.Controllers.ResourceController.Index (msdo.oauth.protectedResource), returned result Microsoft.AspNetCore.Mvc.JsonResult in 1.2506ms.
+2024-04-25 20:20:39.867 +02:00 [INF] Executing JsonResult, writing value of type 'System.Linq.Enumerable+SelectEnumerableIterator`2[[System.Security.Claims.Claim, System.Security.Claims, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a],[<>f__AnonymousType0`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], msdo.oauth.protectedResource, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-04-25 20:20:39.916 +02:00 [INF] Executed action msdo.oauth.client.Controllers.ResourceController.Index (msdo.oauth.protectedResource) in 183.86ms
+2024-04-25 20:20:39.919 +02:00 [INF] Executed endpoint 'msdo.oauth.client.Controllers.ResourceController.Index (msdo.oauth.protectedResource)'
+2024-04-25 20:20:39.930 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5002/Resource - 200 null application/json; charset=utf-8 965.1038ms
+2024-04-25 20:24:19.889 +02:00 [INF] Starting service with configurations from: Local.json
+2024-04-25 20:24:20.104 +02:00 [INF] User profile is available. Using 'C:\Users\Martin\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-04-25 20:24:20.547 +02:00 [INF] Now listening on: http://localhost:5002
+2024-04-25 20:24:20.550 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-04-25 20:24:20.552 +02:00 [INF] Hosting environment: Development
+2024-04-25 20:24:20.554 +02:00 [INF] Content root path: C:\Source\oauth\msdo.oauth.protectedResource
+2024-04-25 20:24:43.262 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5002/Resource - null null
+2024-04-25 20:24:43.936 +02:00 [INF] Executing endpoint 'msdo.oauth.client.Controllers.ResourceController.Index (msdo.oauth.protectedResource)'
+2024-04-25 20:24:43.958 +02:00 [INF] Route matched with {action = "Index", controller = "Resource"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller msdo.oauth.client.Controllers.ResourceController (msdo.oauth.protectedResource).
+2024-04-25 20:24:44.065 +02:00 [INF] Executing action method msdo.oauth.client.Controllers.ResourceController.Index (msdo.oauth.protectedResource) - Validation state: "Valid"
+2024-04-25 20:24:44.073 +02:00 [INF] Executed action method msdo.oauth.client.Controllers.ResourceController.Index (msdo.oauth.protectedResource), returned result Microsoft.AspNetCore.Mvc.JsonResult in 1.1181ms.
+2024-04-25 20:24:44.082 +02:00 [INF] Executing JsonResult, writing value of type 'System.Linq.Enumerable+SelectEnumerableIterator`2[[System.Security.Claims.Claim, System.Security.Claims, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a],[<>f__AnonymousType0`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], msdo.oauth.protectedResource, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-04-25 20:24:44.126 +02:00 [INF] Executed action msdo.oauth.client.Controllers.ResourceController.Index (msdo.oauth.protectedResource) in 157.5311ms
+2024-04-25 20:24:44.129 +02:00 [INF] Executed endpoint 'msdo.oauth.client.Controllers.ResourceController.Index (msdo.oauth.protectedResource)'
+2024-04-25 20:24:44.138 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5002/Resource - 200 null application/json; charset=utf-8 883.0013ms
+2024-04-25 20:28:40.029 +02:00 [INF] Starting service with configurations from: Local.json
+2024-04-25 20:28:40.275 +02:00 [INF] User profile is available. Using 'C:\Users\Martin\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-04-25 20:28:40.879 +02:00 [INF] Now listening on: http://localhost:5002
+2024-04-25 20:28:40.890 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-04-25 20:28:40.895 +02:00 [INF] Hosting environment: Development
+2024-04-25 20:28:40.907 +02:00 [INF] Content root path: C:\Source\oauth\msdo.oauth.protectedResource
+2024-04-25 20:28:52.855 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5002/Resource - null null
+2024-04-25 20:28:53.527 +02:00 [INF] Executing endpoint 'msdo.oauth.client.Controllers.ResourceController.Index (msdo.oauth.protectedResource)'
+2024-04-25 20:28:53.549 +02:00 [INF] Route matched with {action = "Index", controller = "Resource"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller msdo.oauth.client.Controllers.ResourceController (msdo.oauth.protectedResource).
+2024-04-25 20:28:53.662 +02:00 [INF] Executing action method msdo.oauth.client.Controllers.ResourceController.Index (msdo.oauth.protectedResource) - Validation state: "Valid"
+2024-04-25 20:28:53.681 +02:00 [INF] Executed action method msdo.oauth.client.Controllers.ResourceController.Index (msdo.oauth.protectedResource), returned result Microsoft.AspNetCore.Mvc.JsonResult in 2.6803ms.
+2024-04-25 20:28:53.688 +02:00 [INF] Executing JsonResult, writing value of type 'System.Linq.Enumerable+SelectEnumerableIterator`2[[System.Security.Claims.Claim, System.Security.Claims, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a],[<>f__AnonymousType0`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], msdo.oauth.protectedResource, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-04-25 20:28:53.745 +02:00 [INF] Executed action msdo.oauth.client.Controllers.ResourceController.Index (msdo.oauth.protectedResource) in 186.3475ms
+2024-04-25 20:28:53.749 +02:00 [INF] Executed endpoint 'msdo.oauth.client.Controllers.ResourceController.Index (msdo.oauth.protectedResource)'
+2024-04-25 20:28:53.758 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5002/Resource - 200 null application/json; charset=utf-8 911.3993ms

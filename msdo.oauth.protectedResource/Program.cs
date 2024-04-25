@@ -22,13 +22,16 @@ builder.Configuration.AddJsonFile(configurationDirectory + configurationFileName
 
 //Log configuration
 builder.Host.UseSerilog((context, configuration) =>
-    configuration.ReadFrom.Configuration(context.Configuration)
-        .WriteTo.Console(outputTemplate:
-            "[Time:{Timestamp:HH:mm:ss}] [Log level:{Level:u3}] [Correlation id:{CorrelationId}] {NewLine} [Message:{Message}] "
-        )
-        .WriteTo.File("log.txt", rollingInterval: RollingInterval.Day)
-        .Enrich.FromLogContext()
+    configuration.ReadFrom.Configuration(context.Configuration).Enrich.FromLogContext()
 );
+//builder.Host.UseSerilog((context, configuration) =>
+//    configuration.ReadFrom.Configuration(context.Configuration)
+//        .WriteTo.Console(outputTemplate:
+//            "[Time:{Timestamp:HH:mm:ss}] [Log level:{Level:u3}] [Correlation id:{CorrelationId}] {NewLine} [Message:{Message}] "
+//        )
+//        .WriteTo.File("log.txt", rollingInterval: RollingInterval.Day)
+//        .Enrich.FromLogContext()
+//);
 // Add services to the container.
 
 builder.Services.AddControllers();

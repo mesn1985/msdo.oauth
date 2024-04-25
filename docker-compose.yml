@@ -8,6 +8,8 @@ services:
     command: dotnet msdo.oauth.client.dll --ConfigurationFile=DockerCompose.json
     networks:
         - authnet
+    depends_on:
+        - graylog
 
   AuthorizationServer:
     image: lightmaze/oauthauthserver:latest
@@ -18,6 +20,8 @@ services:
     command: dotnet msdo.oauth.identityServer.dll 
     networks:
         - authnet
+    depends_on:
+        - graylog
 
   ProtectedResourceServer:
     image: lightmaze/oauthprotectedresourceserver:latest
@@ -26,6 +30,8 @@ services:
     command: dotnet msdo.oauth.protectedResource.dll --ConfigurationFile=DockerCompose.json
     networks:
         - authnet
+    depends_on:
+        - graylog
 
   mongodb:
     image: mongo:6.0.14
