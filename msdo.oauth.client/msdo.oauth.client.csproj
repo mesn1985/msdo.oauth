@@ -19,6 +19,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\msdo.middleware.httpRequest\msdo.middleware.httpRequest.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Content Update="ConfigurationFiles\DockerCompose.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

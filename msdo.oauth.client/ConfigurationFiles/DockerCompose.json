@@ -9,25 +9,5 @@
   "Services": {
     "AuthorizationServerDiscoveryEndpoint": "http://AuthorizationServer:5001",
     "ProtectedResourceServer": "http://ProtectedResourceServer:5002"
-  },
-  "Serilog": {
-    "Using": [ "Serilog.Sinks.Console", "Serilog.Sinks.File" ],
-    "MinimumLevel": "Debug",
-    "WriteTo": [
-      {
-        "Name": "Console"
-      },
-      {
-        "Name": "File",
-        "Args": {
-          "path": "Logs/applog-.txt",
-          "rollingInterval": "Day"
-        }
-      }
-    ],
-    "Enrich": [ "FromLogContext", "WithMachineName" ],
-    "Properties": {
-      "ApplicationName": "Client"
-    }
   }
 }

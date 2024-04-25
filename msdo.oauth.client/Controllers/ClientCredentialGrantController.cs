@@ -23,12 +23,13 @@ namespace msdo.oauth.client.Controllers
         [HttpGet]
         public async Task<IActionResult> Index()
         {
+            string correlationId = HttpContext.Items["Correlation-Id"].ToString();
 
             string accessToken 
-                = await _authorizationService.GetAccessToken("client", "secret");
+                = await _authorizationService.GetAccessToken("client", "secret",correlationId);
 
             string protectedResource
-                = await _protectedResourceService.GetProtectedResource(accessToken); 
+                = await _protectedResourceService.GetProtectedResource(accessToken, correlationId); 
 
             return Ok(protectedResource);
 

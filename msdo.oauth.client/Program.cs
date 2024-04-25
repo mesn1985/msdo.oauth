@@ -1,12 +1,10 @@
 using msdo.oauth.client.Interfaces;
 using msdo.oauth.client.Services;
+using msdo.middleware.httpRequest;
 using Serilog;
 using System.Configuration;
 
 var builder = WebApplication.CreateBuilder(args);
-
-
-
 
 // Load configuration file
 string configurationDirectory = $"./ConfigurationFiles/";
@@ -19,25 +17,40 @@ if (string.IsNullOrEmpty(configurationFileName))
         $"Configuration file provide by commandline argument {builder.Configuration.GetValue<string>("ConfigurationFile")} not found"
         );
 }
-// Log configuration
-builder.Host.UseSerilog((context, configuration) =>
-    configuration.ReadFrom.Configuration(context.Configuration));
 
-builder.Configuration.AddJsonFile(configurationDirectory+configurationFileName);
-//builder.Configuration.AddJsonFile("./ConfigurationFiles/Local.json");
+builder.Configuration.AddJsonFile(configurationDirectory + configurationFileName);
+
+//Log configuration
+builder.Host.UseSerilog((context, configuration) =>
+  configuration.ReadFrom.Configuration(context.Configuration)
+      .WriteTo.Console(outputTemplate:
+          "[Time:{Timestamp:HH:mm:ss}] [Log level:{Level:u3}] [Correlation id:{CorrelationId}] {NewLine} [Message:{Message}] "
+          )
+      .WriteTo.File("log.txt", rollingInterval: RollingInterval.Day)
+      .Enrich.FromLogContext()
+  );
 
 // Add services to the container.
 
 builder.Services.AddControllers();
-
-builder.Services.AddScoped<IAuthorizationService, IdentityServerAuthorizationService>();
-builder.Services.AddScoped<IProtectedResourceService, ProtectedResourceHttpService>();
+builder.Services.AddHttpClient<IProtectedResourceService, ProtectedResourceService>(client =>
+{
+    client.BaseAddress = new Uri(builder.Configuration.GetValue<string>("Services:ProtectedResourceServer"));
+});
+builder.Services.AddHttpClient<IAuthorizationService, IdentityServerAuthorizationService>(client =>
+    {
+        client.BaseAddress = new Uri(builder.Configuration.GetValue<string>("Services:AuthorizationServerDiscoveryEndpoint"));
+    }
+);
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
+
+// Middleware that adds correlation id to request, if no correlation id is present, the header name is: X-Correlation-Id
+app.UseMiddleware<IncomingCorrelationIdMiddleware>();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

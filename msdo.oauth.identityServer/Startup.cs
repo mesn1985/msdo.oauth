@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using msdo.middleware.httpRequest;
 
 namespace msdo.oauth.identityServer
 {
@@ -51,7 +52,7 @@ namespace msdo.oauth.identityServer
             // uncomment if you want to add MVC
             //app.UseStaticFiles();
             //app.UseRouting();
-
+            app.UseMiddleware<IncomingCorrelationIdMiddleware>();
             app.UseIdentityServer();
 
             // uncomment, if you want to add MVC

@@ -40,7 +40,14 @@ namespace msdo.oauth.identityServer
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
-                .UseSerilog()
+                .UseSerilog((context, configuration) =>
+                    configuration.ReadFrom.Configuration(context.Configuration)
+                        .WriteTo.Console(outputTemplate:
+                            "[Time:{Timestamp:HH:mm:ss}] [Log level:{Level:u3}] [Correlation id:{CorrelationId}] {NewLine} [Message:{Message}] "
+                        )
+                        .WriteTo.File("log.txt", rollingInterval: RollingInterval.Day)
+                        .Enrich.FromLogContext()
+                )
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>();

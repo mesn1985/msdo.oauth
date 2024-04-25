@@ -2,6 +2,6 @@
 {
     public interface IAuthorizationService
     {
-        public  Task<string> GetAccessToken(string clientId, string clientSecret);
+        public  Task<string> GetAccessToken(string clientId, string clientSecret, string correlationId);
     }
 }

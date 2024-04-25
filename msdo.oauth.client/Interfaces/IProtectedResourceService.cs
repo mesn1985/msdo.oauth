@@ -2,6 +2,6 @@
 {
     public interface IProtectedResourceService
     {
-        public Task<string> GetProtectedResource(string accessToken);
+        public Task<string> GetProtectedResource(string accessToken, string correlationId);
     }
 }

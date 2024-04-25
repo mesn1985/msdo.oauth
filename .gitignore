@@ -3,6 +3,9 @@
 ##
 ## Get latest from `dotnet new gitignore`
 
+#Log Files
+*.log
+
 #Identity developer signing key
 *.jwk
 

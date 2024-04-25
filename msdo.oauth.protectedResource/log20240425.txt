@@ -1,0 +1,332 @@
+2024-04-25 11:34:57.278 +02:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2024-04-25 11:34:57.540 +02:00 [INF] Starting service with configurations from: Local.json
+2024-04-25 11:34:57.576 +02:00 [DBG] Hosting starting
+2024-04-25 11:34:57.768 +02:00 [INF] User profile is available. Using 'C:\Users\Martin\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-04-25 11:34:57.800 +02:00 [DBG] Reading data from file 'C:\Users\Martin\AppData\Local\ASP.NET\DataProtection-Keys\key-927dbe51-6b55-4cd1-b4e7-b21b18977cd6.xml'.
+2024-04-25 11:34:57.874 +02:00 [DBG] Reading data from file 'C:\Users\Martin\AppData\Local\ASP.NET\DataProtection-Keys\key-c95b021d-9813-40f7-948f-1856abcc322d.xml'.
+2024-04-25 11:34:57.891 +02:00 [DBG] Reading data from file 'C:\Users\Martin\AppData\Local\ASP.NET\DataProtection-Keys\key-df502986-6f46-4e05-81b7-a2a1cdcf26e6.xml'.
+2024-04-25 11:34:57.901 +02:00 [DBG] Reading data from file 'C:\Users\Martin\AppData\Local\ASP.NET\DataProtection-Keys\key-fea2304a-b7b8-4f66-8690-24c78fd42a61.xml'.
+2024-04-25 11:34:57.944 +02:00 [DBG] Found key {927dbe51-6b55-4cd1-b4e7-b21b18977cd6}.
+2024-04-25 11:34:58.004 +02:00 [DBG] Found key {c95b021d-9813-40f7-948f-1856abcc322d}.
+2024-04-25 11:34:58.045 +02:00 [DBG] Found key {df502986-6f46-4e05-81b7-a2a1cdcf26e6}.
+2024-04-25 11:34:58.055 +02:00 [DBG] Found key {fea2304a-b7b8-4f66-8690-24c78fd42a61}.
+2024-04-25 11:34:58.099 +02:00 [DBG] Considering key {df502986-6f46-4e05-81b7-a2a1cdcf26e6} with expiration date 2024-07-17 05:12:39Z as default key.
+2024-04-25 11:34:58.117 +02:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2024-04-25 11:34:58.138 +02:00 [DBG] Decrypting secret element using Windows DPAPI.
+2024-04-25 11:34:58.146 +02:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2024-04-25 11:34:58.161 +02:00 [DBG] Opening CNG algorithm 'AES' from provider 'null' with chaining mode CBC.
+2024-04-25 11:34:58.170 +02:00 [DBG] Opening CNG algorithm 'SHA256' from provider 'null' with HMAC.
+2024-04-25 11:34:58.181 +02:00 [DBG] Using key {df502986-6f46-4e05-81b7-a2a1cdcf26e6} as the default key.
+2024-04-25 11:34:58.190 +02:00 [DBG] Key ring with default key {df502986-6f46-4e05-81b7-a2a1cdcf26e6} was loaded during application startup.
+2024-04-25 11:34:58.474 +02:00 [DBG] Using development certificate: CN=localhost (Thumbprint: E41735C8F94362FC94FC6B65F56400CFFC2FB815)
+2024-04-25 11:34:58.534 +02:00 [INF] Now listening on: http://localhost:5002
+2024-04-25 11:34:58.539 +02:00 [DBG] Loaded hosting startup assembly msdo.oauth.protectedResource
+2024-04-25 11:34:58.542 +02:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2024-04-25 11:34:58.546 +02:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2024-04-25 11:34:58.552 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-04-25 11:34:58.555 +02:00 [INF] Hosting environment: Development
+2024-04-25 11:34:58.558 +02:00 [INF] Content root path: C:\Source\oauth\msdo.oauth.protectedResource
+2024-04-25 11:34:58.563 +02:00 [DBG] Hosting started
+2024-04-25 11:35:03.286 +02:00 [DBG] Connection id "0HN351BU13427" accepted.
+2024-04-25 11:35:03.292 +02:00 [DBG] Connection id "0HN351BU13427" started.
+2024-04-25 11:35:03.339 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5002/Resource - null null
+2024-04-25 11:35:03.363 +02:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2024-04-25 11:35:03.393 +02:00 [DBG] 1 candidate(s) found for the request path '/Resource'
+2024-04-25 11:35:03.405 +02:00 [DBG] Endpoint 'msdo.oauth.client.Controllers.ResourceController.Index (msdo.oauth.protectedResource)' with route pattern 'Resource' is valid for the request path '/Resource'
+2024-04-25 11:35:03.413 +02:00 [DBG] Request matched endpoint 'msdo.oauth.client.Controllers.ResourceController.Index (msdo.oauth.protectedResource)'
+2024-04-25 11:35:03.452 +02:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2024-04-25 11:35:04.001 +02:00 [DBG] Successfully validated the token.
+2024-04-25 11:35:04.009 +02:00 [DBG] AuthenticationScheme: Bearer was successfully authenticated.
+2024-04-25 11:35:04.023 +02:00 [DBG] Authorization was successful.
+2024-04-25 11:35:04.027 +02:00 [INF] Executing endpoint 'msdo.oauth.client.Controllers.ResourceController.Index (msdo.oauth.protectedResource)'
+2024-04-25 11:35:04.049 +02:00 [INF] Route matched with {action = "Index", controller = "Resource"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller msdo.oauth.client.Controllers.ResourceController (msdo.oauth.protectedResource).
+2024-04-25 11:35:04.061 +02:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2024-04-25 11:35:04.067 +02:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2024-04-25 11:35:04.075 +02:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.Filters.ControllerActionFilter (Order: -2147483648)","Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)"]
+2024-04-25 11:35:04.081 +02:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2024-04-25 11:35:04.086 +02:00 [DBG] Execution plan of result filters (in the following order): ["None"]
+2024-04-25 11:35:04.094 +02:00 [DBG] Executing controller factory for controller msdo.oauth.client.Controllers.ResourceController (msdo.oauth.protectedResource)
+2024-04-25 11:35:04.099 +02:00 [DBG] Executed controller factory for controller msdo.oauth.client.Controllers.ResourceController (msdo.oauth.protectedResource)
+2024-04-25 11:35:04.187 +02:00 [INF] Executing action method msdo.oauth.client.Controllers.ResourceController.Index (msdo.oauth.protectedResource) - Validation state: "Valid"
+2024-04-25 11:35:04.202 +02:00 [INF] Executed action method msdo.oauth.client.Controllers.ResourceController.Index (msdo.oauth.protectedResource), returned result Microsoft.AspNetCore.Mvc.JsonResult in 1.3352ms.
+2024-04-25 11:35:04.213 +02:00 [INF] Executing JsonResult, writing value of type 'System.Linq.Enumerable+SelectEnumerableIterator`2[[System.Security.Claims.Claim, System.Security.Claims, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a],[<>f__AnonymousType0`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], msdo.oauth.protectedResource, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-04-25 11:35:04.260 +02:00 [INF] Executed action msdo.oauth.client.Controllers.ResourceController.Index (msdo.oauth.protectedResource) in 163.7096ms
+2024-04-25 11:35:04.265 +02:00 [INF] Executed endpoint 'msdo.oauth.client.Controllers.ResourceController.Index (msdo.oauth.protectedResource)'
+2024-04-25 11:35:04.274 +02:00 [DBG] Connection id "0HN351BU13427" completed keep alive response.
+2024-04-25 11:35:04.281 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5002/Resource - 200 null application/json; charset=utf-8 951.8146ms
+2024-04-25 11:36:25.782 +02:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2024-04-25 11:36:25.984 +02:00 [INF] Starting service with configurations from: Local.json
+2024-04-25 11:36:25.989 +02:00 [DBG] Hosting starting
+2024-04-25 11:36:26.049 +02:00 [INF] User profile is available. Using 'C:\Users\Martin\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-04-25 11:36:26.074 +02:00 [DBG] Reading data from file 'C:\Users\Martin\AppData\Local\ASP.NET\DataProtection-Keys\key-927dbe51-6b55-4cd1-b4e7-b21b18977cd6.xml'.
+2024-04-25 11:36:26.122 +02:00 [DBG] Reading data from file 'C:\Users\Martin\AppData\Local\ASP.NET\DataProtection-Keys\key-c95b021d-9813-40f7-948f-1856abcc322d.xml'.
+2024-04-25 11:36:26.135 +02:00 [DBG] Reading data from file 'C:\Users\Martin\AppData\Local\ASP.NET\DataProtection-Keys\key-df502986-6f46-4e05-81b7-a2a1cdcf26e6.xml'.
+2024-04-25 11:36:26.158 +02:00 [DBG] Reading data from file 'C:\Users\Martin\AppData\Local\ASP.NET\DataProtection-Keys\key-fea2304a-b7b8-4f66-8690-24c78fd42a61.xml'.
+2024-04-25 11:36:26.184 +02:00 [DBG] Found key {927dbe51-6b55-4cd1-b4e7-b21b18977cd6}.
+2024-04-25 11:36:26.198 +02:00 [DBG] Found key {c95b021d-9813-40f7-948f-1856abcc322d}.
+2024-04-25 11:36:26.203 +02:00 [DBG] Found key {df502986-6f46-4e05-81b7-a2a1cdcf26e6}.
+2024-04-25 11:36:26.209 +02:00 [DBG] Found key {fea2304a-b7b8-4f66-8690-24c78fd42a61}.
+2024-04-25 11:36:26.224 +02:00 [DBG] Considering key {df502986-6f46-4e05-81b7-a2a1cdcf26e6} with expiration date 2024-07-17 05:12:39Z as default key.
+2024-04-25 11:36:26.236 +02:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2024-04-25 11:36:26.245 +02:00 [DBG] Decrypting secret element using Windows DPAPI.
+2024-04-25 11:36:26.255 +02:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2024-04-25 11:36:26.269 +02:00 [DBG] Opening CNG algorithm 'AES' from provider 'null' with chaining mode CBC.
+2024-04-25 11:36:26.277 +02:00 [DBG] Opening CNG algorithm 'SHA256' from provider 'null' with HMAC.
+2024-04-25 11:36:26.289 +02:00 [DBG] Using key {df502986-6f46-4e05-81b7-a2a1cdcf26e6} as the default key.
+2024-04-25 11:36:26.295 +02:00 [DBG] Key ring with default key {df502986-6f46-4e05-81b7-a2a1cdcf26e6} was loaded during application startup.
+2024-04-25 11:36:26.539 +02:00 [DBG] Using development certificate: CN=localhost (Thumbprint: E41735C8F94362FC94FC6B65F56400CFFC2FB815)
+2024-04-25 11:36:26.608 +02:00 [INF] Now listening on: http://localhost:5002
+2024-04-25 11:36:26.636 +02:00 [DBG] Loaded hosting startup assembly msdo.oauth.protectedResource
+2024-04-25 11:36:26.643 +02:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2024-04-25 11:36:26.647 +02:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2024-04-25 11:36:26.653 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-04-25 11:36:26.659 +02:00 [INF] Hosting environment: Development
+2024-04-25 11:36:26.664 +02:00 [INF] Content root path: C:\Source\oauth\msdo.oauth.protectedResource
+2024-04-25 11:36:26.669 +02:00 [DBG] Hosting started
+2024-04-25 11:36:31.028 +02:00 [DBG] Connection id "0HN351CO5RSM4" accepted.
+2024-04-25 11:36:31.034 +02:00 [DBG] Connection id "0HN351CO5RSM4" started.
+2024-04-25 11:36:31.084 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5002/Resource - null null
+2024-04-25 11:36:31.113 +02:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2024-04-25 11:36:31.144 +02:00 [DBG] 1 candidate(s) found for the request path '/Resource'
+2024-04-25 11:36:31.153 +02:00 [DBG] Endpoint 'msdo.oauth.client.Controllers.ResourceController.Index (msdo.oauth.protectedResource)' with route pattern 'Resource' is valid for the request path '/Resource'
+2024-04-25 11:36:31.162 +02:00 [DBG] Request matched endpoint 'msdo.oauth.client.Controllers.ResourceController.Index (msdo.oauth.protectedResource)'
+2024-04-25 11:36:31.196 +02:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2024-04-25 11:36:31.755 +02:00 [DBG] Successfully validated the token.
+2024-04-25 11:36:31.764 +02:00 [DBG] AuthenticationScheme: Bearer was successfully authenticated.
+2024-04-25 11:36:31.779 +02:00 [DBG] Authorization was successful.
+2024-04-25 11:36:31.783 +02:00 [INF] Executing endpoint 'msdo.oauth.client.Controllers.ResourceController.Index (msdo.oauth.protectedResource)'
+2024-04-25 11:36:31.805 +02:00 [INF] Route matched with {action = "Index", controller = "Resource"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller msdo.oauth.client.Controllers.ResourceController (msdo.oauth.protectedResource).
+2024-04-25 11:36:31.817 +02:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2024-04-25 11:36:31.822 +02:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2024-04-25 11:36:31.828 +02:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.Filters.ControllerActionFilter (Order: -2147483648)","Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)"]
+2024-04-25 11:36:31.835 +02:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2024-04-25 11:36:31.840 +02:00 [DBG] Execution plan of result filters (in the following order): ["None"]
+2024-04-25 11:36:31.849 +02:00 [DBG] Executing controller factory for controller msdo.oauth.client.Controllers.ResourceController (msdo.oauth.protectedResource)
+2024-04-25 11:36:31.855 +02:00 [DBG] Executed controller factory for controller msdo.oauth.client.Controllers.ResourceController (msdo.oauth.protectedResource)
+2024-04-25 11:36:31.952 +02:00 [INF] Executing action method msdo.oauth.client.Controllers.ResourceController.Index (msdo.oauth.protectedResource) - Validation state: "Valid"
+2024-04-25 11:36:31.964 +02:00 [INF] Executed action method msdo.oauth.client.Controllers.ResourceController.Index (msdo.oauth.protectedResource), returned result Microsoft.AspNetCore.Mvc.JsonResult in 1.2607ms.
+2024-04-25 11:36:31.973 +02:00 [INF] Executing JsonResult, writing value of type 'System.Linq.Enumerable+SelectEnumerableIterator`2[[System.Security.Claims.Claim, System.Security.Claims, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a],[<>f__AnonymousType0`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], msdo.oauth.protectedResource, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-04-25 11:36:32.020 +02:00 [INF] Executed action msdo.oauth.client.Controllers.ResourceController.Index (msdo.oauth.protectedResource) in 168.3893ms
+2024-04-25 11:36:32.028 +02:00 [INF] Executed endpoint 'msdo.oauth.client.Controllers.ResourceController.Index (msdo.oauth.protectedResource)'
+2024-04-25 11:36:32.037 +02:00 [DBG] Connection id "0HN351CO5RSM4" completed keep alive response.
+2024-04-25 11:36:32.045 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5002/Resource - 200 null application/json; charset=utf-8 970.032ms
+2024-04-25 11:36:38.528 +02:00 [DBG] Connection id "0HN351CO5RSM4" reset.
+2024-04-25 11:36:38.535 +02:00 [DBG] Connection id "0HN351CO5RSM4" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-04-25 11:36:38.543 +02:00 [DBG] Connection id "0HN351CO5RSM4" disconnecting.
+2024-04-25 11:36:38.607 +02:00 [DBG] Connection id "0HN351CO5RSM4" stopped.
+2024-04-25 11:37:26.796 +02:00 [INF] Starting service with configurations from: Local.json
+2024-04-25 11:37:26.991 +02:00 [INF] User profile is available. Using 'C:\Users\Martin\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-04-25 11:37:27.410 +02:00 [INF] Now listening on: http://localhost:5002
+2024-04-25 11:37:27.414 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-04-25 11:37:27.418 +02:00 [INF] Hosting environment: Development
+2024-04-25 11:37:27.424 +02:00 [INF] Content root path: C:\Source\oauth\msdo.oauth.protectedResource
+2024-04-25 11:37:53.046 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5002/Resource - null null
+2024-04-25 11:37:53.688 +02:00 [INF] Executing endpoint 'msdo.oauth.client.Controllers.ResourceController.Index (msdo.oauth.protectedResource)'
+2024-04-25 11:37:53.714 +02:00 [INF] Route matched with {action = "Index", controller = "Resource"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller msdo.oauth.client.Controllers.ResourceController (msdo.oauth.protectedResource).
+2024-04-25 11:37:53.822 +02:00 [INF] Executing action method msdo.oauth.client.Controllers.ResourceController.Index (msdo.oauth.protectedResource) - Validation state: "Valid"
+2024-04-25 11:37:53.832 +02:00 [INF] Executed action method msdo.oauth.client.Controllers.ResourceController.Index (msdo.oauth.protectedResource), returned result Microsoft.AspNetCore.Mvc.JsonResult in 1.3641ms.
+2024-04-25 11:37:53.839 +02:00 [INF] Executing JsonResult, writing value of type 'System.Linq.Enumerable+SelectEnumerableIterator`2[[System.Security.Claims.Claim, System.Security.Claims, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a],[<>f__AnonymousType0`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], msdo.oauth.protectedResource, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-04-25 11:37:53.880 +02:00 [INF] Executed action msdo.oauth.client.Controllers.ResourceController.Index (msdo.oauth.protectedResource) in 154.7942ms
+2024-04-25 11:37:53.883 +02:00 [INF] Executed endpoint 'msdo.oauth.client.Controllers.ResourceController.Index (msdo.oauth.protectedResource)'
+2024-04-25 11:37:53.891 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5002/Resource - 200 null application/json; charset=utf-8 853.3009ms
+2024-04-25 11:39:19.440 +02:00 [INF] Starting service with configurations from: Local.json
+2024-04-25 11:39:19.725 +02:00 [INF] User profile is available. Using 'C:\Users\Martin\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-04-25 11:39:20.227 +02:00 [INF] Now listening on: http://localhost:5002
+2024-04-25 11:39:20.241 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-04-25 11:39:20.278 +02:00 [INF] Hosting environment: Development
+2024-04-25 11:39:20.283 +02:00 [INF] Content root path: C:\Source\oauth\msdo.oauth.protectedResource
+2024-04-25 11:39:25.768 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5002/Resource - null null
+2024-04-25 11:39:26.391 +02:00 [INF] Executing endpoint 'msdo.oauth.client.Controllers.ResourceController.Index (msdo.oauth.protectedResource)'
+2024-04-25 11:39:26.414 +02:00 [INF] Route matched with {action = "Index", controller = "Resource"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller msdo.oauth.client.Controllers.ResourceController (msdo.oauth.protectedResource).
+2024-04-25 11:39:26.513 +02:00 [INF] Executing action method msdo.oauth.client.Controllers.ResourceController.Index (msdo.oauth.protectedResource) - Validation state: "Valid"
+2024-04-25 11:39:26.523 +02:00 [INF] Executed action method msdo.oauth.client.Controllers.ResourceController.Index (msdo.oauth.protectedResource), returned result Microsoft.AspNetCore.Mvc.JsonResult in 1.1297ms.
+2024-04-25 11:39:26.532 +02:00 [INF] Executing JsonResult, writing value of type 'System.Linq.Enumerable+SelectEnumerableIterator`2[[System.Security.Claims.Claim, System.Security.Claims, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a],[<>f__AnonymousType0`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], msdo.oauth.protectedResource, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-04-25 11:39:26.580 +02:00 [INF] Executed action msdo.oauth.client.Controllers.ResourceController.Index (msdo.oauth.protectedResource) in 156.6812ms
+2024-04-25 11:39:26.583 +02:00 [INF] Executed endpoint 'msdo.oauth.client.Controllers.ResourceController.Index (msdo.oauth.protectedResource)'
+2024-04-25 11:39:26.591 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5002/Resource - 200 null application/json; charset=utf-8 830.3363ms
+2024-04-25 11:42:37.950 +02:00 [INF] Starting service with configurations from: Local.json
+2024-04-25 11:42:38.166 +02:00 [INF] User profile is available. Using 'C:\Users\Martin\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-04-25 11:42:38.622 +02:00 [INF] Now listening on: http://localhost:5002
+2024-04-25 11:42:38.634 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-04-25 11:42:38.644 +02:00 [INF] Hosting environment: Development
+2024-04-25 11:42:38.651 +02:00 [INF] Content root path: C:\Source\oauth\msdo.oauth.protectedResource
+2024-04-25 11:42:44.101 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5002/Resource - null null
+2024-04-25 11:42:44.706 +02:00 [INF] Executing endpoint 'msdo.oauth.client.Controllers.ResourceController.Index (msdo.oauth.protectedResource)'
+2024-04-25 11:42:44.730 +02:00 [INF] Route matched with {action = "Index", controller = "Resource"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller msdo.oauth.client.Controllers.ResourceController (msdo.oauth.protectedResource).
+2024-04-25 11:42:44.843 +02:00 [INF] Executing action method msdo.oauth.client.Controllers.ResourceController.Index (msdo.oauth.protectedResource) - Validation state: "Valid"
+2024-04-25 11:42:44.852 +02:00 [INF] Executed action method msdo.oauth.client.Controllers.ResourceController.Index (msdo.oauth.protectedResource), returned result Microsoft.AspNetCore.Mvc.JsonResult in 1.2253ms.
+2024-04-25 11:42:44.860 +02:00 [INF] Executing JsonResult, writing value of type 'System.Linq.Enumerable+SelectEnumerableIterator`2[[System.Security.Claims.Claim, System.Security.Claims, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a],[<>f__AnonymousType0`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], msdo.oauth.protectedResource, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-04-25 11:42:44.907 +02:00 [INF] Executed action msdo.oauth.client.Controllers.ResourceController.Index (msdo.oauth.protectedResource) in 167.2308ms
+2024-04-25 11:42:44.911 +02:00 [INF] Executed endpoint 'msdo.oauth.client.Controllers.ResourceController.Index (msdo.oauth.protectedResource)'
+2024-04-25 11:42:44.921 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5002/Resource - 200 null application/json; charset=utf-8 827.3059ms
+2024-04-25 11:44:40.683 +02:00 [INF] Starting service with configurations from: Local.json
+2024-04-25 11:44:40.895 +02:00 [INF] User profile is available. Using 'C:\Users\Martin\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-04-25 11:44:41.369 +02:00 [INF] Now listening on: http://localhost:5002
+2024-04-25 11:44:41.379 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-04-25 11:44:41.383 +02:00 [INF] Hosting environment: Development
+2024-04-25 11:44:41.544 +02:00 [INF] Content root path: C:\Source\oauth\msdo.oauth.protectedResource
+2024-04-25 11:44:46.132 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5002/Resource - null null
+2024-04-25 11:44:46.755 +02:00 [INF] Executing endpoint 'msdo.oauth.client.Controllers.ResourceController.Index (msdo.oauth.protectedResource)'
+2024-04-25 11:44:46.776 +02:00 [INF] Route matched with {action = "Index", controller = "Resource"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller msdo.oauth.client.Controllers.ResourceController (msdo.oauth.protectedResource).
+2024-04-25 11:44:46.877 +02:00 [INF] Executing action method msdo.oauth.client.Controllers.ResourceController.Index (msdo.oauth.protectedResource) - Validation state: "Valid"
+2024-04-25 11:44:46.886 +02:00 [INF] Executed action method msdo.oauth.client.Controllers.ResourceController.Index (msdo.oauth.protectedResource), returned result Microsoft.AspNetCore.Mvc.JsonResult in 0.98ms.
+2024-04-25 11:44:46.895 +02:00 [INF] Executing JsonResult, writing value of type 'System.Linq.Enumerable+SelectEnumerableIterator`2[[System.Security.Claims.Claim, System.Security.Claims, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a],[<>f__AnonymousType0`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], msdo.oauth.protectedResource, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-04-25 11:44:46.941 +02:00 [INF] Executed action msdo.oauth.client.Controllers.ResourceController.Index (msdo.oauth.protectedResource) in 153.7136ms
+2024-04-25 11:44:46.944 +02:00 [INF] Executed endpoint 'msdo.oauth.client.Controllers.ResourceController.Index (msdo.oauth.protectedResource)'
+2024-04-25 11:44:46.954 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5002/Resource - 200 null application/json; charset=utf-8 828.6175ms
+2024-04-25 12:32:01.892 +02:00 [INF] Starting service with configurations from: Local.json
+2024-04-25 12:32:02.333 +02:00 [INF] User profile is available. Using 'C:\Users\Martin\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-04-25 12:32:02.772 +02:00 [INF] Now listening on: http://localhost:5002
+2024-04-25 12:32:02.779 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-04-25 12:32:02.783 +02:00 [INF] Hosting environment: Development
+2024-04-25 12:32:02.786 +02:00 [INF] Content root path: C:\Source\oauth\msdo.oauth.protectedResource
+2024-04-25 12:32:12.711 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5002/Resource - null null
+2024-04-25 12:32:13.417 +02:00 [INF] Executing endpoint 'msdo.oauth.client.Controllers.ResourceController.Index (msdo.oauth.protectedResource)'
+2024-04-25 12:32:13.448 +02:00 [INF] Route matched with {action = "Index", controller = "Resource"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller msdo.oauth.client.Controllers.ResourceController (msdo.oauth.protectedResource).
+2024-04-25 12:32:13.636 +02:00 [INF] Executing action method msdo.oauth.client.Controllers.ResourceController.Index (msdo.oauth.protectedResource) - Validation state: "Valid"
+2024-04-25 12:32:13.646 +02:00 [INF] Executed action method msdo.oauth.client.Controllers.ResourceController.Index (msdo.oauth.protectedResource), returned result Microsoft.AspNetCore.Mvc.JsonResult in 1.1608ms.
+2024-04-25 12:32:13.654 +02:00 [INF] Executing JsonResult, writing value of type 'System.Linq.Enumerable+SelectEnumerableIterator`2[[System.Security.Claims.Claim, System.Security.Claims, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a],[<>f__AnonymousType0`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], msdo.oauth.protectedResource, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-04-25 12:32:13.696 +02:00 [INF] Executed action msdo.oauth.client.Controllers.ResourceController.Index (msdo.oauth.protectedResource) in 239.2719ms
+2024-04-25 12:32:13.699 +02:00 [INF] Executed endpoint 'msdo.oauth.client.Controllers.ResourceController.Index (msdo.oauth.protectedResource)'
+2024-04-25 12:32:13.706 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5002/Resource - 200 null application/json; charset=utf-8 1003.3968ms
+2024-04-25 14:19:55.762 +02:00 [INF] Starting service with configurations from: Local.json
+2024-04-25 14:19:55.924 +02:00 [INF] User profile is available. Using 'C:\Users\Martin\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-04-25 14:19:56.252 +02:00 [INF] Now listening on: http://localhost:5002
+2024-04-25 14:19:56.257 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-04-25 14:19:56.260 +02:00 [INF] Hosting environment: Development
+2024-04-25 14:19:56.263 +02:00 [INF] Content root path: C:\Source\oauth\msdo.oauth.protectedResource
+2024-04-25 14:20:04.046 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5002/Resource - null null
+2024-04-25 14:20:04.725 +02:00 [INF] Executing endpoint 'msdo.oauth.client.Controllers.ResourceController.Index (msdo.oauth.protectedResource)'
+2024-04-25 14:20:04.752 +02:00 [INF] Route matched with {action = "Index", controller = "Resource"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller msdo.oauth.client.Controllers.ResourceController (msdo.oauth.protectedResource).
+2024-04-25 14:20:04.863 +02:00 [INF] Executing action method msdo.oauth.client.Controllers.ResourceController.Index (msdo.oauth.protectedResource) - Validation state: "Valid"
+2024-04-25 14:20:04.872 +02:00 [INF] Executed action method msdo.oauth.client.Controllers.ResourceController.Index (msdo.oauth.protectedResource), returned result Microsoft.AspNetCore.Mvc.JsonResult in 0.8983ms.
+2024-04-25 14:20:04.880 +02:00 [INF] Executing JsonResult, writing value of type 'System.Linq.Enumerable+SelectEnumerableIterator`2[[System.Security.Claims.Claim, System.Security.Claims, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a],[<>f__AnonymousType0`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], msdo.oauth.protectedResource, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-04-25 14:20:04.923 +02:00 [INF] Executed action msdo.oauth.client.Controllers.ResourceController.Index (msdo.oauth.protectedResource) in 161.3723ms
+2024-04-25 14:20:04.925 +02:00 [INF] Executed endpoint 'msdo.oauth.client.Controllers.ResourceController.Index (msdo.oauth.protectedResource)'
+2024-04-25 14:20:04.935 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5002/Resource - 200 null application/json; charset=utf-8 900.0357ms
+2024-04-25 14:24:48.512 +02:00 [INF] Starting service with configurations from: Local.json
+2024-04-25 14:24:48.716 +02:00 [INF] User profile is available. Using 'C:\Users\Martin\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-04-25 14:24:49.159 +02:00 [INF] Now listening on: http://localhost:5002
+2024-04-25 14:24:49.172 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-04-25 14:24:49.182 +02:00 [INF] Hosting environment: Development
+2024-04-25 14:24:49.203 +02:00 [INF] Content root path: C:\Source\oauth\msdo.oauth.protectedResource
+2024-04-25 14:25:39.626 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5002/Resource - null null
+2024-04-25 14:25:40.261 +02:00 [INF] Executing endpoint 'msdo.oauth.client.Controllers.ResourceController.Index (msdo.oauth.protectedResource)'
+2024-04-25 14:25:40.284 +02:00 [INF] Route matched with {action = "Index", controller = "Resource"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller msdo.oauth.client.Controllers.ResourceController (msdo.oauth.protectedResource).
+2024-04-25 14:25:40.391 +02:00 [INF] Executing action method msdo.oauth.client.Controllers.ResourceController.Index (msdo.oauth.protectedResource) - Validation state: "Valid"
+2024-04-25 14:25:40.400 +02:00 [INF] Executed action method msdo.oauth.client.Controllers.ResourceController.Index (msdo.oauth.protectedResource), returned result Microsoft.AspNetCore.Mvc.JsonResult in 1.2749ms.
+2024-04-25 14:25:40.408 +02:00 [INF] Executing JsonResult, writing value of type 'System.Linq.Enumerable+SelectEnumerableIterator`2[[System.Security.Claims.Claim, System.Security.Claims, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a],[<>f__AnonymousType0`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], msdo.oauth.protectedResource, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-04-25 14:25:40.451 +02:00 [INF] Executed action msdo.oauth.client.Controllers.ResourceController.Index (msdo.oauth.protectedResource) in 158.3348ms
+2024-04-25 14:25:40.454 +02:00 [INF] Executed endpoint 'msdo.oauth.client.Controllers.ResourceController.Index (msdo.oauth.protectedResource)'
+2024-04-25 14:25:40.464 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5002/Resource - 200 null application/json; charset=utf-8 844.8741ms
+2024-04-25 15:04:44.018 +02:00 [INF] Starting service with configurations from: Local.json
+2024-04-25 15:04:44.202 +02:00 [INF] User profile is available. Using 'C:\Users\Martin\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-04-25 15:04:44.655 +02:00 [INF] Now listening on: http://localhost:5002
+2024-04-25 15:04:44.665 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-04-25 15:04:44.669 +02:00 [INF] Hosting environment: Development
+2024-04-25 15:04:44.673 +02:00 [INF] Content root path: C:\Source\oauth\msdo.oauth.protectedResource
+2024-04-25 15:04:53.184 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5002/Resource - null null
+2024-04-25 15:04:53.864 +02:00 [INF] Executing endpoint 'msdo.oauth.client.Controllers.ResourceController.Index (msdo.oauth.protectedResource)'
+2024-04-25 15:04:53.893 +02:00 [INF] Route matched with {action = "Index", controller = "Resource"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller msdo.oauth.client.Controllers.ResourceController (msdo.oauth.protectedResource).
+2024-04-25 15:04:54.007 +02:00 [INF] Executing action method msdo.oauth.client.Controllers.ResourceController.Index (msdo.oauth.protectedResource) - Validation state: "Valid"
+2024-04-25 15:04:54.016 +02:00 [INF] Executed action method msdo.oauth.client.Controllers.ResourceController.Index (msdo.oauth.protectedResource), returned result Microsoft.AspNetCore.Mvc.JsonResult in 1.086ms.
+2024-04-25 15:04:54.025 +02:00 [INF] Executing JsonResult, writing value of type 'System.Linq.Enumerable+SelectEnumerableIterator`2[[System.Security.Claims.Claim, System.Security.Claims, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a],[<>f__AnonymousType0`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], msdo.oauth.protectedResource, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-04-25 15:04:54.069 +02:00 [INF] Executed action msdo.oauth.client.Controllers.ResourceController.Index (msdo.oauth.protectedResource) in 164.3982ms
+2024-04-25 15:04:54.072 +02:00 [INF] Executed endpoint 'msdo.oauth.client.Controllers.ResourceController.Index (msdo.oauth.protectedResource)'
+2024-04-25 15:04:54.080 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5002/Resource - 200 null application/json; charset=utf-8 904.2675ms
+2024-04-25 15:08:52.034 +02:00 [INF] Starting service with configurations from: Local.json
+2024-04-25 15:08:52.234 +02:00 [INF] User profile is available. Using 'C:\Users\Martin\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-04-25 15:08:52.613 +02:00 [INF] Now listening on: http://localhost:5002
+2024-04-25 15:08:52.616 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-04-25 15:08:52.618 +02:00 [INF] Hosting environment: Development
+2024-04-25 15:08:52.621 +02:00 [INF] Content root path: C:\Source\oauth\msdo.oauth.protectedResource
+2024-04-25 15:08:57.487 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5002/Resource - null null
+2024-04-25 15:08:58.184 +02:00 [INF] Executing endpoint 'msdo.oauth.client.Controllers.ResourceController.Index (msdo.oauth.protectedResource)'
+2024-04-25 15:08:58.203 +02:00 [INF] Route matched with {action = "Index", controller = "Resource"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller msdo.oauth.client.Controllers.ResourceController (msdo.oauth.protectedResource).
+2024-04-25 15:08:58.311 +02:00 [INF] Executing action method msdo.oauth.client.Controllers.ResourceController.Index (msdo.oauth.protectedResource) - Validation state: "Valid"
+2024-04-25 15:08:58.322 +02:00 [INF] Executed action method msdo.oauth.client.Controllers.ResourceController.Index (msdo.oauth.protectedResource), returned result Microsoft.AspNetCore.Mvc.JsonResult in 1.9342ms.
+2024-04-25 15:08:58.330 +02:00 [INF] Executing JsonResult, writing value of type 'System.Linq.Enumerable+SelectEnumerableIterator`2[[System.Security.Claims.Claim, System.Security.Claims, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a],[<>f__AnonymousType0`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], msdo.oauth.protectedResource, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-04-25 15:08:58.375 +02:00 [INF] Executed action msdo.oauth.client.Controllers.ResourceController.Index (msdo.oauth.protectedResource) in 161.7585ms
+2024-04-25 15:08:58.378 +02:00 [INF] Executed endpoint 'msdo.oauth.client.Controllers.ResourceController.Index (msdo.oauth.protectedResource)'
+2024-04-25 15:08:58.387 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5002/Resource - 200 null application/json; charset=utf-8 907.5823ms
+2024-04-25 15:11:15.441 +02:00 [INF] Starting service with configurations from: Local.json
+2024-04-25 15:11:15.659 +02:00 [INF] User profile is available. Using 'C:\Users\Martin\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-04-25 15:11:16.080 +02:00 [INF] Now listening on: http://localhost:5002
+2024-04-25 15:11:16.083 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-04-25 15:11:16.086 +02:00 [INF] Hosting environment: Development
+2024-04-25 15:11:16.088 +02:00 [INF] Content root path: C:\Source\oauth\msdo.oauth.protectedResource
+2024-04-25 15:11:24.642 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5002/Resource - null null
+2024-04-25 15:11:25.317 +02:00 [INF] Executing endpoint 'msdo.oauth.client.Controllers.ResourceController.Index (msdo.oauth.protectedResource)'
+2024-04-25 15:11:25.348 +02:00 [INF] Route matched with {action = "Index", controller = "Resource"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller msdo.oauth.client.Controllers.ResourceController (msdo.oauth.protectedResource).
+2024-04-25 15:11:25.458 +02:00 [INF] Executing action method msdo.oauth.client.Controllers.ResourceController.Index (msdo.oauth.protectedResource) - Validation state: "Valid"
+2024-04-25 15:11:25.467 +02:00 [INF] Executed action method msdo.oauth.client.Controllers.ResourceController.Index (msdo.oauth.protectedResource), returned result Microsoft.AspNetCore.Mvc.JsonResult in 1.2338ms.
+2024-04-25 15:11:25.474 +02:00 [INF] Executing JsonResult, writing value of type 'System.Linq.Enumerable+SelectEnumerableIterator`2[[System.Security.Claims.Claim, System.Security.Claims, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a],[<>f__AnonymousType0`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], msdo.oauth.protectedResource, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-04-25 15:11:25.515 +02:00 [INF] Executed action msdo.oauth.client.Controllers.ResourceController.Index (msdo.oauth.protectedResource) in 157.8268ms
+2024-04-25 15:11:25.518 +02:00 [INF] Executed endpoint 'msdo.oauth.client.Controllers.ResourceController.Index (msdo.oauth.protectedResource)'
+2024-04-25 15:11:25.526 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5002/Resource - 200 null application/json; charset=utf-8 892.087ms
+2024-04-25 15:12:40.993 +02:00 [INF] Starting service with configurations from: Local.json
+2024-04-25 15:12:41.144 +02:00 [INF] User profile is available. Using 'C:\Users\Martin\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-04-25 15:12:41.486 +02:00 [INF] Now listening on: http://localhost:5002
+2024-04-25 15:12:41.497 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-04-25 15:12:41.508 +02:00 [INF] Hosting environment: Development
+2024-04-25 15:12:41.519 +02:00 [INF] Content root path: C:\Source\oauth\msdo.oauth.protectedResource
+2024-04-25 15:12:47.602 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5002/Resource - null null
+2024-04-25 15:12:48.311 +02:00 [INF] Executing endpoint 'msdo.oauth.client.Controllers.ResourceController.Index (msdo.oauth.protectedResource)'
+2024-04-25 15:12:48.335 +02:00 [INF] Route matched with {action = "Index", controller = "Resource"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller msdo.oauth.client.Controllers.ResourceController (msdo.oauth.protectedResource).
+2024-04-25 15:12:48.443 +02:00 [INF] Executing action method msdo.oauth.client.Controllers.ResourceController.Index (msdo.oauth.protectedResource) - Validation state: "Valid"
+2024-04-25 15:12:48.456 +02:00 [INF] Executed action method msdo.oauth.client.Controllers.ResourceController.Index (msdo.oauth.protectedResource), returned result Microsoft.AspNetCore.Mvc.JsonResult in 1.2283ms.
+2024-04-25 15:12:48.464 +02:00 [INF] Executing JsonResult, writing value of type 'System.Linq.Enumerable+SelectEnumerableIterator`2[[System.Security.Claims.Claim, System.Security.Claims, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a],[<>f__AnonymousType0`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], msdo.oauth.protectedResource, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-04-25 15:12:48.516 +02:00 [INF] Executed action msdo.oauth.client.Controllers.ResourceController.Index (msdo.oauth.protectedResource) in 171.7208ms
+2024-04-25 15:12:48.519 +02:00 [INF] Executed endpoint 'msdo.oauth.client.Controllers.ResourceController.Index (msdo.oauth.protectedResource)'
+2024-04-25 15:12:48.527 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5002/Resource - 200 null application/json; charset=utf-8 931.6684ms
+2024-04-25 15:14:45.130 +02:00 [INF] Starting service with configurations from: Local.json
+2024-04-25 15:14:45.328 +02:00 [INF] User profile is available. Using 'C:\Users\Martin\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-04-25 15:14:45.669 +02:00 [INF] Now listening on: http://localhost:5002
+2024-04-25 15:14:45.672 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-04-25 15:14:45.675 +02:00 [INF] Hosting environment: Development
+2024-04-25 15:14:45.677 +02:00 [INF] Content root path: C:\Source\oauth\msdo.oauth.protectedResource
+2024-04-25 15:14:52.607 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5002/Resource - null null
+2024-04-25 15:14:53.257 +02:00 [INF] Executing endpoint 'msdo.oauth.client.Controllers.ResourceController.Index (msdo.oauth.protectedResource)'
+2024-04-25 15:14:53.279 +02:00 [INF] Route matched with {action = "Index", controller = "Resource"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller msdo.oauth.client.Controllers.ResourceController (msdo.oauth.protectedResource).
+2024-04-25 15:14:53.387 +02:00 [INF] Executing action method msdo.oauth.client.Controllers.ResourceController.Index (msdo.oauth.protectedResource) - Validation state: "Valid"
+2024-04-25 15:14:53.398 +02:00 [INF] Executed action method msdo.oauth.client.Controllers.ResourceController.Index (msdo.oauth.protectedResource), returned result Microsoft.AspNetCore.Mvc.JsonResult in 1.4539ms.
+2024-04-25 15:14:53.406 +02:00 [INF] Executing JsonResult, writing value of type 'System.Linq.Enumerable+SelectEnumerableIterator`2[[System.Security.Claims.Claim, System.Security.Claims, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a],[<>f__AnonymousType0`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], msdo.oauth.protectedResource, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-04-25 15:14:53.450 +02:00 [INF] Executed action msdo.oauth.client.Controllers.ResourceController.Index (msdo.oauth.protectedResource) in 161.2797ms
+2024-04-25 15:14:53.453 +02:00 [INF] Executed endpoint 'msdo.oauth.client.Controllers.ResourceController.Index (msdo.oauth.protectedResource)'
+2024-04-25 15:14:53.462 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5002/Resource - 200 null application/json; charset=utf-8 862.2463ms
+2024-04-25 15:30:06.886 +02:00 [INF] Starting service with configurations from: Local.json
+2024-04-25 15:30:07.091 +02:00 [INF] User profile is available. Using 'C:\Users\Martin\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-04-25 15:30:07.723 +02:00 [INF] Now listening on: http://localhost:5002
+2024-04-25 15:30:07.727 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-04-25 15:30:07.730 +02:00 [INF] Hosting environment: Development
+2024-04-25 15:30:07.735 +02:00 [INF] Content root path: C:\Source\oauth\msdo.oauth.protectedResource
+2024-04-25 15:31:31.698 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5002/Resource - null null
+2024-04-25 15:31:32.388 +02:00 [INF] Executing endpoint 'msdo.oauth.client.Controllers.ResourceController.Index (msdo.oauth.protectedResource)'
+2024-04-25 15:31:32.418 +02:00 [INF] Route matched with {action = "Index", controller = "Resource"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller msdo.oauth.client.Controllers.ResourceController (msdo.oauth.protectedResource).
+2024-04-25 15:31:32.533 +02:00 [INF] Executing action method msdo.oauth.client.Controllers.ResourceController.Index (msdo.oauth.protectedResource) - Validation state: "Valid"
+2024-04-25 15:31:32.544 +02:00 [INF] Executed action method msdo.oauth.client.Controllers.ResourceController.Index (msdo.oauth.protectedResource), returned result Microsoft.AspNetCore.Mvc.JsonResult in 1.1673ms.
+2024-04-25 15:31:32.553 +02:00 [INF] Executing JsonResult, writing value of type 'System.Linq.Enumerable+SelectEnumerableIterator`2[[System.Security.Claims.Claim, System.Security.Claims, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a],[<>f__AnonymousType0`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], msdo.oauth.protectedResource, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-04-25 15:31:32.598 +02:00 [INF] Executed action msdo.oauth.client.Controllers.ResourceController.Index (msdo.oauth.protectedResource) in 169.4951ms
+2024-04-25 15:31:32.601 +02:00 [INF] Executed endpoint 'msdo.oauth.client.Controllers.ResourceController.Index (msdo.oauth.protectedResource)'
+2024-04-25 15:31:32.609 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5002/Resource - 200 null application/json; charset=utf-8 919.8046ms
+2024-04-25 15:34:04.030 +02:00 [INF] Starting service with configurations from: Local.json
+2024-04-25 15:34:04.130 +02:00 [INF] User profile is available. Using 'C:\Users\Martin\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-04-25 15:34:04.505 +02:00 [INF] Now listening on: http://localhost:5002
+2024-04-25 15:34:04.514 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-04-25 15:34:04.517 +02:00 [INF] Hosting environment: Development
+2024-04-25 15:34:04.522 +02:00 [INF] Content root path: C:\Source\oauth\msdo.oauth.protectedResource
+2024-04-25 15:34:10.453 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5002/Resource - null null
+2024-04-25 15:34:11.079 +02:00 [INF] Executing endpoint 'msdo.oauth.client.Controllers.ResourceController.Index (msdo.oauth.protectedResource)'
+2024-04-25 15:34:11.098 +02:00 [INF] Route matched with {action = "Index", controller = "Resource"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller msdo.oauth.client.Controllers.ResourceController (msdo.oauth.protectedResource).
+2024-04-25 15:34:11.211 +02:00 [INF] Executing action method msdo.oauth.client.Controllers.ResourceController.Index (msdo.oauth.protectedResource) - Validation state: "Valid"
+2024-04-25 15:34:11.220 +02:00 [INF] Executed action method msdo.oauth.client.Controllers.ResourceController.Index (msdo.oauth.protectedResource), returned result Microsoft.AspNetCore.Mvc.JsonResult in 1.1251ms.
+2024-04-25 15:34:11.226 +02:00 [INF] Executing JsonResult, writing value of type 'System.Linq.Enumerable+SelectEnumerableIterator`2[[System.Security.Claims.Claim, System.Security.Claims, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a],[<>f__AnonymousType0`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], msdo.oauth.protectedResource, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-04-25 15:34:11.267 +02:00 [INF] Executed action msdo.oauth.client.Controllers.ResourceController.Index (msdo.oauth.protectedResource) in 160.685ms
+2024-04-25 15:34:11.271 +02:00 [INF] Executed endpoint 'msdo.oauth.client.Controllers.ResourceController.Index (msdo.oauth.protectedResource)'
+2024-04-25 15:34:11.278 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5002/Resource - 200 null application/json; charset=utf-8 832.7885ms
+2024-04-25 15:39:20.053 +02:00 [INF] Starting service with configurations from: Local.json
+2024-04-25 15:39:20.214 +02:00 [INF] User profile is available. Using 'C:\Users\Martin\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-04-25 15:39:20.631 +02:00 [INF] Now listening on: http://localhost:5002
+2024-04-25 15:39:20.634 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-04-25 15:39:20.636 +02:00 [INF] Hosting environment: Development
+2024-04-25 15:39:20.640 +02:00 [INF] Content root path: C:\Source\oauth\msdo.oauth.protectedResource
