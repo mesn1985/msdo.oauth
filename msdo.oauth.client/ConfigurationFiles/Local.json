@@ -10,7 +10,7 @@
       {
         "Name": "Console",
         "Args": {
-          "outputTemplate": "[Time:{Timestamp:HH:mm:ss}] [Log level:{Level:u3}] [Correlation id:{CorrelationId}] {NewLine} --> [Message:{Message}]"
+          "outputTemplate": "[Time:{Timestamp:HH:mm:ss}] [Log level:{Level:u3}] [Correlation id:{CorrelationId}] {NewLine} [Message:{Message}] [Service name:client]"
         }
       },
       {
