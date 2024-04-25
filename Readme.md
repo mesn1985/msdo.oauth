@@ -51,13 +51,13 @@ the Endpoints used in this project is presented for identity server
 
 | Path                                      | Purpose                                                           | HTTP Method | Link to service OpenApi specifications |
 |-------------------------------------------|-------------------------------------------------------------------|-------------|---------------------------------------|
-| `/ClientCredentialGrant`                 | Uses client credential grant to obtain a valid accessToken, and then requests a protected resource | TBD         | Yet to come                           |
+| `/ClientCredentialGrant`                 | Uses client credential grant to obtain a valid accessToken, and then requests a protected resource | GET         | Yet to come                           |
 
 
 #### Protected resource server
 | Path                  | Purpose                                                           | HTTP Method | Link to service OpenApi specifications |
 |-----------------------|-------------------------------------------------------------------|-------------|---------------------------------------|
-| `/Resource`           | Provides a protected resource, if a valid access token is presented | TBD         | Yet to come                           |
+| `/Resource`           | Provides a protected resource, if a valid access token is presented | GET         | Yet to come                           |
 
 
 #### Identity server

@@ -18,8 +18,4 @@
     <PackageReference Include="System.Configuration.ConfigurationManager" Version="8.0.0" />
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\msdo.middleware.httpRequest\msdo.middleware.httpRequest.csproj" />
-  </ItemGroup>
-
 </Project>

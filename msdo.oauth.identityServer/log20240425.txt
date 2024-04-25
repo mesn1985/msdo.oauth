@@ -246,3 +246,75 @@
 2024-04-25 15:39:20.310 +02:00 [INF] Application started. Press Ctrl+C to shut down.
 2024-04-25 15:39:20.316 +02:00 [INF] Hosting environment: Development
 2024-04-25 15:39:20.327 +02:00 [INF] Content root path: C:\Source\oauth\msdo.oauth.identityServer
+2024-04-25 16:35:47.872 +02:00 [INF] User profile is available. Using 'C:\Users\Martin\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-04-25 16:35:48.089 +02:00 [INF] Starting IdentityServer4 version 4.0.0+1acafade44176bf817412aa4309d5dff6587a741
+2024-04-25 16:35:48.122 +02:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2024-04-25 16:35:48.138 +02:00 [INF] Using the default authentication scheme idsrv for IdentityServer
+2024-04-25 16:35:48.298 +02:00 [INF] Now listening on: http://localhost:5001
+2024-04-25 16:35:48.300 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-04-25 16:35:48.301 +02:00 [INF] Hosting environment: Development
+2024-04-25 16:35:48.303 +02:00 [INF] Content root path: C:\Source\oauth\msdo.oauth.identityServer
+2024-04-25 16:35:54.773 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/.well-known/openid-configuration - null null
+2024-04-25 16:35:54.834 +02:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2024-04-25 16:35:54.924 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/.well-known/openid-configuration - 200 null application/json; charset=UTF-8 157.6116ms
+2024-04-25 16:35:55.013 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/.well-known/openid-configuration/jwks - null null
+2024-04-25 16:35:55.044 +02:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2024-04-25 16:35:55.084 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/.well-known/openid-configuration/jwks - 200 null application/json; charset=UTF-8 71.2645ms
+2024-04-25 16:35:55.180 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5001/connect/token - application/x-www-form-urlencoded 53
+2024-04-25 16:35:55.200 +02:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.TokenEndpoint for /connect/token
+2024-04-25 16:35:55.294 +02:00 [INF] Token request validation success, {"ClientId":"client","ClientName":null,"GrantType":"client_credentials","Scopes":"protectedResource","AuthorizationCode":null,"RefreshToken":null,"UserName":null,"AuthenticationContextReferenceClasses":null,"Tenant":null,"IdP":null,"Raw":{"grant_type":"client_credentials","scope":"protectedResource"},"$type":"TokenRequestValidationLog"}
+2024-04-25 16:35:55.440 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5001/connect/token - 200 null application/json; charset=UTF-8 260.7782ms
+2024-04-25 16:35:56.022 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/.well-known/openid-configuration - null null
+2024-04-25 16:35:56.028 +02:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2024-04-25 16:35:56.031 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/.well-known/openid-configuration - 200 null application/json; charset=UTF-8 9.8982ms
+2024-04-25 16:35:56.128 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/.well-known/openid-configuration/jwks - null null
+2024-04-25 16:35:56.135 +02:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2024-04-25 16:35:56.139 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/.well-known/openid-configuration/jwks - 200 null application/json; charset=UTF-8 10.6698ms
+2024-04-25 16:38:10.748 +02:00 [INF] User profile is available. Using 'C:\Users\Martin\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-04-25 16:38:11.058 +02:00 [INF] Starting IdentityServer4 version 4.0.0+1acafade44176bf817412aa4309d5dff6587a741
+2024-04-25 16:38:11.112 +02:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2024-04-25 16:38:11.158 +02:00 [INF] Using the default authentication scheme idsrv for IdentityServer
+2024-04-25 16:38:11.388 +02:00 [INF] Now listening on: http://localhost:5001
+2024-04-25 16:38:11.391 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-04-25 16:38:11.392 +02:00 [INF] Hosting environment: Development
+2024-04-25 16:38:11.394 +02:00 [INF] Content root path: C:\Source\oauth\msdo.oauth.identityServer
+2024-04-25 16:38:40.064 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/.well-known/openid-configuration - null null
+2024-04-25 16:38:40.128 +02:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2024-04-25 16:38:40.217 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/.well-known/openid-configuration - 200 null application/json; charset=UTF-8 160.0349ms
+2024-04-25 16:38:40.320 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/.well-known/openid-configuration/jwks - null null
+2024-04-25 16:38:40.349 +02:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2024-04-25 16:38:40.389 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/.well-known/openid-configuration/jwks - 200 null application/json; charset=UTF-8 69.7187ms
+2024-04-25 16:38:40.495 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5001/connect/token - application/x-www-form-urlencoded 53
+2024-04-25 16:38:40.513 +02:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.TokenEndpoint for /connect/token
+2024-04-25 16:38:40.616 +02:00 [INF] Token request validation success, {"ClientId":"client","ClientName":null,"GrantType":"client_credentials","Scopes":"protectedResource","AuthorizationCode":null,"RefreshToken":null,"UserName":null,"AuthenticationContextReferenceClasses":null,"Tenant":null,"IdP":null,"Raw":{"grant_type":"client_credentials","scope":"protectedResource"},"$type":"TokenRequestValidationLog"}
+2024-04-25 16:38:40.752 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5001/connect/token - 200 null application/json; charset=UTF-8 257.842ms
+2024-04-25 16:38:41.343 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/.well-known/openid-configuration - null null
+2024-04-25 16:38:41.350 +02:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2024-04-25 16:38:41.354 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/.well-known/openid-configuration - 200 null application/json; charset=UTF-8 11.2901ms
+2024-04-25 16:38:41.444 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/.well-known/openid-configuration/jwks - null null
+2024-04-25 16:38:41.450 +02:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2024-04-25 16:38:41.454 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/.well-known/openid-configuration/jwks - 200 null application/json; charset=UTF-8 10.2003ms
+2024-04-25 16:41:51.489 +02:00 [INF] User profile is available. Using 'C:\Users\Martin\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-04-25 16:41:51.894 +02:00 [INF] Starting IdentityServer4 version 4.0.0+1acafade44176bf817412aa4309d5dff6587a741
+2024-04-25 16:41:51.939 +02:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2024-04-25 16:41:51.966 +02:00 [INF] Using the default authentication scheme idsrv for IdentityServer
+2024-04-25 16:41:52.185 +02:00 [INF] Now listening on: http://localhost:5001
+2024-04-25 16:41:52.189 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-04-25 16:41:52.191 +02:00 [INF] Hosting environment: Development
+2024-04-25 16:41:52.194 +02:00 [INF] Content root path: C:\Source\oauth\msdo.oauth.identityServer
+2024-04-25 16:41:58.455 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/.well-known/openid-configuration - null null
+2024-04-25 16:41:58.513 +02:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2024-04-25 16:41:58.602 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/.well-known/openid-configuration - 200 null application/json; charset=UTF-8 154.6181ms
+2024-04-25 16:41:58.702 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/.well-known/openid-configuration/jwks - null null
+2024-04-25 16:41:58.729 +02:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2024-04-25 16:41:58.766 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/.well-known/openid-configuration/jwks - 200 null application/json; charset=UTF-8 64.1577ms
+2024-04-25 16:41:58.878 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5001/connect/token - application/x-www-form-urlencoded 53
+2024-04-25 16:41:58.898 +02:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.TokenEndpoint for /connect/token
+2024-04-25 16:41:58.988 +02:00 [INF] Token request validation success, {"ClientId":"client","ClientName":null,"GrantType":"client_credentials","Scopes":"protectedResource","AuthorizationCode":null,"RefreshToken":null,"UserName":null,"AuthenticationContextReferenceClasses":null,"Tenant":null,"IdP":null,"Raw":{"grant_type":"client_credentials","scope":"protectedResource"},"$type":"TokenRequestValidationLog"}
+2024-04-25 16:41:59.126 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5001/connect/token - 200 null application/json; charset=UTF-8 248.1586ms
+2024-04-25 16:41:59.646 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/.well-known/openid-configuration - null null
+2024-04-25 16:41:59.655 +02:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2024-04-25 16:41:59.659 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/.well-known/openid-configuration - 200 null application/json; charset=UTF-8 12.8621ms
+2024-04-25 16:41:59.770 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/.well-known/openid-configuration/jwks - null null
+2024-04-25 16:41:59.776 +02:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2024-04-25 16:41:59.779 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/.well-known/openid-configuration/jwks - 200 null application/json; charset=UTF-8 9.1294ms

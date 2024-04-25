@@ -6,7 +6,10 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using msdo.middleware.httpRequest;
+using Microsoft.Extensions.Primitives;
+using Serilog.Context;
+using System;
+using System.Linq;
 
 namespace msdo.oauth.identityServer
 {
@@ -52,7 +55,23 @@ namespace msdo.oauth.identityServer
             // uncomment if you want to add MVC
             //app.UseStaticFiles();
             //app.UseRouting();
-            app.UseMiddleware<IncomingCorrelationIdMiddleware>();
+            // Middleware that adds correlation id to request.
+            app.Use(async (context, next) =>
+            {
+                const string _correlationIdHeader = "X-Correlation-Id";
+                const string correlationIdLogPropertyname = "CorrelationId";
+
+                context.Request.Headers.TryGetValue(_correlationIdHeader, out StringValues correlationIds);
+                var correlationId = correlationIds.FirstOrDefault() ?? Guid.NewGuid().ToString();
+
+                using (LogContext.PushProperty(correlationIdLogPropertyname, correlationId))
+                {
+                    context.Items["Correlation-Id"] = correlationId;
+                    await next(context);
+                }
+
+
+            });
             app.UseIdentityServer();
 
             // uncomment, if you want to add MVC

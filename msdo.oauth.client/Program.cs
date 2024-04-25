@@ -1,8 +1,9 @@
 using msdo.oauth.client.Interfaces;
 using msdo.oauth.client.Services;
-using msdo.middleware.httpRequest;
 using Serilog;
 using System.Configuration;
+using Microsoft.Extensions.Primitives;
+using Serilog.Context;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -49,8 +50,23 @@ builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
-// Middleware that adds correlation id to request, if no correlation id is present, the header name is: X-Correlation-Id
-app.UseMiddleware<IncomingCorrelationIdMiddleware>();
+// Middleware that adds correlation id to request.
+app.Use(async (context, next) =>
+{
+    const string _correlationIdHeader = "X-Correlation-Id";
+    const string correlationIdLogPropertyname = "CorrelationId";
+
+    context.Request.Headers.TryGetValue(_correlationIdHeader, out StringValues correlationIds);
+    var correlationId = correlationIds.FirstOrDefault() ?? Guid.NewGuid().ToString();
+
+    using (LogContext.PushProperty(correlationIdLogPropertyname, correlationId))
+    {
+        context.Items["Correlation-Id"] = correlationId;
+        await next(context);
+    }
+
+
+});
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
