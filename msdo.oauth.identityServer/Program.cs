@@ -2,7 +2,6 @@
 using Microsoft.Extensions.Hosting;
 using Serilog;
 using System;
-using System.IO;
 using Microsoft.Extensions.Configuration;
 using Serilog.Events;
 using Serilog.Sinks.SystemConsole.Themes;
