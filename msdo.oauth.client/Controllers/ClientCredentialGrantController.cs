@@ -25,8 +25,12 @@ namespace msdo.oauth.client.Controllers
         {
             string correlationId = HttpContext.Items["Correlation-Id"].ToString();
 
+            _logger.LogInformation("Requesting access token");
+
             string accessToken 
                 = await _authorizationService.GetAccessToken("client", "secret",correlationId);
+
+            _logger.LogInformation($"Obtained Access token: {accessToken}");
 
             string protectedResource
                 = await _protectedResourceService.GetProtectedResource(accessToken, correlationId); 

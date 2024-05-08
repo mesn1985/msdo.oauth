@@ -24,15 +24,6 @@ builder.Configuration.AddJsonFile(configurationDirectory + configurationFileName
 builder.Host.UseSerilog((context, configuration) =>
     configuration.ReadFrom.Configuration(context.Configuration).Enrich.FromLogContext()
 );
-//builder.Host.UseSerilog((context, configuration) =>
-//    configuration.ReadFrom.Configuration(context.Configuration)
-//        .WriteTo.Console(outputTemplate:
-//            "[Time:{Timestamp:HH:mm:ss}] [Log level:{Level:u3}] [Correlation id:{CorrelationId}] {NewLine} [Message:{Message}] "
-//        )
-//        .WriteTo.File("log.txt", rollingInterval: RollingInterval.Day)
-//        .Enrich.FromLogContext()
-//);
-// Add services to the container.
 
 builder.Services.AddControllers();
 builder.Services.AddAuthentication("Bearer").AddJwtBearer("Bearer", options =>
@@ -43,7 +34,7 @@ builder.Services.AddAuthentication("Bearer").AddJwtBearer("Bearer", options =>
     options.RequireHttpsMetadata = false;
     options.Authority 
         = builder.Configuration.GetValue<string>("Services:AuthorizationServer");
-
+    
     options.TokenValidationParameters = new TokenValidationParameters
     {
         ValidateAudience = false
