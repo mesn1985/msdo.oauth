@@ -1,0 +1,348 @@
+2024-05-08 09:50:58.090 +02:00 [INF] User profile is available. Using 'C:\Users\Martin\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-05-08 09:50:58.797 +02:00 [INF] Starting IdentityServer4 version 4.0.0+1acafade44176bf817412aa4309d5dff6587a741
+2024-05-08 09:50:58.835 +02:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2024-05-08 09:50:58.904 +02:00 [INF] Using the default authentication scheme idsrv for IdentityServer
+2024-05-08 09:50:59.162 +02:00 [INF] Unable to bind to http://localhost:5001 on the IPv4 loopback interface: 'An attempt was made to access a socket in a way forbidden by its access permissions.'.
+2024-05-08 09:50:59.168 +02:00 [INF] Unable to bind to http://localhost:5001 on the IPv6 loopback interface: 'An attempt was made to access a socket in a way forbidden by its access permissions.'.
+2024-05-08 09:50:59.292 +02:00 [ERR] Hosting failed to start
+System.IO.IOException: Failed to bind to address http://localhost:5001.
+ ---> System.AggregateException: One or more errors occurred. (An attempt was made to access a socket in a way forbidden by its access permissions.) (An attempt was made to access a socket in a way forbidden by its access permissions.)
+ ---> System.Net.Sockets.SocketException (10013): An attempt was made to access a socket in a way forbidden by its access permissions.
+   at System.Net.Sockets.Socket.UpdateStatusAfterSocketErrorAndThrowException(SocketError error, Boolean disconnectOnFailure, String callerName)
+   at System.Net.Sockets.Socket.DoBind(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Bind(EndPoint localEP)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransportOptions.CreateDefaultBoundListenSocket(EndPoint endpoint)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransportFactory.BindAsync(EndPoint endpoint, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Infrastructure.TransportManager.BindAsync(EndPoint endPoint, ConnectionDelegate connectionDelegate, EndpointConfig endpointConfig, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.<>c__DisplayClass28_0`1.<<StartAsync>g__OnBind|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.LocalhostListenOptions.BindAsync(AddressBindContext context, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+ ---> (Inner Exception #1) System.Net.Sockets.SocketException (10013): An attempt was made to access a socket in a way forbidden by its access permissions.
+   at System.Net.Sockets.Socket.UpdateStatusAfterSocketErrorAndThrowException(SocketError error, Boolean disconnectOnFailure, String callerName)
+   at System.Net.Sockets.Socket.DoBind(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Bind(EndPoint localEP)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransportOptions.CreateDefaultBoundListenSocket(EndPoint endpoint)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransportFactory.BindAsync(EndPoint endpoint, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Infrastructure.TransportManager.BindAsync(EndPoint endPoint, ConnectionDelegate connectionDelegate, EndpointConfig endpointConfig, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.<>c__DisplayClass28_0`1.<<StartAsync>g__OnBind|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.LocalhostListenOptions.BindAsync(AddressBindContext context, CancellationToken cancellationToken)<---
+
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.LocalhostListenOptions.BindAsync(AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.AddressesStrategy.BindAsync(AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindAsync(ListenOptions[] listenOptions, AddressBindContext context, Func`2 useHttps, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.BindAsync(CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.StartAsync[TContext](IHttpApplication`1 application, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.Internal.Host.<StartAsync>b__15_1(IHostedService service, CancellationToken token)
+   at Microsoft.Extensions.Hosting.Internal.Host.ForeachService[T](IEnumerable`1 services, CancellationToken token, Boolean concurrent, Boolean abortOnFirstException, List`1 exceptions, Func`3 operation)
+2024-05-08 09:51:31.791 +02:00 [INF] User profile is available. Using 'C:\Users\Martin\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-05-08 09:51:32.135 +02:00 [INF] Starting IdentityServer4 version 4.0.0+1acafade44176bf817412aa4309d5dff6587a741
+2024-05-08 09:51:32.174 +02:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2024-05-08 09:51:32.200 +02:00 [INF] Using the default authentication scheme idsrv for IdentityServer
+2024-05-08 09:51:32.372 +02:00 [INF] Unable to bind to http://localhost:5001 on the IPv4 loopback interface: 'An attempt was made to access a socket in a way forbidden by its access permissions.'.
+2024-05-08 09:51:32.380 +02:00 [INF] Unable to bind to http://localhost:5001 on the IPv6 loopback interface: 'An attempt was made to access a socket in a way forbidden by its access permissions.'.
+2024-05-08 09:55:45.146 +02:00 [INF] User profile is available. Using 'C:\Users\Martin\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-05-08 09:55:45.351 +02:00 [INF] Starting IdentityServer4 version 4.0.0+1acafade44176bf817412aa4309d5dff6587a741
+2024-05-08 09:55:45.384 +02:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2024-05-08 09:55:45.400 +02:00 [INF] Using the default authentication scheme idsrv for IdentityServer
+2024-05-08 09:55:45.506 +02:00 [INF] Unable to bind to http://localhost:5001 on the IPv4 loopback interface: 'An attempt was made to access a socket in a way forbidden by its access permissions.'.
+2024-05-08 09:55:45.513 +02:00 [INF] Unable to bind to http://localhost:5001 on the IPv6 loopback interface: 'An attempt was made to access a socket in a way forbidden by its access permissions.'.
+2024-05-08 09:55:45.537 +02:00 [ERR] Hosting failed to start
+System.IO.IOException: Failed to bind to address http://localhost:5001.
+ ---> System.AggregateException: One or more errors occurred. (An attempt was made to access a socket in a way forbidden by its access permissions.) (An attempt was made to access a socket in a way forbidden by its access permissions.)
+ ---> System.Net.Sockets.SocketException (10013): An attempt was made to access a socket in a way forbidden by its access permissions.
+   at System.Net.Sockets.Socket.UpdateStatusAfterSocketErrorAndThrowException(SocketError error, Boolean disconnectOnFailure, String callerName)
+   at System.Net.Sockets.Socket.DoBind(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Bind(EndPoint localEP)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransportOptions.CreateDefaultBoundListenSocket(EndPoint endpoint)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransportFactory.BindAsync(EndPoint endpoint, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Infrastructure.TransportManager.BindAsync(EndPoint endPoint, ConnectionDelegate connectionDelegate, EndpointConfig endpointConfig, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.<>c__DisplayClass28_0`1.<<StartAsync>g__OnBind|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.LocalhostListenOptions.BindAsync(AddressBindContext context, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+ ---> (Inner Exception #1) System.Net.Sockets.SocketException (10013): An attempt was made to access a socket in a way forbidden by its access permissions.
+   at System.Net.Sockets.Socket.UpdateStatusAfterSocketErrorAndThrowException(SocketError error, Boolean disconnectOnFailure, String callerName)
+   at System.Net.Sockets.Socket.DoBind(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Bind(EndPoint localEP)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransportOptions.CreateDefaultBoundListenSocket(EndPoint endpoint)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransportFactory.BindAsync(EndPoint endpoint, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Infrastructure.TransportManager.BindAsync(EndPoint endPoint, ConnectionDelegate connectionDelegate, EndpointConfig endpointConfig, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.<>c__DisplayClass28_0`1.<<StartAsync>g__OnBind|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.LocalhostListenOptions.BindAsync(AddressBindContext context, CancellationToken cancellationToken)<---
+
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.LocalhostListenOptions.BindAsync(AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.AddressesStrategy.BindAsync(AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindAsync(ListenOptions[] listenOptions, AddressBindContext context, Func`2 useHttps, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.BindAsync(CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.StartAsync[TContext](IHttpApplication`1 application, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.Internal.Host.<StartAsync>b__15_1(IHostedService service, CancellationToken token)
+   at Microsoft.Extensions.Hosting.Internal.Host.ForeachService[T](IEnumerable`1 services, CancellationToken token, Boolean concurrent, Boolean abortOnFirstException, List`1 exceptions, Func`3 operation)
+2024-05-08 09:56:28.781 +02:00 [INF] User profile is available. Using 'C:\Users\Martin\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-05-08 09:56:29.313 +02:00 [INF] Starting IdentityServer4 version 4.0.0+1acafade44176bf817412aa4309d5dff6587a741
+2024-05-08 09:56:29.360 +02:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2024-05-08 09:56:29.385 +02:00 [INF] Using the default authentication scheme idsrv for IdentityServer
+2024-05-08 09:56:29.528 +02:00 [INF] Unable to bind to http://localhost:5001 on the IPv4 loopback interface: 'An attempt was made to access a socket in a way forbidden by its access permissions.'.
+2024-05-08 09:56:29.536 +02:00 [INF] Unable to bind to http://localhost:5001 on the IPv6 loopback interface: 'An attempt was made to access a socket in a way forbidden by its access permissions.'.
+2024-05-08 09:56:29.567 +02:00 [ERR] Hosting failed to start
+System.IO.IOException: Failed to bind to address http://localhost:5001.
+ ---> System.AggregateException: One or more errors occurred. (An attempt was made to access a socket in a way forbidden by its access permissions.) (An attempt was made to access a socket in a way forbidden by its access permissions.)
+ ---> System.Net.Sockets.SocketException (10013): An attempt was made to access a socket in a way forbidden by its access permissions.
+   at System.Net.Sockets.Socket.UpdateStatusAfterSocketErrorAndThrowException(SocketError error, Boolean disconnectOnFailure, String callerName)
+   at System.Net.Sockets.Socket.DoBind(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Bind(EndPoint localEP)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransportOptions.CreateDefaultBoundListenSocket(EndPoint endpoint)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransportFactory.BindAsync(EndPoint endpoint, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Infrastructure.TransportManager.BindAsync(EndPoint endPoint, ConnectionDelegate connectionDelegate, EndpointConfig endpointConfig, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.<>c__DisplayClass28_0`1.<<StartAsync>g__OnBind|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.LocalhostListenOptions.BindAsync(AddressBindContext context, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+ ---> (Inner Exception #1) System.Net.Sockets.SocketException (10013): An attempt was made to access a socket in a way forbidden by its access permissions.
+   at System.Net.Sockets.Socket.UpdateStatusAfterSocketErrorAndThrowException(SocketError error, Boolean disconnectOnFailure, String callerName)
+   at System.Net.Sockets.Socket.DoBind(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Bind(EndPoint localEP)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransportOptions.CreateDefaultBoundListenSocket(EndPoint endpoint)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransportFactory.BindAsync(EndPoint endpoint, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Infrastructure.TransportManager.BindAsync(EndPoint endPoint, ConnectionDelegate connectionDelegate, EndpointConfig endpointConfig, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.<>c__DisplayClass28_0`1.<<StartAsync>g__OnBind|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.LocalhostListenOptions.BindAsync(AddressBindContext context, CancellationToken cancellationToken)<---
+
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.LocalhostListenOptions.BindAsync(AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.AddressesStrategy.BindAsync(AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindAsync(ListenOptions[] listenOptions, AddressBindContext context, Func`2 useHttps, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.BindAsync(CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.StartAsync[TContext](IHttpApplication`1 application, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.Internal.Host.<StartAsync>b__15_1(IHostedService service, CancellationToken token)
+   at Microsoft.Extensions.Hosting.Internal.Host.ForeachService[T](IEnumerable`1 services, CancellationToken token, Boolean concurrent, Boolean abortOnFirstException, List`1 exceptions, Func`3 operation)
+2024-05-08 10:08:24.766 +02:00 [INF] User profile is available. Using 'C:\Users\Martin\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-05-08 10:08:25.199 +02:00 [INF] Starting IdentityServer4 version 4.0.0+1acafade44176bf817412aa4309d5dff6587a741
+2024-05-08 10:08:25.230 +02:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2024-05-08 10:08:25.283 +02:00 [INF] Using the default authentication scheme idsrv for IdentityServer
+2024-05-08 10:08:25.606 +02:00 [INF] Now listening on: http://localhost:5001
+2024-05-08 10:08:25.609 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-05-08 10:08:25.610 +02:00 [INF] Hosting environment: Development
+2024-05-08 10:08:25.613 +02:00 [INF] Content root path: C:\Source\oauth\msdo.oauth.identityServer
+2024-05-08 10:08:48.944 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/.well-known/openid-configuration - null null
+2024-05-08 10:08:49.007 +02:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2024-05-08 10:08:49.160 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/.well-known/openid-configuration - 200 null application/json; charset=UTF-8 224.8588ms
+2024-05-08 10:08:49.261 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/.well-known/openid-configuration/jwks - null null
+2024-05-08 10:08:49.307 +02:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2024-05-08 10:08:49.500 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/.well-known/openid-configuration/jwks - 200 null application/json; charset=UTF-8 239.1426ms
+2024-05-08 10:08:49.807 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5001/connect/token - application/x-www-form-urlencoded 53
+2024-05-08 10:08:49.859 +02:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.TokenEndpoint for /connect/token
+2024-05-08 10:08:50.029 +02:00 [INF] Token request validation success, {"ClientId":"client","ClientName":null,"GrantType":"client_credentials","Scopes":"protectedResource","AuthorizationCode":null,"RefreshToken":null,"UserName":null,"AuthenticationContextReferenceClasses":null,"Tenant":null,"IdP":null,"Raw":{"grant_type":"client_credentials","scope":"protectedResource"},"$type":"TokenRequestValidationLog"}
+2024-05-08 10:08:50.206 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5001/connect/token - 200 null application/json; charset=UTF-8 398.633ms
+2024-05-08 10:08:51.275 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/.well-known/openid-configuration - null null
+2024-05-08 10:08:51.280 +02:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2024-05-08 10:08:51.284 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/.well-known/openid-configuration - 200 null application/json; charset=UTF-8 9.3912ms
+2024-05-08 10:08:51.385 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/.well-known/openid-configuration/jwks - null null
+2024-05-08 10:08:51.391 +02:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2024-05-08 10:08:51.394 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/.well-known/openid-configuration/jwks - 200 null application/json; charset=UTF-8 8.4547ms
+2024-05-08 10:42:27.633 +02:00 [INF] User profile is available. Using 'C:\Users\Martin\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-05-08 10:42:28.387 +02:00 [INF] Starting IdentityServer4 version 4.0.0+1acafade44176bf817412aa4309d5dff6587a741
+2024-05-08 10:42:28.473 +02:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2024-05-08 10:42:28.541 +02:00 [INF] Using the default authentication scheme idsrv for IdentityServer
+2024-05-08 10:42:28.931 +02:00 [INF] Now listening on: http://localhost:5001
+2024-05-08 10:42:28.935 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-05-08 10:42:28.939 +02:00 [INF] Hosting environment: Development
+2024-05-08 10:42:28.941 +02:00 [INF] Content root path: C:\Source\oauth\msdo.oauth.identityServer
+2024-05-08 10:42:49.909 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/.well-known/openid-configuration - null null
+2024-05-08 10:42:49.967 +02:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2024-05-08 10:42:50.096 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/.well-known/openid-configuration - 200 null application/json; charset=UTF-8 193.4861ms
+2024-05-08 10:42:50.185 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/.well-known/openid-configuration/jwks - null null
+2024-05-08 10:42:50.216 +02:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2024-05-08 10:42:50.316 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/.well-known/openid-configuration/jwks - 200 null application/json; charset=UTF-8 131.0202ms
+2024-05-08 10:42:50.437 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5001/connect/token - application/x-www-form-urlencoded 53
+2024-05-08 10:42:50.457 +02:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.TokenEndpoint for /connect/token
+2024-05-08 10:42:50.606 +02:00 [INF] Token request validation success, {"ClientId":"client","ClientName":null,"GrantType":"client_credentials","Scopes":"protectedResource","AuthorizationCode":null,"RefreshToken":null,"UserName":null,"AuthenticationContextReferenceClasses":null,"Tenant":null,"IdP":null,"Raw":{"grant_type":"client_credentials","scope":"protectedResource"},"$type":"TokenRequestValidationLog"}
+2024-05-08 10:42:50.784 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5001/connect/token - 200 null application/json; charset=UTF-8 346.8341ms
+2024-05-08 10:42:51.488 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/.well-known/openid-configuration - null null
+2024-05-08 10:42:51.494 +02:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2024-05-08 10:42:51.499 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/.well-known/openid-configuration - 200 null application/json; charset=UTF-8 10.7237ms
+2024-05-08 10:42:51.584 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/.well-known/openid-configuration/jwks - null null
+2024-05-08 10:42:51.589 +02:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2024-05-08 10:42:51.592 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/.well-known/openid-configuration/jwks - 200 null application/json; charset=UTF-8 8.3503ms
+2024-05-08 10:49:03.510 +02:00 [INF] User profile is available. Using 'C:\Users\Martin\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-05-08 10:49:03.723 +02:00 [INF] Starting IdentityServer4 version 4.0.0+1acafade44176bf817412aa4309d5dff6587a741
+2024-05-08 10:49:03.787 +02:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2024-05-08 10:49:03.808 +02:00 [INF] Using the default authentication scheme idsrv for IdentityServer
+2024-05-08 10:49:03.977 +02:00 [INF] Now listening on: http://localhost:5001
+2024-05-08 10:49:03.980 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-05-08 10:49:03.984 +02:00 [INF] Hosting environment: Development
+2024-05-08 10:49:03.986 +02:00 [INF] Content root path: C:\Source\oauth\msdo.oauth.identityServer
+2024-05-08 10:49:10.268 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/.well-known/openid-configuration - null null
+2024-05-08 10:49:10.330 +02:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2024-05-08 10:49:10.424 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/.well-known/openid-configuration - 200 null application/json; charset=UTF-8 162.4683ms
+2024-05-08 10:49:10.522 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/.well-known/openid-configuration/jwks - null null
+2024-05-08 10:49:10.543 +02:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2024-05-08 10:49:10.582 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/.well-known/openid-configuration/jwks - 200 null application/json; charset=UTF-8 60.0111ms
+2024-05-08 10:49:10.686 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5001/connect/token - application/x-www-form-urlencoded 53
+2024-05-08 10:49:10.708 +02:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.TokenEndpoint for /connect/token
+2024-05-08 10:49:10.793 +02:00 [INF] Token request validation success, {"ClientId":"client","ClientName":null,"GrantType":"client_credentials","Scopes":"protectedResource","AuthorizationCode":null,"RefreshToken":null,"UserName":null,"AuthenticationContextReferenceClasses":null,"Tenant":null,"IdP":null,"Raw":{"grant_type":"client_credentials","scope":"protectedResource"},"$type":"TokenRequestValidationLog"}
+2024-05-08 10:49:10.927 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5001/connect/token - 200 null application/json; charset=UTF-8 240.7958ms
+2024-05-08 10:49:11.534 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/.well-known/openid-configuration - null null
+2024-05-08 10:49:11.540 +02:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2024-05-08 10:49:11.543 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/.well-known/openid-configuration - 200 null application/json; charset=UTF-8 9.0101ms
+2024-05-08 10:49:11.635 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/.well-known/openid-configuration/jwks - null null
+2024-05-08 10:49:11.642 +02:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2024-05-08 10:49:11.645 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/.well-known/openid-configuration/jwks - 200 null application/json; charset=UTF-8 9.8703ms
+2024-05-08 10:54:30.145 +02:00 [INF] User profile is available. Using 'C:\Users\Martin\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-05-08 10:54:30.470 +02:00 [INF] Starting IdentityServer4 version 4.0.0+1acafade44176bf817412aa4309d5dff6587a741
+2024-05-08 10:54:30.506 +02:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2024-05-08 10:54:30.529 +02:00 [INF] Using the default authentication scheme idsrv for IdentityServer
+2024-05-08 10:54:30.706 +02:00 [INF] Now listening on: http://localhost:5001
+2024-05-08 10:54:30.708 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-05-08 10:54:30.710 +02:00 [INF] Hosting environment: Development
+2024-05-08 10:54:30.712 +02:00 [INF] Content root path: C:\Source\oauth\msdo.oauth.identityServer
+2024-05-08 10:54:37.193 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/.well-known/openid-configuration - null null
+2024-05-08 10:54:37.254 +02:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2024-05-08 10:54:37.358 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/.well-known/openid-configuration - 200 null application/json; charset=UTF-8 171.5336ms
+2024-05-08 10:54:37.458 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/.well-known/openid-configuration/jwks - null null
+2024-05-08 10:54:37.492 +02:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2024-05-08 10:54:37.530 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/.well-known/openid-configuration/jwks - 200 null application/json; charset=UTF-8 71.9354ms
+2024-05-08 10:54:37.629 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5001/connect/token - application/x-www-form-urlencoded 53
+2024-05-08 10:54:37.648 +02:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.TokenEndpoint for /connect/token
+2024-05-08 10:54:37.736 +02:00 [INF] Token request validation success, {"ClientId":"client","ClientName":null,"GrantType":"client_credentials","Scopes":"protectedResource","AuthorizationCode":null,"RefreshToken":null,"UserName":null,"AuthenticationContextReferenceClasses":null,"Tenant":null,"IdP":null,"Raw":{"grant_type":"client_credentials","scope":"protectedResource"},"$type":"TokenRequestValidationLog"}
+2024-05-08 10:54:37.876 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5001/connect/token - 200 null application/json; charset=UTF-8 246.7184ms
+2024-05-08 10:54:38.496 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/.well-known/openid-configuration - null null
+2024-05-08 10:54:38.502 +02:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2024-05-08 10:54:38.506 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/.well-known/openid-configuration - 200 null application/json; charset=UTF-8 10.8656ms
+2024-05-08 10:54:38.601 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/.well-known/openid-configuration/jwks - null null
+2024-05-08 10:54:38.607 +02:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2024-05-08 10:54:38.611 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/.well-known/openid-configuration/jwks - 200 null application/json; charset=UTF-8 9.6163ms
+2024-05-08 11:41:25.960 +02:00 [INF] User profile is available. Using 'C:\Users\Martin\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-05-08 11:41:26.471 +02:00 [INF] Starting IdentityServer4 version 4.0.0+1acafade44176bf817412aa4309d5dff6587a741
+2024-05-08 11:41:26.499 +02:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2024-05-08 11:41:26.552 +02:00 [INF] Using the default authentication scheme idsrv for IdentityServer
+2024-05-08 11:41:26.807 +02:00 [INF] Now listening on: http://localhost:5001
+2024-05-08 11:41:26.809 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-05-08 11:41:26.810 +02:00 [INF] Hosting environment: Development
+2024-05-08 11:41:26.811 +02:00 [INF] Content root path: C:\Source\oauth\msdo.oauth.identityServer
+2024-05-08 11:46:32.917 +02:00 [DBG] Hosting starting
+2024-05-08 11:46:33.117 +02:00 [INF] User profile is available. Using 'C:\Users\Martin\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-05-08 11:46:33.233 +02:00 [DBG] Reading data from file 'C:\Users\Martin\AppData\Local\ASP.NET\DataProtection-Keys\key-927dbe51-6b55-4cd1-b4e7-b21b18977cd6.xml'.
+2024-05-08 11:46:33.263 +02:00 [DBG] Reading data from file 'C:\Users\Martin\AppData\Local\ASP.NET\DataProtection-Keys\key-c95b021d-9813-40f7-948f-1856abcc322d.xml'.
+2024-05-08 11:46:33.300 +02:00 [DBG] Reading data from file 'C:\Users\Martin\AppData\Local\ASP.NET\DataProtection-Keys\key-df502986-6f46-4e05-81b7-a2a1cdcf26e6.xml'.
+2024-05-08 11:46:33.334 +02:00 [DBG] Reading data from file 'C:\Users\Martin\AppData\Local\ASP.NET\DataProtection-Keys\key-fea2304a-b7b8-4f66-8690-24c78fd42a61.xml'.
+2024-05-08 11:46:33.354 +02:00 [DBG] Found key {927dbe51-6b55-4cd1-b4e7-b21b18977cd6}.
+2024-05-08 11:46:33.375 +02:00 [DBG] Found key {c95b021d-9813-40f7-948f-1856abcc322d}.
+2024-05-08 11:46:33.386 +02:00 [DBG] Found key {df502986-6f46-4e05-81b7-a2a1cdcf26e6}.
+2024-05-08 11:46:33.397 +02:00 [DBG] Found key {fea2304a-b7b8-4f66-8690-24c78fd42a61}.
+2024-05-08 11:46:33.423 +02:00 [DBG] Considering key {df502986-6f46-4e05-81b7-a2a1cdcf26e6} with expiration date 2024-07-17 05:12:39Z as default key.
+2024-05-08 11:46:33.483 +02:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2024-05-08 11:46:33.528 +02:00 [DBG] Decrypting secret element using Windows DPAPI.
+2024-05-08 11:46:33.553 +02:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2024-05-08 11:46:33.598 +02:00 [DBG] Opening CNG algorithm 'AES' from provider 'null' with chaining mode CBC.
+2024-05-08 11:46:33.607 +02:00 [DBG] Opening CNG algorithm 'SHA256' from provider 'null' with HMAC.
+2024-05-08 11:46:33.614 +02:00 [DBG] Using key {df502986-6f46-4e05-81b7-a2a1cdcf26e6} as the default key.
+2024-05-08 11:46:33.620 +02:00 [DBG] Key ring with default key {df502986-6f46-4e05-81b7-a2a1cdcf26e6} was loaded during application startup.
+2024-05-08 11:46:33.700 +02:00 [INF] Starting IdentityServer4 version 4.0.0+1acafade44176bf817412aa4309d5dff6587a741
+2024-05-08 11:46:33.738 +02:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2024-05-08 11:46:33.760 +02:00 [INF] Using the default authentication scheme idsrv for IdentityServer
+2024-05-08 11:46:33.772 +02:00 [DBG] Using idsrv as default ASP.NET Core scheme for authentication
+2024-05-08 11:46:33.777 +02:00 [DBG] Using idsrv as default ASP.NET Core scheme for sign-in
+2024-05-08 11:46:33.783 +02:00 [DBG] Using idsrv as default ASP.NET Core scheme for sign-out
+2024-05-08 11:46:33.788 +02:00 [DBG] Using idsrv as default ASP.NET Core scheme for challenge
+2024-05-08 11:46:33.793 +02:00 [DBG] Using idsrv as default ASP.NET Core scheme for forbid
+2024-05-08 11:46:33.956 +02:00 [INF] Now listening on: http://localhost:5001
+2024-05-08 11:46:33.975 +02:00 [DBG] Loaded hosting startup assembly msdo.oauth.identityServer
+2024-05-08 11:46:33.991 +02:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2024-05-08 11:46:34.007 +02:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2024-05-08 11:46:34.027 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-05-08 11:46:34.032 +02:00 [INF] Hosting environment: Development
+2024-05-08 11:46:34.036 +02:00 [INF] Content root path: C:\Source\oauth\msdo.oauth.identityServer
+2024-05-08 11:46:34.048 +02:00 [DBG] Hosting started
+2024-05-08 11:46:40.172 +02:00 [DBG] Connection id "0HN3F8F1D1J4T" accepted.
+2024-05-08 11:46:40.179 +02:00 [DBG] Connection id "0HN3F8F1D1J4T" started.
+2024-05-08 11:46:40.226 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/.well-known/openid-configuration - null null
+2024-05-08 11:46:40.249 +02:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2024-05-08 11:46:40.287 +02:00 [DBG] Login Url: /Account/Login
+2024-05-08 11:46:40.294 +02:00 [DBG] Login Return Url Parameter: ReturnUrl
+2024-05-08 11:46:40.298 +02:00 [DBG] Logout Url: /Account/Logout
+2024-05-08 11:46:40.302 +02:00 [DBG] ConsentUrl Url: /consent
+2024-05-08 11:46:40.305 +02:00 [DBG] Consent Return Url Parameter: returnUrl
+2024-05-08 11:46:40.310 +02:00 [DBG] Error Url: /home/error
+2024-05-08 11:46:40.315 +02:00 [DBG] Error Id Parameter: errorId
+2024-05-08 11:46:40.323 +02:00 [DBG] AuthenticationScheme: idsrv was not authenticated.
+2024-05-08 11:46:40.335 +02:00 [DBG] AuthenticationScheme: idsrv was not authenticated.
+2024-05-08 11:46:40.343 +02:00 [DBG] Request path /.well-known/openid-configuration matched to endpoint type Discovery
+2024-05-08 11:46:40.353 +02:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
+2024-05-08 11:46:40.358 +02:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2024-05-08 11:46:40.365 +02:00 [DBG] Start discovery request
+2024-05-08 11:46:40.487 +02:00 [DBG] Connection id "0HN3F8F1D1J4T" completed keep alive response.
+2024-05-08 11:46:40.493 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/.well-known/openid-configuration - 200 null application/json; charset=UTF-8 274.3627ms
+2024-05-08 11:46:40.580 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/.well-known/openid-configuration/jwks - null null
+2024-05-08 11:46:40.593 +02:00 [DBG] AuthenticationScheme: idsrv was not authenticated.
+2024-05-08 11:46:40.598 +02:00 [DBG] AuthenticationScheme: idsrv was not authenticated.
+2024-05-08 11:46:40.602 +02:00 [DBG] Request path /.well-known/openid-configuration/jwks matched to endpoint type Discovery
+2024-05-08 11:46:40.611 +02:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryKeyEndpoint
+2024-05-08 11:46:40.617 +02:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2024-05-08 11:46:40.626 +02:00 [DBG] Start key discovery request
+2024-05-08 11:46:40.727 +02:00 [DBG] Connection id "0HN3F8F1D1J4T" completed keep alive response.
+2024-05-08 11:46:40.733 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/.well-known/openid-configuration/jwks - 200 null application/json; charset=UTF-8 153.289ms
+2024-05-08 11:46:40.828 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5001/connect/token - application/x-www-form-urlencoded 53
+2024-05-08 11:46:40.845 +02:00 [DBG] AuthenticationScheme: idsrv was not authenticated.
+2024-05-08 11:46:40.850 +02:00 [DBG] AuthenticationScheme: idsrv was not authenticated.
+2024-05-08 11:46:40.855 +02:00 [DBG] Request path /connect/token matched to endpoint type Token
+2024-05-08 11:46:40.868 +02:00 [DBG] Endpoint enabled: Token, successfully created handler: IdentityServer4.Endpoints.TokenEndpoint
+2024-05-08 11:46:40.873 +02:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.TokenEndpoint for /connect/token
+2024-05-08 11:46:40.929 +02:00 [DBG] Start token request.
+2024-05-08 11:46:40.936 +02:00 [DBG] Start client validation
+2024-05-08 11:46:40.944 +02:00 [DBG] Start parsing Basic Authentication secret
+2024-05-08 11:46:40.949 +02:00 [DBG] Parser found secret: BasicAuthenticationSecretParser
+2024-05-08 11:46:40.953 +02:00 [DBG] Secret id found: client
+2024-05-08 11:46:40.965 +02:00 [DBG] client configuration validation for client client succeeded.
+2024-05-08 11:46:40.975 +02:00 [DBG] Secret validator success: HashedSharedSecretValidator
+2024-05-08 11:46:40.980 +02:00 [DBG] Client validation success
+2024-05-08 11:46:40.993 +02:00 [DBG] Connection id "0HN3F8F1D1J4T", Request id "0HN3F8F1D1J4T:00000003": started reading request body.
+2024-05-08 11:46:40.999 +02:00 [DBG] Connection id "0HN3F8F1D1J4T", Request id "0HN3F8F1D1J4T:00000003": done reading request body.
+2024-05-08 11:46:41.024 +02:00 [DBG] Start token request validation
+2024-05-08 11:46:41.037 +02:00 [DBG] Start client credentials token request validation
+2024-05-08 11:46:41.061 +02:00 [DBG] client credentials token request validation success
+2024-05-08 11:46:41.079 +02:00 [INF] Token request validation success, {"ClientId":"client","ClientName":null,"GrantType":"client_credentials","Scopes":"protectedResource","AuthorizationCode":null,"RefreshToken":null,"UserName":null,"AuthenticationContextReferenceClasses":null,"Tenant":null,"IdP":null,"Raw":{"grant_type":"client_credentials","scope":"protectedResource"},"$type":"TokenRequestValidationLog"}
+2024-05-08 11:46:41.120 +02:00 [DBG] Getting claims for access token for client: client
+2024-05-08 11:46:41.235 +02:00 [DBG] Token request success.
+2024-05-08 11:46:41.254 +02:00 [DBG] Connection id "0HN3F8F1D1J4T" completed keep alive response.
+2024-05-08 11:46:41.260 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5001/connect/token - 200 null application/json; charset=UTF-8 431.46ms
+2024-05-08 11:46:41.823 +02:00 [DBG] Connection id "0HN3F8F1D1J4U" accepted.
+2024-05-08 11:46:41.829 +02:00 [DBG] Connection id "0HN3F8F1D1J4U" started.
+2024-05-08 11:46:41.846 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/.well-known/openid-configuration - null null
+2024-05-08 11:46:41.855 +02:00 [DBG] AuthenticationScheme: idsrv was not authenticated.
+2024-05-08 11:46:41.859 +02:00 [DBG] AuthenticationScheme: idsrv was not authenticated.
+2024-05-08 11:46:41.864 +02:00 [DBG] Request path /.well-known/openid-configuration matched to endpoint type Discovery
+2024-05-08 11:46:41.868 +02:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
+2024-05-08 11:46:41.873 +02:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2024-05-08 11:46:41.878 +02:00 [DBG] Start discovery request
+2024-05-08 11:46:41.881 +02:00 [DBG] Connection id "0HN3F8F1D1J4U" completed keep alive response.
+2024-05-08 11:46:41.887 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/.well-known/openid-configuration - 200 null application/json; charset=UTF-8 40.6658ms
+2024-05-08 11:46:41.972 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/.well-known/openid-configuration/jwks - null null
+2024-05-08 11:46:41.983 +02:00 [DBG] AuthenticationScheme: idsrv was not authenticated.
+2024-05-08 11:46:41.988 +02:00 [DBG] AuthenticationScheme: idsrv was not authenticated.
+2024-05-08 11:46:41.991 +02:00 [DBG] Request path /.well-known/openid-configuration/jwks matched to endpoint type Discovery
+2024-05-08 11:46:41.998 +02:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryKeyEndpoint
+2024-05-08 11:46:42.002 +02:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2024-05-08 11:46:42.006 +02:00 [DBG] Start key discovery request
+2024-05-08 11:46:42.011 +02:00 [DBG] Connection id "0HN3F8F1D1J4U" completed keep alive response.
+2024-05-08 11:46:42.016 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/.well-known/openid-configuration/jwks - 200 null application/json; charset=UTF-8 43.9011ms

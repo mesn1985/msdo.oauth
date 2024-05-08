@@ -13,6 +13,14 @@
 
     <PackageReference Include="Serilog.AspNetCore" Version="3.2.0" />
 
+    <PackageReference Include="Serilog.Settings.Configuration" Version="8.0.0" />
+
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <Content Update="ConfigurationFiles\DockerCompose.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 </Project>

@@ -17,7 +17,7 @@ services:
     hostname: http://AuthorizationServer:5001
     expose:
         - "5001"
-    command: dotnet msdo.oauth.identityServer.dll 
+    command: dotnet msdo.oauth.identityServer.dll --ConfigurationFile=DockerCompose.json
     networks:
         - authnet
     depends_on:

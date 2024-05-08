@@ -1,9 +1,9 @@
 ﻿using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
 using Serilog;
-using Serilog.Events;
-using Serilog.Sinks.SystemConsole.Themes;
 using System;
+using System.IO;
+using Microsoft.Extensions.Configuration;
 
 namespace msdo.oauth.identityServer
 {
@@ -11,20 +11,10 @@ namespace msdo.oauth.identityServer
     {
         public static int Main(string[] args)
         {
-            Log.Logger = new LoggerConfiguration()
-                .MinimumLevel.Debug()
-                .MinimumLevel.Override("Microsoft", LogEventLevel.Warning)
-                .MinimumLevel.Override("Microsoft.Hosting.Lifetime", LogEventLevel.Information)
-                .MinimumLevel.Override("System", LogEventLevel.Warning)
-                .MinimumLevel.Override("Microsoft.AspNetCore.Authentication", LogEventLevel.Information)
-                .Enrich.FromLogContext()
-                .WriteTo.Console(outputTemplate: "[{Timestamp:HH:mm:ss} {Level}] {SourceContext}{NewLine}{Message:lj}{NewLine}{Exception}{NewLine}", theme: AnsiConsoleTheme.Code)
-                .CreateLogger();
 
             try
             {
-                Log.Information("Starting host...");
-                CreateHostBuilder(args).Build().Run();
+               CreateHostBuilder(args).Build().Run();
                 return 0;
             }
             catch (Exception ex)
@@ -38,19 +28,23 @@ namespace msdo.oauth.identityServer
             }
         }
 
-        public static IHostBuilder CreateHostBuilder(string[] args) =>
-            Host.CreateDefaultBuilder(args)
-                .UseSerilog((context, configuration) =>
-                    configuration.ReadFrom.Configuration(context.Configuration)
-                        .WriteTo.Console(outputTemplate:
-                            "[Time:{Timestamp:HH:mm:ss}] [Log level:{Level:u3}] [Correlation id:{CorrelationId}] {NewLine} [Message:{Message}] "
-                        )
-                        .WriteTo.File("log.txt", rollingInterval: RollingInterval.Day)
-                        .Enrich.FromLogContext()
-                )
-                .ConfigureWebHostDefaults(webBuilder =>
+        public static IHostBuilder CreateHostBuilder(string[] args)
+        {
+            var config = new ConfigurationBuilder()
+                .AddCommandLine(args).Build();
+
+          return  Host.CreateDefaultBuilder(args)
+              
+                .ConfigureHostConfiguration(hostConfig =>
                 {
-                    webBuilder.UseStartup<Startup>();
-                });
+                    hostConfig.SetBasePath(Directory.GetCurrentDirectory() + "\\ConfigurationFiles\\");
+                    hostConfig.AddCommandLine(args);
+                    hostConfig.AddJsonFile(config.GetValue<string>("ConfigurationFile"), optional: false);
+                })
+                .UseSerilog((context, configuration) =>
+                    configuration.ReadFrom.Configuration(context.Configuration).Enrich.FromLogContext()
+                )
+                .ConfigureWebHostDefaults(webBuilder => { webBuilder.UseStartup<Startup>(); });
+        }
     }
 }

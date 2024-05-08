@@ -1,0 +1,21 @@
+{
+  "Serilog": {
+    "MinimumLevel": "Debug",
+    "WriteTo": [
+      {
+        "Name": "Console",
+        "Args": {
+          "outputTemplate": "[Time:{Timestamp:HH:mm:ss}] [Log level:{Level:u3}] [Correlation id:{CorrelationId}] {NewLine} [Message:{Message}] [Service name:Authorization server]"
+        }
+      },
+      {
+        "Name": "File",
+        "Args": {
+          "path": "application.log",
+          "rollingInterval": "Day"
+        }
+      }
+    ]
+  }
+
+}
