@@ -22,5 +22,8 @@
     <Content Update="ConfigurationFiles\DockerCompose.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Update="ConfigurationFiles\Local.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 </Project>

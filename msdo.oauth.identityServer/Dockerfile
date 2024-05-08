@@ -2,7 +2,7 @@
 # Author: Martin Edwin Schjødt Nielsen
 # Build: docker build . -t lightmaze/oauthauthserver
 # Push to docker repo: docker push lightmaze/oauthauthserver
-# Run container: docker run -p 5001:5001 lightmaze/oauthauthserver
+# Run container with local  configuration: docker run -p 5001:5001 lightmaze/oauthauthserver dotnet msdo.oauth.identityServer.dll --ConfigurationFile=Local.json
 
 FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
 USER app

@@ -4,6 +4,8 @@ using Serilog;
 using System;
 using System.IO;
 using Microsoft.Extensions.Configuration;
+using Serilog.Events;
+using Serilog.Sinks.SystemConsole.Themes;
 
 namespace msdo.oauth.identityServer
 {
@@ -11,7 +13,17 @@ namespace msdo.oauth.identityServer
     {
         public static int Main(string[] args)
         {
-
+            ///Tempoary logger, used for startup
+            /// 
+            Log.Logger = new LoggerConfiguration()
+                .MinimumLevel.Debug()
+                .MinimumLevel.Override("Microsoft", LogEventLevel.Warning)
+                .MinimumLevel.Override("Microsoft.Hosting.Lifetime", LogEventLevel.Information)
+                .MinimumLevel.Override("System", LogEventLevel.Warning)
+                .MinimumLevel.Override("Microsoft.AspNetCore.Authentication", LogEventLevel.Information)
+                .Enrich.FromLogContext()
+                .WriteTo.Console(outputTemplate: "[{Timestamp:HH:mm:ss} {Level}] {SourceContext}{NewLine}{Message:lj}{NewLine}{Exception}{NewLine}", theme: AnsiConsoleTheme.Code)
+                .CreateLogger();
             try
             {
                CreateHostBuilder(args).Build().Run();
@@ -32,14 +44,18 @@ namespace msdo.oauth.identityServer
         {
             var config = new ConfigurationBuilder()
                 .AddCommandLine(args).Build();
+           
 
-          return  Host.CreateDefaultBuilder(args)
+            string configurationDirectory = $"./ConfigurationFiles/";
+            string configurationFileName
+                = config.GetValue<string>("ConfigurationFile");
+
+            return  Host.CreateDefaultBuilder(args)
               
                 .ConfigureHostConfiguration(hostConfig =>
                 {
-                    hostConfig.SetBasePath(Directory.GetCurrentDirectory() + "\\ConfigurationFiles\\");
                     hostConfig.AddCommandLine(args);
-                    hostConfig.AddJsonFile(config.GetValue<string>("ConfigurationFile"), optional: false);
+                    hostConfig.AddJsonFile(configurationDirectory + configurationFileName, optional: false);
                 })
                 .UseSerilog((context, configuration) =>
                     configuration.ReadFrom.Configuration(context.Configuration).Enrich.FromLogContext()
