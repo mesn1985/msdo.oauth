@@ -28,7 +28,6 @@ builder.Host.UseSerilog((context, configuration) =>
 builder.Services.AddControllers();
 builder.Services.AddAuthentication("Bearer").AddJwtBearer("Bearer", options =>
 {
-
     /// TLS is disable. The implementation is purely for an educational purpose. And not using TLS
     /// will make it easier to incoporate sniffing tools later.
     options.RequireHttpsMetadata = false;

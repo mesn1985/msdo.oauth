@@ -6,8 +6,10 @@ to [IdentityServer4 documentation](https://docs.duendesoftware.com/identityserve
 in OAuth.
 
 ## Running the project
-The services can be deployed as a unit pr. service by deploying the services directly onto the OS,
-or the services can be deployed as a single unit, by using [docker compose](https://docs.docker.com/compose/). Using docker compose is the recommend approach for this project.
+The services can be deployed as a unit pr. service by deploying the services directly onto the OS, 
+or the services can be deployed as a single unit, by using [docker compose](https://docs.docker.com/compose/). Using docker compose is the recommend approach for this project,
+an is the only deployment that also provides graylog.
+
   
 Because this project serves educational purpose only, it is only intended to be deploy to a local desktop, where the user can experiment.
 
@@ -47,6 +49,7 @@ the table below provides a full overview of ports used by each service.
 This section presents all the endpoints exposed by the services. Except for identity server. Only
 the Endpoints used in this project is presented for identity server
 
+
 #### Client
 
 | Path                                      | Purpose                                                           | HTTP Method | Link to service OpenApi specifications |
@@ -66,5 +69,12 @@ the Endpoints used in this project is presented for identity server
 | `/.well-known/openid-configuration`       | Retrieves OpenID Connect configuration details for authentication. See [documentation](https://identityserver4.readthedocs.io/en/latest/endpoints/discovery.html) | GET         | Yet to come                           |
 | `/connect/token`                          | Used to request tokens. See [documentation](https://identityserver4.readthedocs.io/en/latest/endpoints/token.html)  | POST        | Yet to come                           |
 
+### Network port usage
+
+| Port                                      | Service                                                        | 
+|-------------------------------------------|-------------------------------------------------------------------|
+| | |
+| | |
+| | |
 
 ## Testing
