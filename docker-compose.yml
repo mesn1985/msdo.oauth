@@ -3,6 +3,7 @@ version: '3.7'
 services:
   client:
     image: lightmaze/oauthclient:latest
+    hostname: Client
     ports:
         - "5003:5003"
     command: dotnet msdo.oauth.client.dll --ConfigurationFile=DockerCompose.json
@@ -13,8 +14,7 @@ services:
 
   AuthorizationServer:
     image: lightmaze/oauthauthserver:latest
-    #The host name is used as issuer name, and must therefor match thr URL used
-    hostname: http://AuthorizationServer:5001
+    hostname: Authorization_Server
     expose:
         - "5001"
     command: dotnet msdo.oauth.identityServer.dll --ConfigurationFile=DockerCompose.json
@@ -25,6 +25,7 @@ services:
 
   ProtectedResourceServer:
     image: lightmaze/oauthprotectedresourceserver:latest
+    hostname: Protected_Resource_Server
     expose:
         - "5002"
     command: dotnet msdo.oauth.protectedResource.dll --ConfigurationFile=DockerCompose.json
