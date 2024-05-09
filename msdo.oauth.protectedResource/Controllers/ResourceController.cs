@@ -20,7 +20,7 @@ namespace msdo.oauth.client.Controllers
         {
             string accessToken = GetAccessTokenFromHeader();
 
-            _logger.LogInformation($"Request for protected resource was made with token: {accessToken}");
+            _logger.LogInformation($"Authorized Request for protected resource was made with token: {accessToken}");
 
             return new JsonResult(from c in User.Claims select new { c.Type, c.Value });
         }

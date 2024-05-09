@@ -37,7 +37,7 @@ namespace msdo.oauth.client.Controllers
             string protectedResource
                 = await _protectedResourceService.GetProtectedResource(accessToken, correlationId); 
 
-            _logger.LogInformation($"Protected Resource retrived: {protectedResource}");
+            _logger.LogInformation($"Protected Resource retrieved: {protectedResource}");
 
             return Ok(protectedResource);
 
