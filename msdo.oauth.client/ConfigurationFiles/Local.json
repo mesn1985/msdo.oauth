@@ -1,16 +1,15 @@
 {
-  "AllowedHosts": "*",
   "Services": {
     "AuthorizationServerDiscoveryEndpoint": "http://localhost:5001",
     "ProtectedResourceServer": "http://localhost:5002"
   },
   "Serilog": {
-    "MinimumLevel": "Debug",
+    "MinimumLevel": "Verbose",
     "WriteTo": [
       {
         "Name": "Console",
         "Args": {
-          "outputTemplate": "[Time:{Timestamp:HH:mm:ss}] [Log level:{Level:u3}] [Correlation id:{CorrelationId}] {NewLine} [Message:{Message}] [Service name:client]"
+          "outputTemplate": "[Time:{Timestamp:HH:mm:ss}] [Log level:{Level:u3}] [Correlation id:{CorrelationId}] {NewLine} [Message:{Message}]"
         }
       },
       {

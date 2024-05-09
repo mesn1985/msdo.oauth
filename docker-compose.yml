@@ -1,3 +1,8 @@
+# Team india
+# This docker compose file is only meant for local deployment of the enviroment
+# Deploy the enviroment: docker compose up (From the root of the project folder)
+# Ther
+
 version: '3.7'
 
 services:
@@ -74,6 +79,10 @@ services:
     # Password: admin
     - GRAYLOG_ROOT_PASSWORD_SHA2=8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918
     - GRAYLOG_HTTP_EXTERNAL_URI=http://127.0.0.1:9000/
+    # Load input and rules configurations from file (attached by volume)
+    - GRAYLOG_CONTENT_PACKS_AUTO_INSTALL=inputConfiguration.json
+    - GRAYLOG_CONTENT_PACKS_LOADER_ENABLED=true
+    - GRAYLOG_CONTENT_PACKS_DIR=data/contentpacks
     entrypoint: /usr/bin/tini -- wait-for-it elasticsearch:9200 --  /docker-entrypoint.sh
     networks:
       - authnet
@@ -92,6 +101,12 @@ services:
       - 12201:12201
       # GELF UDP
       - 12201:12201/udp
+    # The volume mount the input and pipeline configuration file located in the project folder ./GraylogContentPacks
+    # This allows for predefined input and pipelines to be executed at deployment, and present at runtime
+    volumes:
+      - type: bind
+        source: ./GraylogContentPacks/inputConfiguration.json
+        target: /usr/share/graylog/data/contentpacks/inputConfiguration.json
 
 networks: 
   authnet:

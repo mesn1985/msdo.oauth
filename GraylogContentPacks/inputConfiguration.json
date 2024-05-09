@@ -1,0 +1,69 @@
+{
+  "v": 1,
+  "id": "75a25ae2-b922-4b92-a057-b1eb41412c3f",
+  "rev": 1,
+  "name": "UdpInput",
+  "summary": "Create input by UDP protocol on port 12201",
+  "description": "",
+  "vendor": "private",
+  "url": "",
+  "parameters": [],
+  "entities": [
+    {
+      "v": "1",
+      "type": {
+        "name": "input",
+        "version": "1"
+      },
+      "id": "b3fcb77e-a969-4001-8180-1d3ccc0053d5",
+      "data": {
+        "title": {
+          "@type": "string",
+          "@value": "OAuthTracing"
+        },
+        "configuration": {
+          "recv_buffer_size": {
+            "@type": "integer",
+            "@value": 262144
+          },
+          "port": {
+            "@type": "integer",
+            "@value": 12201
+          },
+          "number_worker_threads": {
+            "@type": "integer",
+            "@value": 8
+          },
+          "charset_name": {
+            "@type": "string",
+            "@value": "UTF-8"
+          },
+          "bind_address": {
+            "@type": "string",
+            "@value": "0.0.0.0"
+          },
+          "decompress_size_limit": {
+            "@type": "integer",
+            "@value": 8388608
+          }
+        },
+        "static_fields": {},
+        "type": {
+          "@type": "string",
+          "@value": "org.graylog2.inputs.gelf.udp.GELFUDPInput"
+        },
+        "global": {
+          "@type": "boolean",
+          "@value": false
+        },
+        "extractors": []
+      },
+      "constraints": [
+        {
+          "type": "server-version",
+          "version": ">=5.2.7+5e29a2c"
+        }
+      ]
+    }
+  ]
+}

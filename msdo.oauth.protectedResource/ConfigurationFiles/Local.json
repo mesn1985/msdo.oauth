@@ -1,21 +1,14 @@
 {
-  "Logging": {
-    "LogLevel": {
-      "Default": "Information",
-      "Microsoft.AspNetCore": "Warning"
-    }
-  },
-  "AllowedHosts": "*",
   "Services": {
     "AuthorizationServer": "http://localhost:5001"
   },
   "Serilog": {
-    "MinimumLevel": "Debug",
+    "MinimumLevel": "Verbose",
     "WriteTo": [
       {
         "Name": "Console",
         "Args": {
-          "outputTemplate": "[Time:{Timestamp:HH:mm:ss}] [Log level:{Level:u3}] [Correlation id:{CorrelationId}] {NewLine} [Message:{Message}] [Service_name:protected_resource server]"
+          "outputTemplate": "[Time:{Timestamp:HH:mm:ss}] [Log level:{Level:u3}] [Correlation id:{CorrelationId}] {NewLine} [Message:{Message}]"
         }
       },
       {

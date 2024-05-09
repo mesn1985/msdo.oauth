@@ -1,13 +1,13 @@
 {
-  
+
   "Serilog": {
     "Using": [ "Serilog.Sinks.Graylog" ],
-    "MinimumLevel": "Debug",
+    "MinimumLevel": "Verbose",
     "WriteTo": [
       {
         "Name": "Console",
         "Args": {
-          "outputTemplate": "[Time:{Timestamp:HH:mm:ss}] [Log level:{Level:u3}] [Correlation id:{CorrelationId}] {NewLine} [Message:{Message}] [Service name:Authorization server]"
+          "outputTemplate": "[Time:{Timestamp:HH:mm:ss}] [Log level:{Level:u3}] [Correlation id:{CorrelationId}] {NewLine} [Message:{Message}]"
         }
       },
       {
