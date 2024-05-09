@@ -17,11 +17,13 @@ Because this project serves educational purpose only, it is only intended to be 
 Executing the command ```Docker compose up``` in the root of this project folder, will use the `docker-compose.yml` file to deploy this entire project.
 Afterwards the [client service API]() will be exposed on port 5003.
 
+_Beaware: There is a dependency towards the folder GraylogContentsPacks located in the root of the project folder._
+
 ### Unit pr service
 The application can be deployed as a unit pr. services. Each service must be deploy using the [dotnet cli tool](https://learn.microsoft.com/en-us/dotnet/core/tools/).
 The services can be deployed by executing the commands shown below. The shown order of the commands, is also the recommended order for deployment:
 
-- ```dotnet run --project .\msdo.oauth.identityServer\ ```
+- ```dotnet run --project .\msdo.oauth.identityServer\ --ConfigurationFile=Local.json```
 - ```dotnet run --project .\msdo.oauth.protectedResource\ --ConfigurationFile=Local.json```
 - ```dotnet run --project .\msdo.oauth.client\ --ConfigurationFile=Local.json```
 
