@@ -21,7 +21,7 @@ namespace msdo.oauth.client.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> UseClientCredentialGrantToAccessProtectedResource()
         {
             string correlationId = HttpContext.Items["Correlation-Id"].ToString();
 
@@ -32,8 +32,12 @@ namespace msdo.oauth.client.Controllers
 
             _logger.LogInformation($"Obtained Access token: {accessToken}");
 
+            _logger.LogInformation($"Requesting access to protected resource");
+
             string protectedResource
                 = await _protectedResourceService.GetProtectedResource(accessToken, correlationId); 
+
+            _logger.LogInformation($"Protected Resource retrived: {protectedResource}");
 
             return Ok(protectedResource);
 

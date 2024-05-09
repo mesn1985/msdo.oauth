@@ -25,6 +25,8 @@ namespace msdo.oauth.client.Services
 
             string tokenEndpointAddress = await GetTokenEndpointAddressFromDiscoveryEndpoint();
 
+            _logger.LogInformation($"Token endpoint adresse retrieved: {tokenEndpointAddress} ");
+
             return await RequestToken(tokenEndpointAddress, clientId, clientSecret);
         }
 
