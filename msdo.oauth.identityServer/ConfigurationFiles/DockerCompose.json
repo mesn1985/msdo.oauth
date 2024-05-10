@@ -7,7 +7,7 @@
       {
         "Name": "Console",
         "Args": {
-          "outputTemplate": "[Time:{Timestamp:HH:mm:ss}] [Log level:{Level:u3}] [Correlation id:{CorrelationId}] {NewLine} [Message:{Message}]"
+          "outputTemplate": "[Time:{Timestamp:HH:mm:ss}] [LogLevel:{Level:u3}] [CorrelationId:{CorrelationId}] {NewLine} [Message:{Message}]"
         }
       },
       {
