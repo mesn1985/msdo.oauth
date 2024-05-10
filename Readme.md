@@ -1,6 +1,6 @@
 # Visualisation of Token and authorization  grants.
-This project aims to create a visualization of the flow of tokens when using OAuth, along with the flow
-of the Client and Code authorization grant. This project uses [IdentityServer](https://duendesoftware.com/products/identityserver) for OAuth functionallity, but should  **never be used as an example of how to configure Identity server**.
+This project aims to create a visualization of the flow of tokens when using OAuth. 
+This project uses [IdentityServer](https://duendesoftware.com/products/identityserver) for OAuth functionallity, but should  **never be used as an example of how to configure Identity server**.
 In fact this project **disregards most security aspects of the Identity server configuration**. For examples of proper Identity server, please referer
 to [IdentityServer4 documentation](https://docs.duendesoftware.com/identityserver/v7). The sole purpose of this project is to demonstrate the flows
 in OAuth.
@@ -16,8 +16,12 @@ Because this project serves educational purpose only, it is only intended to be 
 ### Docker compose
 Executing the command ```Docker compose up``` in the root of this project folder, will use the `docker-compose.yml` file to deploy this entire project.
 Afterwards the [client service API](#client) will be exposed on port 5003.
+  
+The docker compose file also includes the graylog stack.
 
-_Beaware: There is a dependency towards the folder GraylogContentsPacks located in the root of the project folder._
+The docker compose file can be viewed  in the [docker-compose.yml](./docker-compose.yml) located in the repository root folder.
+
+_Beware: There is a dependency towards the folder GraylogContentsPacks located in the root of the project folder._
 
 ### Unit pr service
 The application can be deployed as a unit pr. services. Each service must be deploy using the [dotnet cli tool](https://learn.microsoft.com/en-us/dotnet/core/tools/).
@@ -27,8 +31,24 @@ The services can be deployed by executing the commands shown below. The shown or
 - ```dotnet run --project .\msdo.oauth.protectedResource\ --ConfigurationFile=Local.json```
 - ```dotnet run --project .\msdo.oauth.client\ --ConfigurationFile=Local.json```
 
+
 ### Configuring the services
-Yet to come
+All services are configured to configuration files located in each services project folder, in the folder _ConfigurationFiles_
+
+By default, a configuration file that should be used with docker compose is provide. The file is located in the root folder of
+each service project. The file name is _DockerCompose.json_.
+
+There is also a configuration file for each service, that should be used when deploying the services separate  called _Local.json_
+
+*The enviroment, regardless of the chosen deployment method, is only meant to be deployed on a single host*
+
+## Using Graylog
+When deploying the environment with docker compose, the graylog stack is also deployed. Graylog is deployed with preconfigured
+input, rules and dashboard, for tracking of the OAuth token flow.
+  
+The graylog content pack used for the predefined input,rules and dashboard, can be found in [./GraylogContentPacks/inputConfiguration.json](./GraylogContentPacks/inputConfiguration.json)
+
+
 ## Information on services in this project
 This section presents an overview of all the services in this project. The table below presents a general overview of all services in this project.
 
