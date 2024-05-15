@@ -5,7 +5,6 @@ namespace msdo.oauth.client.Controllers
 {
     [Route("[controller]")]
     [Authorize]
-
     public class ResourceController : Controller
     {
         private ILogger<ResourceController> _logger;
@@ -14,7 +13,16 @@ namespace msdo.oauth.client.Controllers
         {
             _logger = logger;
         }
-
+        /// <summary>
+        ///  Request access to a protected resource using the client credential grant.
+        ///  Initiates the token flow for access to a protected resource.
+        /// </summary>
+        /// <param></param>
+        /// <response code="200">Proteced resource have been obtained</response>
+        ///  <response code="401">Invalid access token provided</response>
+        // Identity framework handles the validation of the provided JWS (See configuration in Program.cs)
+        [ProducesResponseType(typeof(String), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(void), StatusCodes.Status401Unauthorized)]
         [HttpGet]
         public IActionResult Index()
         {
@@ -22,7 +30,7 @@ namespace msdo.oauth.client.Controllers
 
             _logger.LogInformation($"Authorized Request for protected resource was made with token: {accessToken}");
 
-            return new JsonResult(from c in User.Claims select new { c.Type, c.Value });
+            return new JsonResult( "{ProtectedResource:ValueOfProtecedResource}");
         }
 
         private string GetAccessTokenFromHeader()

@@ -3,6 +3,12 @@ using msdo.oauth.client.Interfaces;
 
 namespace msdo.oauth.client.Controllers
 {
+    /// <summary>
+    /// Client credential controller.
+    /// This controller provides the endpoint used for invoking request for
+    /// protected resource, where the client credential authorization grant is used to obtain access token
+    /// @author: Martin Edwin Schjødt Nielsen
+    /// </summary>
     [Route("[controller]")]
     public class ClientCredentialGrantController : Controller
     {
@@ -19,8 +25,13 @@ namespace msdo.oauth.client.Controllers
             _protectedResourceService = protectedResourceService;
             _logger = logger;
         }
-
+        /// <summary>
+        ///  Provides a protected resource if a valid token is provided
+        /// </summary>
+        /// <param></param>
+        /// <response code="200">Proteced resource have been obtained</response>
         [HttpGet]
+        [ProducesResponseType(typeof(String), StatusCodes.Status200OK)]
         public async Task<IActionResult> UseClientCredentialGrantToAccessProtectedResource()
         {
             string correlationId = HttpContext.Items["Correlation-Id"].ToString();
@@ -40,8 +51,6 @@ namespace msdo.oauth.client.Controllers
             _logger.LogInformation($"Protected Resource retrieved: {protectedResource}");
 
             return Ok(protectedResource);
-
-
         }
     }
 }

@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "id": "050bdbf3-bc78-4d04-adbd-a0252eae959a",
+  "id": "0bb1ccab-6588-4697-a954-78b4b111e9f7",
   "rev": 1,
   "name": "OAuthTokenTracing",
   "summary": "Content pack  used for  tracing OAuth token flows",
@@ -12,128 +12,10 @@
     {
       "v": "1",
       "type": {
-        "name": "pipeline_rule",
-        "version": "1"
-      },
-      "id": "c36d79fd-d84d-4a10-9294-c5365a892139",
-      "data": {
-        "title": {
-          "@type": "string",
-          "@value": "Authorized request for protected resource was made"
-        },
-        "description": {
-          "@type": "string",
-          "@value": ""
-        },
-        "source": {
-          "@type": "string",
-          "@value": "rule \"Authorized request for protected resource was made\"\nwhen\n  contains(\n  value: to_string($message.\"message\"),\n  search: \"Authorized Request for protected resource\",\n  ignore_case: false\n)\nthen\n  set_field(\n    field : \"isPartOfOAuthTokenFlow\",\n    value : \"true\",\n    clean_field : false\n  );\n  set_field(\n    field : \"Type\",\n    value : \"AuthorizedReqeustForProtectedResourceWasMade\",\n    clean_field : false\n  );\nend"
-        }
-      },
-      "constraints": [
-        {
-          "type": "server-version",
-          "version": ">=5.2.7+5e29a2c"
-        }
-      ]
-    },
-    {
-      "v": "1",
-      "type": {
-        "name": "pipeline",
-        "version": "1"
-      },
-      "id": "ae11c98f-3060-48dc-af6c-1709b0c09595",
-      "data": {
-        "title": {
-          "@type": "string",
-          "@value": "OAuthTokenTracingPipeline"
-        },
-        "description": {
-          "@type": "string",
-          "@value": "pipeline  used for OAuth token tracing"
-        },
-        "source": {
-          "@type": "string",
-          "@value": "pipeline \"OAuthTokenTracingPipeline\"\nstage 0 match pass\nrule \"Drop messages without correlation id value\"\nstage 2 match all\nrule \"Add false value to isPartOfOAuthFlow field\"\nstage 1 match pass\nrule \"Is client requesting access token\"\nrule \"Authorization Server  issued a token for client\"\nrule \"Client obtained access token\"\nrule \"Client requests access to protected resource\"\nrule \"Authorized request for protected resource was made\"\nrule \"Protected resource  retrieved\"\nend"
-        },
-        "connected_streams": [
-          {
-            "@type": "string",
-            "@value": "000000000000000000000001"
-          }
-        ]
-      },
-      "constraints": [
-        {
-          "type": "server-version",
-          "version": ">=5.2.7+5e29a2c"
-        }
-      ]
-    },
-    {
-      "v": "1",
-      "type": {
-        "name": "pipeline_rule",
-        "version": "1"
-      },
-      "id": "4caa7c4e-e143-4ac4-94af-f4d4812c99d7",
-      "data": {
-        "title": {
-          "@type": "string",
-          "@value": "Is client requesting access token"
-        },
-        "description": {
-          "@type": "string",
-          "@value": ""
-        },
-        "source": {
-          "@type": "string",
-          "@value": "rule \"Is client requesting access token\"\nwhen\n  contains(\n  value: to_string($message.\"message\"),\n  search: \"Requesting access token\",\n  ignore_case: false\n)\nthen\n  set_field(\n    field : \"isPartOfOAuthTokenFlow\",\n    value : \"true\",\n    clean_field : false\n  );\n  set_field(\n    field : \"Type\",\n    value : \"ClientTokenRequest\",\n    clean_field : false\n  );\nend"
-        }
-      },
-      "constraints": [
-        {
-          "type": "server-version",
-          "version": ">=5.2.7+5e29a2c"
-        }
-      ]
-    },
-    {
-      "v": "1",
-      "type": {
-        "name": "pipeline_rule",
-        "version": "1"
-      },
-      "id": "8200be2f-6ceb-4fbf-b9e6-46d913994b7e",
-      "data": {
-        "title": {
-          "@type": "string",
-          "@value": "Client requests access to protected resource"
-        },
-        "description": {
-          "@type": "string",
-          "@value": ""
-        },
-        "source": {
-          "@type": "string",
-          "@value": "rule \"Client requests access to protected resource\"\nwhen\n  contains(\n  value: to_string($message.\"message\"),\n  search: \"Request for protected resource sent\",\n  ignore_case: false\n)\nthen\n  set_field(\n    field : \"isPartOfOAuthTokenFlow\",\n    value : \"true\",\n    clean_field : false\n  );\n  set_field(\n    field : \"Type\",\n    value : \"ClientRequestForProtectedResource\",\n    clean_field : false\n  );\nend\nend"
-        }
-      },
-      "constraints": [
-        {
-          "type": "server-version",
-          "version": ">=5.2.7+5e29a2c"
-        }
-      ]
-    },
-    {
-      "v": "1",
-      "type": {
         "name": "input",
         "version": "1"
       },
-      "id": "e7abd68e-5599-4fb5-80f7-e687ac37d1cc",
+      "id": "d4e14739-6386-498a-8597-47dd873094db",
       "data": {
         "title": {
           "@type": "string",
@@ -186,23 +68,29 @@
     {
       "v": "1",
       "type": {
-        "name": "pipeline_rule",
+        "name": "pipeline",
         "version": "1"
       },
-      "id": "1c829b16-563d-426a-b4a9-948956efb470",
+      "id": "2727e87a-b64e-4f8d-95ff-ee238de4bc63",
       "data": {
         "title": {
           "@type": "string",
-          "@value": "Client obtained access token"
+          "@value": "OAuthTokenTracingPipeline"
         },
         "description": {
           "@type": "string",
-          "@value": ""
+          "@value": "pipeline  used for OAuth token tracing"
         },
         "source": {
           "@type": "string",
-          "@value": "rule \"Client obtained access token\"\nwhen\n  contains(\n  value: to_string($message.\"message\"),\n  search: \"Obtained Access token\",\n  ignore_case: false\n)\nthen\n  set_field(\n    field : \"isPartOfOAuthTokenFlow\",\n    value : \"true\",\n    clean_field : false\n  );\n  set_field(\n    field : \"Type\",\n    value : \"ClientObtainedAccessToken\",\n    clean_field : false\n  );\nend"
-        }
+          "@value": "pipeline \"OAuthTokenTracingPipeline\"\nstage 0 match pass\nrule \"Drop messages without correlation id value\"\nstage 2 match all\nrule \"Add false value to isPartOfOAuthFlow field\"\nstage 1 match pass\nrule \"Is client requesting access token\"\nrule \"Authorization Server  issued a token for client\"\nrule \"Client obtained access token\"\nrule \"Client requests access to protected resource\"\nrule \"Authorized request for protected resource was made\"\nrule \"Protected resource  retrieved\"\nend"
+        },
+        "connected_streams": [
+          {
+            "@type": "string",
+            "@value": "000000000000000000000001"
+          }
+        ]
       },
       "constraints": [
         {
@@ -217,63 +105,7 @@
         "name": "pipeline_rule",
         "version": "1"
       },
-      "id": "31a5dc5c-218d-462e-bbb9-9697a999a842",
-      "data": {
-        "title": {
-          "@type": "string",
-          "@value": "Add false value to isPartOfOAuthFlow field"
-        },
-        "description": {
-          "@type": "string",
-          "@value": ""
-        },
-        "source": {
-          "@type": "string",
-          "@value": "rule \"Add false value to isPartOfOAuthFlow field\"\nwhen\n  is_null($message.\"isPartOfOAuthTokenFlow\")\nthen\n  set_field(\n    field : \"isPartOfOAuthTokenFlow\",\n    value : \"false\",\n    clean_field : false\n  );\nend"
-        }
-      },
-      "constraints": [
-        {
-          "type": "server-version",
-          "version": ">=5.2.7+5e29a2c"
-        }
-      ]
-    },
-    {
-      "v": "1",
-      "type": {
-        "name": "pipeline_rule",
-        "version": "1"
-      },
-      "id": "960104fb-f770-4ff3-b0df-3ba44f0bff88",
-      "data": {
-        "title": {
-          "@type": "string",
-          "@value": "Drop messages without correlation id value"
-        },
-        "description": {
-          "@type": "string",
-          "@value": ""
-        },
-        "source": {
-          "@type": "string",
-          "@value": "rule \"Drop messages without correlation id value\"\nwhen\n  is_null($message.\"CorrelationId\")\nthen\n  drop_message();\nend"
-        }
-      },
-      "constraints": [
-        {
-          "type": "server-version",
-          "version": ">=5.2.7+5e29a2c"
-        }
-      ]
-    },
-    {
-      "v": "1",
-      "type": {
-        "name": "pipeline_rule",
-        "version": "1"
-      },
-      "id": "90e8167b-890a-48e8-8290-e17868ae53dc",
+      "id": "3e4dfc79-50fe-46da-8321-c5fe5ba257e8",
       "data": {
         "title": {
           "@type": "string",
@@ -301,7 +133,7 @@
         "name": "pipeline_rule",
         "version": "1"
       },
-      "id": "7f525cb4-62b5-46fd-aed9-2f971c3f7294",
+      "id": "b2d9b4b9-2aa0-43c5-8eb0-d23810fb71c8",
       "data": {
         "title": {
           "@type": "string",
@@ -314,6 +146,447 @@
         "source": {
           "@type": "string",
           "@value": "rule \"Authorization Server  issued a token for client\"\nwhen\n  contains(\n  value: to_string($message.\"message\"),\n  search: \"Access token issued for\",\n  ignore_case: false\n)\nthen\n  set_field(\n    field : \"isPartOfOAuthTokenFlow\",\n    value : \"true\",\n    clean_field : false\n  );\n  set_field(\n    field : \"Type\",\n    value : \"AuthorizationServerIssuedAToken\",\n    clean_field : false\n  );\nend"
+        }
+      },
+      "constraints": [
+        {
+          "type": "server-version",
+          "version": ">=5.2.7+5e29a2c"
+        }
+      ]
+    },
+    {
+      "v": "1",
+      "type": {
+        "name": "pipeline_rule",
+        "version": "1"
+      },
+      "id": "d3f86ecd-5353-42c2-8fc4-cf86e993dfe2",
+      "data": {
+        "title": {
+          "@type": "string",
+          "@value": "Client requests access to protected resource"
+        },
+        "description": {
+          "@type": "string",
+          "@value": ""
+        },
+        "source": {
+          "@type": "string",
+          "@value": "rule \"Client requests access to protected resource\"\nwhen\n  contains(\n  value: to_string($message.\"message\"),\n  search: \"Request for protected resource sent\",\n  ignore_case: false\n)\nthen\n  set_field(\n    field : \"isPartOfOAuthTokenFlow\",\n    value : \"true\",\n    clean_field : false\n  );\n  set_field(\n    field : \"Type\",\n    value : \"ClientRequestForProtectedResource\",\n    clean_field : false\n  );\nend\nend"
+        }
+      },
+      "constraints": [
+        {
+          "type": "server-version",
+          "version": ">=5.2.7+5e29a2c"
+        }
+      ]
+    },
+    {
+      "v": "1",
+      "type": {
+        "name": "dashboard",
+        "version": "2"
+      },
+      "id": "f325cb6f-7259-41e3-8063-a6db24fb6bed",
+      "data": {
+        "summary": {
+          "@type": "string",
+          "@value": "This is a list of all sources that sent in messages to Graylog."
+        },
+        "search": {
+          "queries": [
+            {
+              "id": "73731ed4-3227-4126-a493-10a4bd7c9f3f",
+              "timerange": {
+                "from": 300,
+                "type": "relative"
+              },
+              "filters": [],
+              "query": {
+                "type": "elasticsearch",
+                "query_string": ""
+              },
+              "search_types": [
+                {
+                  "query": {
+                    "type": "elasticsearch",
+                    "query_string": "isPartOfOAuthTokenFlow:true"
+                  },
+                  "name": "chart",
+                  "timerange": {
+                    "from": 300,
+                    "type": "relative"
+                  },
+                  "column_limit": null,
+                  "streams": [],
+                  "row_limit": null,
+                  "series": [
+                    {
+                      "type": "card",
+                      "id": "card(CorrelationId)",
+                      "field": "CorrelationId"
+                    }
+                  ],
+                  "filter": null,
+                  "rollup": true,
+                  "row_groups": [
+                    {
+                      "type": "values",
+                      "fields": [
+                        "source"
+                      ],
+                      "limit": 15,
+                      "skip_empty_values": false
+                    }
+                  ],
+                  "type": "pivot",
+                  "id": "53fcd1b4-0a79-489f-b69c-d87a29bc0f78",
+                  "filters": [],
+                  "column_groups": [],
+                  "sort": []
+                },
+                {
+                  "query": null,
+                  "name": "chart",
+                  "timerange": {
+                    "from": 300,
+                    "type": "relative"
+                  },
+                  "column_limit": null,
+                  "streams": [],
+                  "row_limit": null,
+                  "series": [
+                    {
+                      "type": "card",
+                      "id": "card(Type)",
+                      "field": "Type"
+                    },
+                    {
+                      "type": "latest",
+                      "id": "latest(Type)",
+                      "field": "Type"
+                    }
+                  ],
+                  "filter": null,
+                  "rollup": true,
+                  "row_groups": [
+                    {
+                      "type": "values",
+                      "fields": [
+                        "source"
+                      ],
+                      "limit": 15,
+                      "skip_empty_values": false
+                    }
+                  ],
+                  "type": "pivot",
+                  "id": "4cc9864e-afb2-41a7-b7a4-b82598dc8183",
+                  "filters": [],
+                  "column_groups": [],
+                  "sort": []
+                }
+              ]
+            }
+          ],
+          "parameters": [],
+          "requires": {},
+          "owner": "admin",
+          "created_at": "2024-05-10T16:19:57.267Z"
+        },
+        "created_at": "2023-06-01T08:43:23.743Z",
+        "requires": {},
+        "state": {
+          "73731ed4-3227-4126-a493-10a4bd7c9f3f": {
+            "selected_fields": null,
+            "static_message_list_id": null,
+            "titles": {
+              "tab": {
+                "title": "OAuthTokenFlow"
+              },
+              "widget": {
+                "09bb2302-2a92-412c-bd19-9df7500264d1": "Number of distinct correlation id's used in relation OAuth token flow, pr services"
+              }
+            },
+            "widgets": [
+              {
+                "id": "09bb2302-2a92-412c-bd19-9df7500264d1",
+                "type": "aggregation",
+                "filter": null,
+                "filters": [],
+                "timerange": {
+                  "from": 300,
+                  "type": "relative"
+                },
+                "query": {
+                  "type": "elasticsearch",
+                  "query_string": "isPartOfOAuthTokenFlow:true"
+                },
+                "streams": [],
+                "config": {
+                  "visualization": "bar",
+                  "column_limit": null,
+                  "event_annotation": false,
+                  "row_limit": 15,
+                  "row_pivots": [
+                    {
+                      "fields": [
+                        "source"
+                      ],
+                      "type": "values",
+                      "config": {
+                        "limit": 15
+                      }
+                    }
+                  ],
+                  "series": [
+                    {
+                      "config": {
+                        "name": null
+                      },
+                      "function": "card(CorrelationId)"
+                    }
+                  ],
+                  "rollup": false,
+                  "column_pivots": [],
+                  "visualization_config": {
+                    "barmode": "group",
+                    "axis_type": "linear"
+                  },
+                  "formatting_settings": null,
+                  "sort": []
+                }
+              },
+              {
+                "id": "c9ea1dd9-0356-4a4d-ab06-b61f54ee84c7",
+                "type": "aggregation",
+                "filter": null,
+                "filters": [],
+                "timerange": {
+                  "from": 300,
+                  "type": "relative"
+                },
+                "query": null,
+                "streams": [],
+                "config": {
+                  "visualization": "table",
+                  "column_limit": null,
+                  "event_annotation": false,
+                  "row_limit": 15,
+                  "row_pivots": [
+                    {
+                      "fields": [
+                        "source"
+                      ],
+                      "type": "values",
+                      "config": {
+                        "limit": 15
+                      }
+                    }
+                  ],
+                  "series": [
+                    {
+                      "config": {
+                        "name": null
+                      },
+                      "function": "card(Type)"
+                    },
+                    {
+                      "config": {
+                        "name": null
+                      },
+                      "function": "latest(Type)"
+                    }
+                  ],
+                  "rollup": false,
+                  "column_pivots": [],
+                  "visualization_config": {
+                    "pinned_columns": []
+                  },
+                  "formatting_settings": null,
+                  "sort": []
+                }
+              }
+            ],
+            "widget_mapping": {
+              "09bb2302-2a92-412c-bd19-9df7500264d1": [
+                "53fcd1b4-0a79-489f-b69c-d87a29bc0f78"
+              ],
+              "c9ea1dd9-0356-4a4d-ab06-b61f54ee84c7": [
+                "4cc9864e-afb2-41a7-b7a4-b82598dc8183"
+              ]
+            },
+            "positions": {
+              "c9ea1dd9-0356-4a4d-ab06-b61f54ee84c7": {
+                "col": 1,
+                "row": 1,
+                "height": 4,
+                "width": 4
+              },
+              "09bb2302-2a92-412c-bd19-9df7500264d1": {
+                "col": 1,
+                "row": 5,
+                "height": 4,
+                "width": 4
+              }
+            },
+            "formatting": null,
+            "display_mode_settings": {
+              "positions": {}
+            }
+          }
+        },
+        "properties": [],
+        "owner": "admin",
+        "title": {
+          "@type": "string",
+          "@value": "Sources"
+        },
+        "type": "DASHBOARD",
+        "description": {
+          "@type": "string",
+          "@value": "This is a list of all sources that sent in messages to Graylog. You can narrow the timerange by zooming in on the message histogram, or you can increase the time range by specifying a broader one in the controls at the top. You can also specify filters to limit the results you are seeing. You can also add additional widgets to this dashboard, or adapt the appearance of existing widgets to suit your needs."
+        }
+      },
+      "constraints": [
+        {
+          "type": "server-version",
+          "version": ">=5.2.7+5e29a2c"
+        }
+      ]
+    },
+    {
+      "v": "1",
+      "type": {
+        "name": "pipeline_rule",
+        "version": "1"
+      },
+      "id": "0b5fb992-5556-4a99-a2f3-491a719ee916",
+      "data": {
+        "title": {
+          "@type": "string",
+          "@value": "Is client requesting access token"
+        },
+        "description": {
+          "@type": "string",
+          "@value": ""
+        },
+        "source": {
+          "@type": "string",
+          "@value": "rule \"Is client requesting access token\"\nwhen\n  contains(\n  value: to_string($message.\"message\"),\n  search: \"Requesting access token\",\n  ignore_case: false\n)\nthen\n  set_field(\n    field : \"isPartOfOAuthTokenFlow\",\n    value : \"true\",\n    clean_field : false\n  );\n  set_field(\n    field : \"Type\",\n    value : \"ClientTokenRequest\",\n    clean_field : false\n  );\nend"
+        }
+      },
+      "constraints": [
+        {
+          "type": "server-version",
+          "version": ">=5.2.7+5e29a2c"
+        }
+      ]
+    },
+    {
+      "v": "1",
+      "type": {
+        "name": "pipeline_rule",
+        "version": "1"
+      },
+      "id": "4fc02de4-8809-4c79-92f9-8681d782caf6",
+      "data": {
+        "title": {
+          "@type": "string",
+          "@value": "Drop messages without correlation id value"
+        },
+        "description": {
+          "@type": "string",
+          "@value": ""
+        },
+        "source": {
+          "@type": "string",
+          "@value": "rule \"Drop messages without correlation id value\"\nwhen\n  is_null($message.\"CorrelationId\")\nthen\n  drop_message();\nend"
+        }
+      },
+      "constraints": [
+        {
+          "type": "server-version",
+          "version": ">=5.2.7+5e29a2c"
+        }
+      ]
+    },
+    {
+      "v": "1",
+      "type": {
+        "name": "pipeline_rule",
+        "version": "1"
+      },
+      "id": "09e3341e-a027-45af-a10a-a9cf0e22cc2b",
+      "data": {
+        "title": {
+          "@type": "string",
+          "@value": "Authorized request for protected resource was made"
+        },
+        "description": {
+          "@type": "string",
+          "@value": ""
+        },
+        "source": {
+          "@type": "string",
+          "@value": "rule \"Authorized request for protected resource was made\"\nwhen\n  contains(\n  value: to_string($message.\"message\"),\n  search: \"Authorized Request for protected resource\",\n  ignore_case: false\n)\nthen\n  set_field(\n    field : \"isPartOfOAuthTokenFlow\",\n    value : \"true\",\n    clean_field : false\n  );\n  set_field(\n    field : \"Type\",\n    value : \"AuthorizedReqeustForProtectedResourceWasMade\",\n    clean_field : false\n  );\nend"
+        }
+      },
+      "constraints": [
+        {
+          "type": "server-version",
+          "version": ">=5.2.7+5e29a2c"
+        }
+      ]
+    },
+    {
+      "v": "1",
+      "type": {
+        "name": "pipeline_rule",
+        "version": "1"
+      },
+      "id": "da8ef5c3-5d35-4c88-a63e-2c42dd03b143",
+      "data": {
+        "title": {
+          "@type": "string",
+          "@value": "Client obtained access token"
+        },
+        "description": {
+          "@type": "string",
+          "@value": ""
+        },
+        "source": {
+          "@type": "string",
+          "@value": "rule \"Client obtained access token\"\nwhen\n  contains(\n  value: to_string($message.\"message\"),\n  search: \"Obtained Access token\",\n  ignore_case: false\n)\nthen\n  set_field(\n    field : \"isPartOfOAuthTokenFlow\",\n    value : \"true\",\n    clean_field : false\n  );\n  set_field(\n    field : \"Type\",\n    value : \"ClientObtainedAccessToken\",\n    clean_field : false\n  );\nend"
+        }
+      },
+      "constraints": [
+        {
+          "type": "server-version",
+          "version": ">=5.2.7+5e29a2c"
+        }
+      ]
+    },
+    {
+      "v": "1",
+      "type": {
+        "name": "pipeline_rule",
+        "version": "1"
+      },
+      "id": "eb2da371-0cfc-4486-8ece-a98b0b459deb",
+      "data": {
+        "title": {
+          "@type": "string",
+          "@value": "Add false value to isPartOfOAuthFlow field"
+        },
+        "description": {
+          "@type": "string",
+          "@value": ""
+        },
+        "source": {
+          "@type": "string",
+          "@value": "rule \"Add false value to isPartOfOAuthFlow field\"\nwhen\n  is_null($message.\"isPartOfOAuthTokenFlow\")\nthen\n  set_field(\n    field : \"isPartOfOAuthTokenFlow\",\n    value : \"false\",\n    clean_field : false\n  );\nend"
         }
       },
       "constraints": [

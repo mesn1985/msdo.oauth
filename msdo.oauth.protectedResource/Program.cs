@@ -3,6 +3,8 @@ using Serilog;
 using System.Configuration;
 using Microsoft.Extensions.Primitives;
 using Serilog.Context;
+using System.Reflection;
+using Microsoft.OpenApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -28,6 +30,7 @@ builder.Host.UseSerilog((context, configuration) =>
 builder.Services.AddControllers();
 builder.Services.AddAuthentication("Bearer").AddJwtBearer("Bearer", options =>
 {
+    /// Never use this implementation for other purposes than experimenting locally with identity server.
     /// TLS is disable. The implementation is purely for an educational purpose. And not using TLS
     /// will make it easier to incoporate sniffing tools later.
     options.RequireHttpsMetadata = false;
@@ -38,7 +41,6 @@ builder.Services.AddAuthentication("Bearer").AddJwtBearer("Bearer", options =>
     {
         ValidateAudience = false
     };
-
 });
 builder.Services.AddAuthorization(options =>
 {
@@ -50,7 +52,37 @@ builder.Services.AddAuthorization(options =>
 });
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.AddSwaggerGen(options =>
+{
+    var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+    var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
+    options.IncludeXmlComments(xmlPath);
+
+    options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+    {
+        In = ParameterLocation.Header,
+        Description = "Please enter token",
+        Name = "Authorization",
+        Type = SecuritySchemeType.Http,
+        BearerFormat = "JWT",
+        Scheme = "bearer"
+    });
+
+    options.AddSecurityRequirement(new OpenApiSecurityRequirement
+    {
+        {
+            new OpenApiSecurityScheme
+            {
+                Reference = new OpenApiReference
+                {
+                    Type=ReferenceType.SecurityScheme,
+                    Id="Bearer"
+                }
+            },
+            new string[]{}
+        }
+    });
+});
 
 var app = builder.Build();
 
