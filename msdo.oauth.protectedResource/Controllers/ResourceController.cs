@@ -27,7 +27,7 @@ namespace msdo.oauth.client.Controllers
         public IActionResult Index()
         {
             string accessToken = GetAccessTokenFromHeader();
-
+            //Never log keys!!!! It is only allowable here, because it is an educational tool
             _logger.LogInformation($"Authorized Request for protected resource was made with token: {accessToken}");
 
             return new JsonResult( "{ProtectedResource:ValueOfProtecedResource}");

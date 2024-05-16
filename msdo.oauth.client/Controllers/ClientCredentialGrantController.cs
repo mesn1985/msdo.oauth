@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using msdo.oauth.client.Interfaces;
+using System.IdentityModel.Tokens.Jwt;
 
 namespace msdo.oauth.client.Controllers
 {
@@ -40,7 +41,7 @@ namespace msdo.oauth.client.Controllers
 
             string accessToken 
                 = await _authorizationService.GetAccessToken("client", "secret",correlationId);
-
+            //Never log keys!!!! It is only allowable here, because it is an educational tool
             _logger.LogInformation($"Obtained Access token: {accessToken}");
 
             _logger.LogInformation($"Requesting access to protected resource");
