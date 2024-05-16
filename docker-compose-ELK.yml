@@ -1,0 +1,92 @@
+# Team india
+# This docker compose file is only meant for local deployment of the enviroment
+# Deploy the enviroment: docker compose up (From the root of the project folder)
+# Ther
+
+version: '3.7'
+
+services:
+  client:
+    image: lightmaze/oauthclient:latest
+    hostname: Client
+    ports:
+        - "5003:5003"
+    command: dotnet msdo.oauth.client.dll --ConfigurationFile=Local.json
+    networks:
+        - authnet
+    depends_on:
+        - elasticsearch
+
+  AuthorizationServer:
+    image: lightmaze/oauthauthserver:latest
+    hostname: Authorization_Server
+    expose:
+        - "5001"
+    command: dotnet msdo.oauth.identityServer.dll --ConfigurationFile=Local.json
+    networks:
+        - authnet
+    depends_on:
+        - elasticsearch
+
+  ProtectedResourceServer:
+    image: lightmaze/oauthprotectedresourceserver:latest
+    hostname: Protected_Resource_Server
+    expose:
+        - "5002"
+    command: dotnet msdo.oauth.protectedResource.dll --ConfigurationFile=Local.json
+    networks:
+        - authnet
+    depends_on:
+        - elasticsearch
+
+  elasticsearch:
+      image: elasticsearch:7.9.1
+      container_name: elasticsearch
+      ports:
+        - "9200:9200"
+        - "9300:9300"
+      # volumes:
+      #   - test_data:/usr/share/elasticsearch/data/
+      #   - ./elk-config/elasticsearch/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml
+      environment:
+        - discovery.type=single-node
+        - http.host=0.0.0.0
+        - transport.host=0.0.0.0
+        - xpack.security.enabled=false
+        - xpack.monitoring.enabled=false
+        - cluster.name=elasticsearch
+        - bootstrap.memory_lock=true
+      networks:
+        - authnet
+
+  logstash:
+    image: logstash:7.9.1
+    container_name: logstash
+    ports:
+      - "5044:5044"
+      - "9600:9600"
+    # volumes:
+    #   - ./elk-config/logstash/logstash.conf:/usr/share/logstash/pipeline/logstash.conf
+    #   - ./elk-config/logstash/logstash.yml:/usr/share/logstash/config/logstash.yml
+    #   - ls_data:/usr/share/logstash/data
+
+    networks:
+      - authnet
+    depends_on:
+      - elasticsearch
+
+  kibana:
+    image: kibana:7.9.1
+    container_name: kibana
+    ports:
+      - "5601:5601"
+    # volumes:
+    #   - ./elk-config/kibana/kibana.yml:/usr/share/kibana/config/kibana.yml
+    #   - kb_data:/usr/share/kibana/data
+    networks:
+      - authnet
+    depends_on:
+      - elasticsearch
+
+networks: 
+  authnet:
