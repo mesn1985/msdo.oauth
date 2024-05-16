@@ -23,6 +23,11 @@
   </ItemGroup>
   
   <ItemGroup>
+    <Content Update="ConfigurationFiles\DockerCompose-ELK.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
     <Content Update="ConfigurationFiles\DockerCompose.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
