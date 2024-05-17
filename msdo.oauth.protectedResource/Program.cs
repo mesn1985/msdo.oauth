@@ -5,6 +5,7 @@ using Microsoft.Extensions.Primitives;
 using Serilog.Context;
 using System.Reflection;
 using Microsoft.OpenApi.Models;
+using Microsoft.Extensions.Options;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -56,7 +57,7 @@ builder.Services.AddSwaggerGen(options =>
 {
     var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
     var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
-    options.IncludeXmlComments(xmlPath);
+    options.IncludeXmlComments("./OpenApiSpecifications/specifications.xml");
 
     options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
     {

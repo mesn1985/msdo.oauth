@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>msdo.oauth.client</name>
+    </assembly>
+    <members>
+        <member name="T:msdo.oauth.client.Controllers.ClientCredentialGrantController">
+            <summary>
+            Client credential controller.
+            This controller provides the endpoint used for invoking request for
+            protected resource, where the client credential authorization grant is used to obtain access token
+            @author: Martin Edwin Schjødt Nielsen
+            </summary>
+        </member>
+        <member name="M:msdo.oauth.client.Controllers.ClientCredentialGrantController.UseClientCredentialGrantToAccessProtectedResource">
+            <summary>
+             Provides a protected resource if a valid token is provided
+            </summary>
+            <param></param>
+            <response code="200">Proteced resource have been obtained</response>
+        </member>
+    </members>
+</doc>

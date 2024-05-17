@@ -12,6 +12,7 @@
 
   <PropertyGroup>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <DocumentationFile>./OpenApiSpecifications/specifications.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
@@ -30,6 +31,10 @@
       <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
     </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="OpenApiSpecifications\" />
   </ItemGroup>
 
 </Project>

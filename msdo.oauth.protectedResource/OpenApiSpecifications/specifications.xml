@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>msdo.oauth.protectedResource</name>
+    </assembly>
+    <members>
+        <member name="M:msdo.oauth.client.Controllers.ResourceController.Index">
+            <summary>
+             Request access to a protected resource using the client credential grant.
+             Initiates the token flow for access to a protected resource.
+            </summary>
+            <param></param>
+            <response code="200">Proteced resource have been obtained</response>
+             <response code="401">Invalid access token provided</response>
+        </member>
+    </members>
+</doc>

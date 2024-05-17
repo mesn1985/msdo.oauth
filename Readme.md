@@ -54,7 +54,7 @@ The services can be deployed by executing the commands shown below. The shown or
 ### Configuring the services
 All services are configured to configuration files located in each services project folder, in the folder _ConfigurationFiles_
 
-By default, a configuration file that should be used with docker compose is provide. The file is located in the root folder of
+By default, a configuration file that should be used with docker compose is provide. The file is located in the folder `ConfigurationFiles` in
 each service project. The file name is _DockerCompose.json_.
 
 There is also a configuration file for each service, that should be used when deploying the services separate  called _Local.json_
@@ -93,12 +93,12 @@ the Endpoints used in this project is presented for identity server
 
 | Path                                      | Purpose                                                           | HTTP Method | Link to service OpenApi specifications |
 |-------------------------------------------|-------------------------------------------------------------------|-------------|---------------------------------------|
-| `/ClientCredentialGrant`                 | Uses client credential grant to obtain a valid accessToken, and then requests a protected resource | GET         | Yet to come                           |
+| `/ClientCredentialGrant`                 | Uses client credential grant to obtain a valid accessToken, and then requests a protected resource | GET         | [specifications.xml](msdo.oauth.client/OpenApiSpecifications/specifications.xml)                         |
   
 #### Protected resource server
 | Path                  | Purpose                                                           | HTTP Method | Link to service OpenApi specifications |
 |-----------------------|-------------------------------------------------------------------|-------------|---------------------------------------|
-| `/Resource`           | Provides a protected resource, if a valid access token is presented | GET         | Yet to come                           |
+| `/Resource`           | Provides a protected resource, if a valid access token is presented | GET         | [specifications.xml](./msdo.oauth.protectedResource/OpenApiSpecifications/specifications.xml)                        |
   
 #### Identity server
 | Path                                      | Purpose                                                           | HTTP Method | Link to service OpenApi specifications |

@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
@@ -11,6 +11,7 @@
 
   <PropertyGroup>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
+        <DocumentationFile>./OpenApiSpecifications/specifications.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
@@ -32,6 +33,10 @@
     <Content Update="ConfigurationFiles\DockerCompose.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="OpenApiSpecifications\" />
   </ItemGroup>
 
 </Project>
