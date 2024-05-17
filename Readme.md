@@ -1,4 +1,4 @@
-# Visualisation of Token and authorization  grants.
+# Visualisation of Token OAUth token flows.
 This project aims to create a visualization of the flow of tokens when using OAuth. 
 This project uses [IdentityServer](https://duendesoftware.com/products/identityserver) for OAuth functionallity, but should  **never be used as an example of how to configure Identity server**.
 In fact this project **disregards most security aspects of the Identity server configuration**. For examples of proper Identity server, please referer
