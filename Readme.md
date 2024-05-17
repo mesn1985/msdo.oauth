@@ -13,6 +13,26 @@ an is the only deployment that also provides graylog.
   
 Because this project serves educational purpose only, it is only intended to be deploy to a local desktop, where the user can experiment.
 
+### Quick start
+Clone this repository, and from the root of the repository folder, execute the command ```Docker compose up```- Await the start of all
+the services, and then enter the graylog  GUI URL at [127.0.0.1:9000](http://127.0.0.1:9000) and login the credentials Username: _admin_ and password:_admin_.
+In the Graylog GUI, click _Dashboards_.
+
+![Enter greylog dashboard](./Images/Graylog/EnterGraylogDashBoard.png)  
+  
+Once you have entered the dash boards, select the _OAuth_ dashboard  
+  
+![Alt text](./Images/Graylog/EnterOAuthDashboard.png)  
+  
+You will now be presented with 7 different aggregation. Click the start refresh in the upper right corner.  
+  
+![Alt text](./Images/Graylog/ShowingOAuthDashboard.png)  
+  
+Finally initiate a request for a protected resource, by sending a HTTP GET request to the client service at the path `/ClientCredentialGrant`.
+Here is an example of the request cURL from windows powershell: ```curl 'http://localhost:5003/ClientCredentialGrant'```. The Graylog dashboard,
+should now show values in the all of the token flow aggregations. 
+![Alt text](./Images/Graylog/LogAggregations.png)
+
 ### Docker compose
 Executing the command ```Docker compose up``` in the root of this project folder, will use the `docker-compose.yml` file to deploy this entire project.
 Afterwards the [client service API](#client) will be exposed on port 5003.
@@ -55,8 +75,8 @@ This section presents an overview of all the services in this project. The table
 | Service name                                      | Purpose                                                           |Implementation                                                           |
 |---------------------------------------------------|-------------------------------------------------------------------|-------------------------------------------------------------------|
 | Client | Is the client service, that need access to a protected resource | [msdo.oauth.client](./msdo.oauth.client) |
-| Protected Resource server | The resource server with protected resources | [msdo.oauth.protectedResource](./msdo.oauth.protectedResource) |
-| Identity Server | The Authorization server that provides access token for protected resources | [msdo.oauth.identityServer](./msdo.oauth.identityServer) |
+| Protected Resource service | The resource service with protected resources | [msdo.oauth.protectedResource](./msdo.oauth.protectedResource) |
+| Identity service | The Authorization service that provides access token for protected resources | [msdo.oauth.identityServer](./msdo.oauth.identityServer) |
 
 ### Services Network ports
 The services usage of network ports are persistant, regardless if deployment are made to a local OS, or using docker compose,
@@ -90,13 +110,3 @@ the Endpoints used in this project is presented for identity server
 |-------------------------------------------|-------------------------------------------------------------------|-------------|---------------------------------------|
 | `/.well-known/openid-configuration`       | Retrieves OpenID Connect configuration details for authentication. See [documentation](https://identityserver4.readthedocs.io/en/latest/endpoints/discovery.html) | GET         | Yet to come                           |
 | `/connect/token`                          | Used to request tokens. See [documentation](https://identityserver4.readthedocs.io/en/latest/endpoints/token.html)  | POST        | Yet to come                           |
-
-### Network port usage
-
-| Port                                      | Service                                                        | 
-|-------------------------------------------|-------------------------------------------------------------------|
-| | |
-| | |
-| | |
-
-## Testing
