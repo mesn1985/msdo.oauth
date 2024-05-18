@@ -1,0 +1,68 @@
+# Team india
+# This docker compose file is only meant for local deployment of the enviroment
+# Deploy the enviroment: docker compose up (From the root of the project folder)
+# Ther
+
+version: '3.7'
+
+services:
+  client:
+    image: lightmaze/oauthclient:latest
+    hostname: Client
+    ports:
+        - "5003:5003"
+    command: dotnet msdo.oauth.client.dll --ConfigurationFile=DockerCompose-LOKI.json
+    networks:
+        - authnet
+    depends_on:
+        - loki
+
+  AuthorizationServer:
+    image: lightmaze/oauthauthserver:latest
+    hostname: Authorization_Server
+    expose:
+        - "5001"
+    command: dotnet msdo.oauth.identityServer.dll --ConfigurationFile=DockerCompose-LOKI.json
+    networks:
+        - authnet
+    depends_on:
+        - loki
+
+  ProtectedResourceServer:
+    image: lightmaze/oauthprotectedresourceserver:latest
+    hostname: Protected_Resource_Server
+    expose:
+        - "5002"
+    command: dotnet msdo.oauth.protectedResource.dll --ConfigurationFile=DockerCompose-LOKI.json
+    networks:
+        - authnet
+    depends_on:
+        - loki
+  loki:
+    image: grafana/loki:latest
+    ports:
+      - "3100:3100"
+    networks:
+      - authnet
+
+  promtail:
+    image: grafana/promtail:latest
+    volumes:
+      - ./promtail-config.yaml:/etc/promtail/promtail-config.yaml
+    networks:
+      - authnet
+    depends_on:
+      - loki
+
+  grafana:
+    image: grafana/grafana:latest
+    ports:
+      - "3000:3000"
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=admin
+    networks:
+      - authnet
+    depends_on:
+      - loki
+networks: 
+  authnet:

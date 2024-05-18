@@ -1,0 +1,30 @@
+{
+  "Services": {
+    "AuthorizationServerDiscoveryEndpoint": "http://AuthorizationServer:5001",
+    "ProtectedResourceServer": "http://ProtectedResourceServer:5002"
+  },
+
+  "Serilog": {
+    "Using": [ "Serilog.Sinks.Grafana.Loki"],
+    "MinimumLevel": "Verbose",
+    "WriteTo": [
+      {
+        "Name": "GrafanaLoki",
+        "Args": {
+          "uri": "http://Loki:3100",
+          "labels": [
+            {
+              "key": "app",
+              "value": "client"
+            }
+          ],
+          "propertiesAsLabels": [
+            "app"
+          ]
+        }
+      }
+    ]
+  }
+    
+}
+
