@@ -13,8 +13,8 @@
           "uri": "http://Loki:3100",
           "labels": [
             {
-              "key": "app",
-              "value": "protectedResource"
+              "key": "type",
+              "value": "OAuth"
             }
           ],
           "propertiesAsLabels": [
