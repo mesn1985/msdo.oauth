@@ -34,16 +34,16 @@ jobs:
       with:
           context: "{{defaultContext}}:msdo.oauth.client"
           push: true
-          tags: lightmaze/oauthclient
+          tags: lightmaze/oauthclient , lightmaze/oauthclient:{{github.run_number}}
     - name: Build and push protected resource service image
       uses: docker/build-push-action@v5
       with:
           context: "{{defaultContext}}:msdo.oauth.protectedResource"
           push: true
-          tags: lightmaze/oauthprotectedresourceserver
+          tags: lightmaze/oauthprotectedresourceserver , lightmaze/oauthprotectedresourceserver:{{github.run_number}}
     - name: Build and push auth server image
       uses: docker/build-push-action@v5
       with:
           context: "{{defaultContext}}:msdo.oauth.identityServer"
           push: true
-          tags: lightmaze/oauthauthserver
+          tags: lightmaze/oauthauthserver , lightmaze/oauthauthserver:{{github.run_number}}
