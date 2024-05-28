@@ -1,23 +1,17 @@
 # Visualisation of Token OAUth token flows.
-This project aims to create a visualization of the flow of tokens when using OAuth. 
+This project aims to create a visualization of the flow of tokens when using OAuth 2.0 
 This project uses [IdentityServer](https://duendesoftware.com/products/identityserver) for OAuth functionallity, but should  **never be used as an example of how to configure Identity server**.
 In fact this project **disregards most security aspects of the Identity server configuration**. For examples of proper Identity server, please referer
-to [IdentityServer4 documentation](https://docs.duendesoftware.com/identityserver/v7). The sole purpose of this project is to demonstrate the flows
+to [IdentityServer4 documentation](https://docs.duendesoftware.com/identityserver/v7). The sole purpose of this project is to demonstrate the flow of access tokens
 in OAuth.
 
-## Running the project
-The services can be deployed as a unit pr. service by deploying the services directly onto the OS, 
-or the services can be deployed as a single unit, by using [docker compose](https://docs.docker.com/compose/). Using docker compose is the recommend approach for this project,
-an is the only deployment that also provides graylog.
 
-  
-Because this project serves educational purpose only, it is only intended to be deploy to a local desktop, where the user can experiment.
 
-### Quick start
-Clone this repository, and from the root of the repository folder, execute the command ```Docker compose up```- Await the start of all
-the services, and then enter the graylog  GUI URL at [127.0.0.1:9000](http://127.0.0.1:9000) and login the credentials Username: _admin_ and password:_admin_.
+## Quick start
+Clone this repository to your local hard drive. From the **root of the repository folder**, execute the command ```Docker compose up``` and await the start of all
+containers(The start time depends on your hardware). Then enter the graylog administration GUI, by navigating to the  URL [127.0.0.1:9000](http://127.0.0.1:9000) in your browser and login the credentials `Username:admin` and `password:admin`.
 In the Graylog GUI, click _Dashboards_.
-
+  
 ![Enter greylog dashboard](./Images/Graylog/EnterGraylogDashBoard.png)  
   
 Once you have entered the dash boards, select the _OAuth_ dashboard  
@@ -29,10 +23,18 @@ You will now be presented with 7 different aggregation. Click the start refresh 
 ![Alt text](./Images/Graylog/ShowingOAuthDashboard.png)  
   
 Finally initiate a request for a protected resource, by sending a HTTP GET request to the client service at the path `/ClientCredentialGrant`.
-Here is an example of the request cURL from windows powershell: ```curl 'http://localhost:5003/ClientCredentialGrant'```. The Graylog dashboard,
-should now show values in the all of the token flow aggregations. 
+Here is an example of the request cURL from windows powershell:  
+ ```powershell curl 'http://localhost:5003/ClientCredentialGrant'```.  
+ The Graylog dashboard should now show values in the all of the token flow aggregations. 
 ![Alt text](./Images/Graylog/LogAggregations.png)
   
+## Running the project
+The services can be deployed as a unit pr. service by deploying the services directly onto the OS, 
+or the services can be deployed as a single unit, by using [docker compose](https://docs.docker.com/compose/). Using docker compose is the recommend approach for this project,
+an is the only deployment that also provides graylog.
+  
+Because this project serves educational purpose only, it is only intended to be deploy to a local desktop, where the user can experiment.
+
 ### Docker compose
 Executing the command ```Docker compose up``` in the root of this project folder, will use the `docker-compose.yml` file to deploy this entire project.
 Afterwards the [client service API](#client) will be exposed on port 5003.

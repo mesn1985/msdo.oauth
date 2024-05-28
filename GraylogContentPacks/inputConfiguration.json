@@ -1094,7 +1094,7 @@
       "data": {
         "title": {
           "@type": "string",
-          "@value": "Authorization Server  issued a token for client"
+          "@value": "Authorization Server issued a token for client"
         },
         "description": {
           "@type": "string",
