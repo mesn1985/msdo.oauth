@@ -14,13 +14,18 @@ In the Graylog GUI, click _Dashboards_.
   
 ![Enter greylog dashboard](./Images/Graylog/EnterGraylogDashBoard.png)  
   
+
 Once you have entered the dash boards, select the _OAuth_ dashboard  
   
+
 ![Alt text](./Images/Graylog/EnterOAuthDashboard.png)  
   
+
 You will now be presented with 7 different aggregation. Click the start refresh in the upper right corner.  
   
+
 ![Alt text](./Images/Graylog/ShowingOAuthDashboard.png)  
+  
   
 Finally initiate a request for a protected resource, by sending a HTTP GET request to the client service at the path `/ClientCredentialGrant`.
 Here is an example of the request cURL from windows powershell:  
