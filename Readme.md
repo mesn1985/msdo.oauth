@@ -26,7 +26,7 @@ You will now be presented with 7 different aggregation. Click the start refresh 
 
 ![Alt text](./Images/Graylog/ShowingOAuthDashboard.png)  
   
-  
+
 Finally initiate a request for a protected resource, by sending a HTTP GET request to the client service at the path `/ClientCredentialGrant`.
 Here is an example of the request cURL from windows powershell:  
  ```powershell curl 'http://localhost:5003/ClientCredentialGrant'```.  
@@ -85,7 +85,7 @@ This section presents an overview of all the services in this project. The table
   
 ### Services Network ports
 The services usage of network ports are persistant, regardless if deployment are made to a local OS, or using docker compose,
-the table below provides a full overview of ports used by each service.
+the table below provides a full overview of ports used by each of the implemented services.
 | Service name                                      | Port                                                           |
 |---------------------------------------------------|-------------------------------------------------------------------|
 | Client | Port 5003, used for http traffic  |
@@ -98,17 +98,17 @@ the Endpoints used in this project is presented for identity server
   
 #### Client
 
-| Path                                      | Purpose                                                           | HTTP Method | Link to service OpenApi specifications |
-|-------------------------------------------|-------------------------------------------------------------------|-------------|---------------------------------------|
-| `/ClientCredentialGrant`                 | Uses client credential grant to obtain a valid accessToken, and then requests a protected resource | GET         | [specifications.xml](msdo.oauth.client/OpenApiSpecifications/specifications.xml)                         |
+| Path                                      | Purpose                                                           | HTTP Method |
+|-------------------------------------------|-------------------------------------------------------------------|-------------
+| `/ClientCredentialGrant`                 | Uses client credential grant to obtain a valid accessToken, and then requests a protected resource | GET         |
   
 #### Protected resource server
-| Path                  | Purpose                                                           | HTTP Method | Link to service OpenApi specifications |
-|-----------------------|-------------------------------------------------------------------|-------------|---------------------------------------|
-| `/Resource`           | Provides a protected resource, if a valid access token is presented | GET         | [specifications.xml](./msdo.oauth.protectedResource/OpenApiSpecifications/specifications.xml)                        |
+| Path                  | Purpose                                                           | HTTP Method |
+|-----------------------|-------------------------------------------------------------------|-------------|
+| `/Resource`           | Provides a protected resource, if a valid access token is presented | GET         | 
   
 #### Identity server
-| Path                                      | Purpose                                                           | HTTP Method | Link to service OpenApi specifications |
-|-------------------------------------------|-------------------------------------------------------------------|-------------|---------------------------------------|
-| `/.well-known/openid-configuration`       | Retrieves OpenID Connect configuration details for authentication. See [documentation](https://identityserver4.readthedocs.io/en/latest/endpoints/discovery.html) | GET         | Yet to come                           |
-| `/connect/token`                          | Used to request tokens. See [documentation](https://identityserver4.readthedocs.io/en/latest/endpoints/token.html)  | POST        | Yet to come                           |
+| Path                                      | Purpose                                                           | HTTP Method |
+|-------------------------------------------|-------------------------------------------------------------------|-------------|
+| `/.well-known/openid-configuration`       | Retrieves OpenID Connect configuration details for authentication. See [documentation](https://identityserver4.readthedocs.io/en/latest/endpoints/discovery.html) | GET         |
+| `/connect/token`                          | Used to request tokens. See [documentation](https://identityserver4.readthedocs.io/en/latest/endpoints/token.html)  | POST        | 
