@@ -4,10 +4,11 @@ This project uses [IdentityServer](https://duendesoftware.com/products/identitys
 In fact this project **disregards most security aspects of the Identity server configuration**. For examples of proper Identity server, please referer
 to [IdentityServer4 documentation](https://docs.duendesoftware.com/identityserver/v7). The sole purpose of this project is to demonstrate the flow of access tokens
 in OAuth.
-
-
-
+  
+A video presentation of the project in danish can be viewed at [Youtube project presentation video](https://youtu.be/bwVD3xjuAp8)
+  
 ## Quick start
+
 Clone this repository to your local hard drive. From the **root of the repository folder**, execute the command ```Docker compose up``` and await the start of all
 containers(The start time depends on your hardware). Then enter the graylog administration GUI, by navigating to the  URL [127.0.0.1:9000](http://127.0.0.1:9000) in your browser and login the credentials `Username:admin` and `password:admin`.
 In the Graylog GUI, click _Dashboards_.
@@ -33,7 +34,7 @@ Here is an example of the request cURL from windows powershell:
  The Graylog dashboard should now show values in the all of the token flow aggregations. 
 ![Alt text](./Images/Graylog/LogAggregations.png)
   
-  
+
 ## Beyond the quick start.
 The services can be deployed as a unit pr. service by deploying the services directly onto the OS, 
 or the services can be deployed as a single unit, by using [docker compose](https://docs.docker.com/compose/). Using docker compose is the recommend approach for this project,
