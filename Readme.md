@@ -33,7 +33,8 @@ Here is an example of the request cURL from windows powershell:
  The Graylog dashboard should now show values in the all of the token flow aggregations. 
 ![Alt text](./Images/Graylog/LogAggregations.png)
   
-## Running the project
+  
+## Beyond the quick start.
 The services can be deployed as a unit pr. service by deploying the services directly onto the OS, 
 or the services can be deployed as a single unit, by using [docker compose](https://docs.docker.com/compose/). Using docker compose is the recommend approach for this project,
 an is the only deployment that also provides graylog.
