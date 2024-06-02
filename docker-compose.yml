@@ -7,7 +7,7 @@ version: '3.7'
 
 services:
   client:
-    image: lightmaze/oauthclient:89
+    image: lightmaze/oauthclient:92
     hostname: Client
     ports:
         - "5003:5003"
@@ -18,7 +18,7 @@ services:
         - graylog
 
   AuthorizationServer:
-    image: lightmaze/oauthauthserver:89
+    image: lightmaze/oauthauthserver:92
     hostname: Authorization_Server
     expose:
         - "5001"
@@ -29,7 +29,7 @@ services:
         - graylog
 
   ProtectedResourceServer:
-    image: lightmaze/oauthprotectedresourceserver:89
+    image: lightmaze/oauthprotectedresourceserver:92
     hostname: Protected_Resource_Server
     expose:
         - "5002"
