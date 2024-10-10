@@ -1,4 +1,4 @@
-# Team india
+# Author: Martin Edwin Schjødt Nilsen
 # This docker compose file is only meant for local deployment of the enviroment
 # Deploy the enviroment: docker compose up (From the root of the project folder)
 # Ther
